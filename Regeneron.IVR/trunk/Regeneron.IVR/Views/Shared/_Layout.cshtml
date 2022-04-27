@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regeneron IVR</title>
+
+    
+    <style>
+        .main {
+            padding: 25px;
+        }
+
+        #footer {
+            background-color: rgb(230,231,232);
+            padding: 25px 0 40px;
+        }
+
+        .bar-gradient {
+            background: url(bar-gradient.png) no-repeat;
+            background-position: center center;
+            background-size: 100% 5px;
+            display: block;
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    <div class="main">
+
+        @RenderBody()
+
+
+    </div>
+    <div class="row" id="footer">
+        <div class="container">
+            <div class="col-md-12">
+                <a href="https://www.regeneron.com/" target="_blank"><img src="https://www.eylea.us/Content/images/logo/regeneron.png" width="170px" /></a>
+            </div>
+            <div class="col-md-12">
+                <div class="bar-gradient"></div>
+            </div>
+            <div class="col-md-8 marginT25">
+                &copy; 2017, Regeneron Pharmaceuticals, Inc. All rights reserved.<br>
+                777 Old Saw Mill River Road, Tarrytown, NY 10591
+            </div>
+        </div>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
