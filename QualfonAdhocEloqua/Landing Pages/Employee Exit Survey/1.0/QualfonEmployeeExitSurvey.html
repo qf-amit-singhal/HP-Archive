@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Qualfon Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <script src="https://kit.fontawesome.com/12ebb599fc.js"></script>
+
+  <style type="text/css">
+    html {
+      height: 100%;
+    }
+
+    body {
+      background: #002B49 ;
+      background: linear-gradient(169deg, rgba(36,50,103,1) 0%, rgba(20,131,142,1) 100%);
+      height: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #app {
+      height: 100%;
+    }
+
+    #app-container {
+      padding-top: 10%;
+      height: 100%;
+    }
+
+    .footer-fix {
+      margin-bottom: 200px;
+    }
+
+    .has-photos {
+      background-image: url('https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B5b15c654-e8dd-4cae-a07f-4e9f8e7ba4df%7D_%7B167359b8-2376-4550-a59b-0450758750ab%7D_Duma-Guyana-2.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+
+    /*.page-row {
+      margin-top: 10%;
+    }*/
+
+    .home-page-container {
+      background-color: rgba(255, 255, 255, 1);
+      padding: 40px 40px 0 40px;
+    }
+
+    .company-header > img {
+      width: 80%;
+    }
+
+    .step-list-container {
+      background-color: #dddddd;
+      padding: 20px 40px 20px 40px;
+    }
+
+    .step-page-container {
+      background-color: white;
+      padding: 40px 40px 0 40px;
+      z-index: 2000;
+    }
+
+    .page-footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #002b49 !important;
+      color: white;
+      height: 156px;
+      padding-top: 30px;
+    }
+
+    .page-footer .main-text {
+      font-weight: normal;
+    }
+
+    .page-footer .links {
+      font-size: 12px;
+      margin-top: 30px;
+    }
+
+    .page-footer .links a, .page-footer .links a:visited, .page-footer .links a:active {
+      color: white;
+    }
+
+    .footer-company {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .footer-company a {
+      color: #00a7e1;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    [v-cloak] {
+      display: none
+    }
+
+    .text-dark {
+      color: #002B49  !important;
+    }
+
+    a, a:visited {
+      color: #002B49 ;
+    }
+
+    .btn-primary.btn-dd {
+      background-color: #002B49 ;
+      border-color: #002B49 ;
+      font-size: 14px;
+    }
+
+    .btn-outline-primary.btn-dd {
+      border-color: #002B49 ;
+      font-size: 14px;
+      color: #002B49 ;
+    }
+
+    .btn-outline-primary.btn-dd:hover {
+      background-color: #002B49 ;
+      color: white;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-size: 32px;
+      /*font-family: 'Slabo 27px', serif;*/
+      line-height: 34px;
+    }
+
+    .rsvp-code-panel {
+      margin-top: 20px;
+    }
+
+    .yes-no {
+      font-weight: bold;
+      color: #00A8E2;
+    }
+
+    .question-header {
+      margin-bottom: 10px;
+    }
+
+    .white-bg {
+      background-color: white;
+    }
+
+    .component-fade-enter-active, .component-fade-leave-active {
+      transition: opacity .3s ease;
+    }
+
+    .component-fade-enter, .component-fade-leave-to {
+      opacity: 0;
+    }
+
+    .step-panel .step-name {
+      /*font-family: 'Slabo 27px', serif;*/
+      font-size: 27px;
+      line-height: 27px;
+      color: #888888;
+    }
+
+    .step-panel .step-label {
+      font-size: 12px;
+      color: #888888;
+    }
+
+    .step-list-container .company-header {
+      margin-bottom: 30px;
+    }
+
+    .step-panel {
+      margin-top: 15px;
+    }
+
+    .step-panel.active .step-name {
+      color: #00A8E2;
+    }
+
+    .step-panel.active .step-label {
+      color: #333333;
+    }
+
+    .page-row h1 {
+      /*font-family: 'Slabo 27px', serif;*/
+      font-size: 27px;
+      color: #00A8E2;
+    }
+
+    .form-footer {
+      margin-top: 20px;
+      color: #00A8E2;
+      margin-bottom: 10px;
+    }
+
+    .help-text {
+      font-size: 11px;
+    }
+
+    input.underline {
+      border: 0px;
+      border-bottom: 1px solid #888;
+      padding: 0px;
+    }
+
+    input.underline::placeholder {
+      color: gray;
+      font-size: 12px;
+    }
+
+    input.underline::-ms-input-placeholder {
+      color: #cccccc;
+    }
+
+    input.underline:-ms-input-placeholder {
+      color: #cccccc;
+    }
+
+    input.underline.invalid {
+      border-bottom: 1px solid red;
+    }
+
+    .alert-sm {
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    .text-xs {
+      font-size: 12px;
+    }
+
+    .shaded {
+      background-color: #eee;
+      border-radius: 2px;
+    }
+
+    .confirmation-company-name {
+      color: #656565;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+
+    .mb10 {
+      margin-bottom: 10px;
+    }
+
+    .mb20 {
+      margin-bottom: 20px;
+    }
+
+    .mt10 {
+      margin-top: 10px;
+    }
+
+    .mt20 {
+      margin-top: 20px;
+    }
+
+    .p20 {
+      padding: 20px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .col-border-r {
+        border-right: 1px solid #ccc;
+      }
+    }
+
+    @media only screen and (max-width: 575px) {
+      #app-container {
+        height: calc(100% - 220px);
+      }
+      .page-footer {
+        position: inherit;
+        text-align: center;
+        height: 220px;
+      }
+      .footer-logo {
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+      .footer-company {
+        text-align: center;
+      }
+    }
+    
+    .progress-bar {
+      background-color: #00A8E2;
+    }
+    
+    	.text-underline {
+      text-decoration: underline;
+    	}
+
+    .z-index-fix {
+      z-index: -1;
+    }
+
+    .language-switch-container {
+      padding: 10px;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .language-switch-container .custom-switch {
+      width: 223px;
+      margin: 0 auto;
+    }
+
+    .language-switch-container .custom-control-label::before {
+      color: #fff!important;
+      border-color: #002b49!important;
+      background-color: #002b49!important;
+    }
+
+    .language-switch-container .custom-control-label::after {
+      background-color: #fff!important;
+    }
+
+    .language-switch-label {
+      margin-right: 41px;
+    }
+
+    .range-value {
+      width: calc(100% - 30px);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+  <script src="https://unpkg.com/@ungap/url-search-params"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.js" integrity="sha256-QTriwEK1XTUJdKp3So7tMDUvZSTLOPpUv8F/J+UwJ8M=" crossorigin="anonymous"></script>
+
+  <div id="app">
+    <div id="app-container" class="container">
+      <div class="footer-fix">
+        <keep-alive>
+          <transition name="component-fade" mode="out-in">
+            <router-view v-on:go-to-home="onGoToHome"
+                   v-on:go-to-expired="onGoToExpired"
+                   v-on:go-to-not-started="onGoToNotStarted"
+                   v-on:go-to-completed="onGoToCompleted"
+                   v-on:go-to-survey="onGoToSurvey"
+                   v-on:go-to-thank-you="onGoToThankYou"></router-view>
+          </transition>
+        </keep-alive>
+      </div>
+    </div>
+
+    <nav class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12" v-html="store.pageText.support[store.lang]"></div>
+          <div class="col-sm-6 col-xs-12 text-right">
+            <div class="mb-3 footer-logo">
+              <img src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Be6d16238-2fe4-454c-b0a6-9b6db33d077d%7D_%7Bca5d105e-d0e4-43f4-bda8-2228c1da9a71%7D_Qualfon_white_on_blue.png" alt="Qualfon" />
+            </div>
+            <div class="footer-company">
+              13700 Oakland Avenue, Highland Park, MI 48203<br />
+              <a href="tel:8772610804" id="phoneNumber">877-261-0804</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <div id="eloqua-form" class="d-none">
+    <div id="mergeEmailAddress" class="eloqua-field-merge" data-survey-name="email" data-eloqua-name="emailAddress"><span class=eloquaemail >EmailAddress</span></div>
+    <div id="mergeEmployeeId" class="eloqua-field-merge" data-survey-name="employeeId" data-eloqua-name="employeeID"><span class=eloquaemail >Qualfon_Employee_ID1</span></div>
+    <div id="mergeFirstName" class="eloqua-field-merge" data-survey-name="firstName" data-eloqua-name="firstName"><span class=eloquaemail >First_Name___Forms1</span></div>
+    <div id="mergeLastName" class="eloqua-field-merge" data-survey-name="lastName" data-eloqua-name="lastName"><span class=eloquaemail >LastName</span></div>
+    <div id="mergeSurveyRequestDate" class="eloqua-field-merge" data-survey-name="requestDate" data-eloqua-name="requestDate"><span class=eloquaemail >Employee_Exit_Survey_Request_Date1</span></div>
+    <div id="mergeCountry"><span class=eloquaemail >Country</span></div>
+    <span elqid="8" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+  </div>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Survey Progress -->
+  <script type="text/x-template" id="progress-template">
+    <div class="row">
+      <div class="col col-xs col-md-12">
+        <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :style="'width: ' + progress + '%'">{{ progress }}%</div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script type="text/javascript">
+    var SurveyProgress = Vue.component('survey-progress', {
+      template: '#progress-template',
+      methods: {
+        navigateToStep: function (step) {
+          //alert(JSON.stringify(step));
+          messageBus.$emit(step);
+        }
+      },
+      computed: {
+        progress: function() {
+          const questions = Array.isArray(store.questions) ? store.questions.length - 1 : 1;
+          const current = !isNaN(store.currentStep) ? store.currentStep : 1;
+          return Math.round((current / questions) * 100);
+        }
+      }
+    });
+  </script>
+  <!-- END Survey Progress -->
+  <!-- Language Switch -->
+  <script type="text/x-template" id="language-switch-template">
+    <div class="language-switch-container">
+      <div class="container">
+        <div class="row">
+          <div class="col mx-auto">
+            <div class="custom-control custom-switch pl-0">
+              <label class="language-switch-label" for="languageSwitch">English</label>
+              <input type="checkbox" class="custom-control-input" id="languageSwitch" v-model="checked" @change="changeLanguage()">
+              <label class="custom-control-label" for="languageSwitch">Spanish</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script type="text/javascript">
+    var LanguageSwitch = Vue.component('language-switch', {
+      template: '#language-switch-template',
+      data: function () {
+        return {
+          store: store,
+          checked: false
+        }
+      },
+      methods: {
+        changeLanguage: function() {
+          store.lang = this.checked ? 'sp' : 'en';
+        }
+      },
+      mounted: function() {
+        this.checked = store.lang === 'sp' ? true : false;
+      }
+    });
+  </script>
+  <!-- END Language Switch -->
+  <!-- Home Page -->
+  <script type="text/x-template" id="home-template">
+    <div class="row page-row text-center">
+      <div class="home-page-container col-md-10 offset-md-1">
+
+        <div class="company-header">
+          <img v-bind:src="store.company.logoUrl" />
+        </div>
+        <div class="row title">
+          <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+        </div>
+        <div class="rsvp-code-panel">
+          <div class="mt-4">
+            <button class="btn btn-primary btn-dd" @click="onBeginSurvey">{{ store.pageText.begin[store.lang] }}</button>
+          </div>
+          <div class="mt-4">
+            <language-switch></language-switch>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- END Home Page -->
+  <!-- Survey Page -->
+  <script type="text/x-template" id="survey-template">
+    <div class="row page-row text-center">
+      <div class="step-list-container col-md-12">
+        <survey-progress></survey-progress>
+      </div>
+      <div class="step-page-container col-md-12 text-left">
+        <div v-for="(question, qindex) in store.questions">
+          <div v-if="store.currentStep === qindex">
+            <h1>{{ question.question[store.lang] }}</h1>
+            <div v-if="!isValid" class="alert alert-sm alert-warning"><i class="fas fa-exclamation-circle"></i> {{ store.pageText.required[store.lang] }}</div>
+            <div class="row my-4">
+              <div class="col mx-4">
+                <form>
+                  <div class="form-group" v-if="question.type === 'radio'">
+                    <div v-for="(answer, index) in question.answers">
+                      <div class="custom-control custom-radio" v-if="!(question.excludeAnswerQuestion && answer['en'] === store.questions[question.excludeAnswerQuestion - 1].response) || answer['en'] === 'Other'">
+                        <input type="radio" :id="'surveyRadio-' + qindex + '-' + index" :name="'customRadio' + qindex" class="custom-control-input required" :value="answer['en']" v-model="question.response">
+                        <label class="custom-control-label" :for="'surveyRadio-' + qindex + '-' + index">{{ answer[store.lang] }}</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" v-if="question.type === 'checkbox'">
+                    <div class="custom-control custom-checkbox" v-for="(answer, index) in question.answers">
+                      <input type="checkbox" :id="'surveyCheckbox-' + qindex + '-' + index" :name="'surveyCheckbox-' + qindex + '-' + index" class="custom-control-input required" :value="answer['en']" v-model="question.response">
+                      <label class="custom-control-label" :for="'surveyCheckbox-' + qindex + '-' + index">{{ answer[store.lang] }}</label>
+                    </div>
+                  </div>
+                  <div class="form-group" v-if="question.type === 'text'">
+                    <textarea class="form-control" rows='8' v-model="question.response"></textarea>
+                  </div>
+                  <div class="form-group" v-if="question.type === 'short-text'">
+                    <input type="text" class="form-control" v-model="question.response">
+                  </div>
+                  <div class="form-group" v-if="question.type === 'range'">
+                    <label :for="'surveyRange-' + qindex" class="float-left">{{ question.min }}</label>
+                    <label :for="'surveyRange-' + qindex" class="range-value">{{ question.response }}</label>
+                    <label :for="'surveyRange-' + qindex" class="float-right">{{ question.max }}</label>
+                    <input :id="'surveyRange-' + qindex" type="range" class="custom-range" :min="question.min" :max="question.max" v-model="question.response">
+                  </div>
+                  <div class="form-group" v-if="question.showComments === true">
+                    <div class="form-group">
+                      <label :for="'comments-' + qindex">Comments</label>
+                      <textarea :id="'comments-' + qindex" class="form-control" rows='4' v-model="question.comments"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group" v-if="question.showOtherOn === question.response || (Array.isArray(question.response) && question.response.indexOf(question.showOtherOn) !== -1)">
+                    <div class="form-group">
+                      <label :for="'comments-' + qindex">{{ question.otherText[store.lang] }}</label>
+                      <textarea :id="'comments-' + qindex" class="form-control" rows='4' v-model="question.explanation"></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-dd mt-3" @click="onSurveyBack">Back</button> <button class="btn btn-primary btn-dd mt-3" @click="onSurveyContinue">{{ buttonNext }}</button>
+
+            <div class="mt-4">
+              <language-switch></language-switch>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- END Survey Page -->
+  <!-- Not Started Page -->
+  <script type="text/x-template" id="not-started-template">
+    <div class="row page-row text-center">
+      <div class="home-page-container col-md-10 offset-md-1">
+
+        <div class="company-header">
+          <img v-bind:src="store.company.logoUrl" />
+        </div>
+        <div class="row title">
+          <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+        </div>
+        <div class="rsvp-code-panel">
+          <div class="mt-4">
+            <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> {{ store.pageText.notStarted[store.lang] }}</div>
+          </div>
+          <div class="mt-4">
+            <language-switch></language-switch>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- END Not Started Page -->
+  <!-- Expired Page -->
+  <script type="text/x-template" id="expired-template">
+    <div class="row page-row text-center">
+      <div class="home-page-container col-md-10 offset-md-1">
+
+        <div class="company-header">
+          <img v-bind:src="store.company.logoUrl" />
+        </div>
+        <div class="row title">
+          <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+        </div>
+        <div class="rsvp-code-panel">
+          <div class="mt-4">
+            <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> {{ store.pageText.expired[store.lang] }}</div>
+          </div>
+          <div class="mt-4">
+            <language-switch></language-switch>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- END Expired Page -->
+  <!-- Completed Page -->
+  <script type="text/x-template" id="completed-template">
+    <div class="row page-row text-center">
+      <div class="home-page-container col-md-10 offset-md-1">
+
+        <div class="company-header">
+          <img v-bind:src="store.company.logoUrl" />
+        </div>
+        <div class="row title">
+          <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+        </div>
+        <div class="rsvp-code-panel">
+          <div class="mt-4">
+            <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> {{ store.pageText.completed[store.lang] }}</div>
+          </div>
+          <div class="mt-4">
+            <language-switch></language-switch>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- END Completed Page -->
+  <!-- Thank You Page -->
+  <script type="text/x-template" id="thank-you-template">
+    <div class="row page-row text-center">
+      <div class="home-page-container col-md-10 offset-md-1">
+
+        <div class="company-header">
+          <img v-bind:src="store.company.logoUrl" />
+        </div>
+        <div class="rsvp-code-panel">
+          <div class="mt-4">
+            <h1 v-html="store.pageText.thankYou[store.lang]"></h1>
+          </div>
+          <div class="mt-4">
+            <language-switch></language-switch>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- END Thank You Page -->
+  <!-- Startup Code -->
+  <script type="text/javascript">
+
+    var messageBus = new Vue({});
+
+    // Global data store shared by all steps.
+    var store = {
+      // Static, customizable information for survey
+      homeTitle: 'Employee Exit Survey',
+
+      // Use for testing - Change to false for production
+      testing: {
+        active: true
+      },
+
+      company: {
+        logoUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B05bd959a-b23e-42d4-bb3b-3c0842ec0519%7D_%7Be4af78e8-ed2e-4e72-b9d1-766c56d355e3%7D_QF_ThePersonOfficeLogo_Horizontal.jpg',
+        smallLogoUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B6cd10dbf-7971-4de9-8f47-e8387480f443%7D_%7B5470f88b-f2ba-4f5e-9587-ec846abe21be%7D_logo_small.jpg',
+        	supportEmail: 'CampaignMgmt@qualfon.com'
+      },
+
+      survey: {
+        code: 'EmployeeExit',
+        startDate: new Date('2020-07-07T10:30:00.000-05:00'),
+        expirationDate: 15 // Days
+      },
+      
+      eloqua: {
+        formUrl: 'https://s1702368288.t.eloqua.com/e/f2',
+        formName: 'EmployeeExitSurvey',
+        siteId: 1702368288
+      },
+      
+      questions: [
+        {
+          id: 1,
+          type: 'radio',
+          code: 'primaryReason',
+          question: {
+            en: 'The primary reason you are leaving the Company: (Please select one)',
+            sp: 'La principal razón por la que te vas de la empresa: (Por favor selecciona una)'
+          },
+          response: '',
+          explanation: '',
+          required: true,
+          answers: [
+            {
+              en: 'Work Environment',
+              sp: 'Ambiente laboral'
+            },
+            {
+              en: 'Compensation',
+              sp: 'Compensación'
+            },
+            {
+              en: 'Benefits',
+              sp: 'Beneficios'
+            },
+            {
+              en: 'Personal/Health/Family/Retirement',
+              sp: 'Retiro personal/médico/familiar'
+            },
+            {
+              en: 'New Job',
+              sp: 'Nuevo trabajo'
+            },
+            {
+              en: 'Scheduling',
+              sp: 'Horario'
+            },
+            {
+              en: 'Management/Leadership',
+              sp: 'Liderazgo'
+            },
+            {
+              en: 'Transportation',
+              sp: 'Transporte'
+            },
+            {
+              en: 'Education',
+              sp: 'Educación'
+            },
+            {
+              en: 'Moved from Area',
+              sp: 'Cambio de área '
+            },
+            {
+              en: 'Training Experience',
+              sp: 'Entrenamiento inadecuado'
+            },
+            {
+              en: 'Work@Home',
+              sp: 'Trabajo desde casa'
+            },
+            {
+              en: 'Other',
+              sp: 'Otro'
+            },
+          ],
+          showOtherOn: 'Other',
+          otherText: {
+            en: 'If you selected “Other,” please elaborate.',
+            sp: 'Si seleccionaste “otro”, por favor elabora.'
+          }
+        },
+        {
+          id: 2,
+          type: 'radio',
+          code: 'secondaryReason',
+          question: {
+            en: 'The secondary reason you are leaving the Company: (Please select one)',
+            sp: 'La segunda razón por la que te vas de la empresa: (Por favor selecciona una)'
+          },
+          response: '',
+          explanation: '',
+          required: true,
+          answers: [
+            {
+              en: 'Work Environment',
+              sp: 'Ambiente laboral'
+            },
+            {
+              en: 'Compensation',
+              sp: 'Compensación'
+            },
+            {
+              en: 'Benefits',
+              sp: 'Beneficios'
+            },
+            {
+              en: 'Personal/Health/Family/Retirement',
+              sp: 'Retiro personal/médico/familiar'
+            },
+            {
+              en: 'New Job',
+              sp: 'Nuevo trabajo'
+            },
+            {
+              en: 'Scheduling',
+              sp: 'Horario'
+            },
+            {
+              en: 'Management/Leadership',
+              sp: 'Liderazgo'
+            },
+            {
+              en: 'Transportation',
+              sp: 'Transporte'
+            },
+            {
+              en: 'Education',
+              sp: 'Educación'
+            },
+            {
+              en: 'Moved from Area',
+              sp: 'Cambio de área '
+            },
+            {
+              en: 'Training Experience',
+              sp: 'Entrenamiento inadecuado'
+            },
+            {
+              en: 'Work@Home',
+              sp: 'Trabajo desde casa'
+            },
+            {
+              en: 'Other',
+              sp: 'Otro'
+            },
+          ],
+          showOtherOn: 'Other',
+          otherText: {
+            en: 'If you selected “Other,” please elaborate.',
+            sp: 'Si seleccionaste “otro”, por favor elabora.'
+          },
+          excludeAnswerQuestion: 1
+        },
+        {
+          id: 3,
+          type: 'text',
+          code: 'reasonComment',
+          question: {
+            en: 'Please help us understand why you selected the these reasons and how they contributed to your decision to leave:',
+            sp: 'Por favor ayúdanos a entender por qué seleccionaste estas razones y cómo contribuyeron a tu decisión de irte:'
+          },
+          response: '',
+          required: false,
+          showComments: false,
+          comments: ''
+        },
+        {
+          id: 4,
+          type: 'radio',
+          code: 'workEnvReason',
+          question: 
+            {
+              en: 'If you answered “Work Environment” on the previous question, please select the reason that applies:',
+              sp: 'Contestaste “Ambiente laboral” en la pregunta anterior, por favor selecciona la razón que mejor aplique:'
+            },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Production Floor',
+              sp: 'Piso de operaciones'
+            },
+            {
+              en: 'Technology',
+              sp: 'Tecnología'
+            },
+            {
+              en: 'Training Room Environment',
+              sp: 'Ambiente en la sala de capacitación'
+            },
+            {
+              en: 'Parking lot/Location',
+              sp: 'Estacionamiento/Torre'
+            },
+            {
+              en: 'Professionalism',
+              sp: 'Profesionalismo'
+            },
+            {
+              en: 'Co-Workers',
+              sp: 'Compañeros de trabajo'
+            },
+            {
+              en: 'Safety',
+              sp: 'Seguridad'
+            },
+            {
+              en: 'Sedentary',
+              sp: 'Sedentarismo'
+            },
+            {
+              en: 'Job Requirements',
+              sp: 'Requerimientos Laborales'
+            }
+          ],
+          showIf: [
+            {
+              question: 1,
+              operator: '=',
+              value: 'Work Environment'
+            },
+            {
+              question: 2,
+              operator: '=',
+              value: 'Work Environment'
+            }
+          ]
+        },
+        {
+          id: 5,
+          type: 'radio',
+          code: 'workAtHomeReason',
+          question: {
+            en: 'If you answered “Work@Home” on the previous question, please select the reason that applies:',
+            sp: 'Contestaste “Trabajo en casa” en la pregunta anterior, por favor selecciona la razón que mejor aplique:'
+          },
+          response: '',
+          explanation: '',
+          required: true,
+          answers: [
+            {
+              en: 'Internet Issues',
+              sp: 'Problemas con el Internet'
+            },
+            {
+              en: 'Lack of Adequate Workspace',
+              sp: 'Falta de espacio de trabajo adecuado'
+            },
+            {
+              en: 'Child Care Issues',
+              sp: 'Problelmas con el cuidado de los niños'
+            },
+            {
+              en: 'School',
+              sp: 'Escuela'
+            },
+            {
+              en: 'Personal/Family',
+              sp: 'Personal/Familiar'
+            },
+            {
+              en: 'Lack of Leadership or Coaching',
+              sp: 'Falta de liderazgo o guía'
+            },
+            {
+              en: 'Other - Please Specify Below',
+              sp: 'Otro – favor de especificar abajo'
+            }
+          ],
+          showIf: [
+            {
+              question: 1,
+              operator: '=',
+              value: 'Work@Home'
+            },
+            {
+              question: 2,
+              operator: '=',
+              value: 'Work@Home'
+            }
+          ],
+          showOtherOn: 'Other - Please Specify Below',
+          otherText: {
+            en: 'If you selected “Other,” please elaborate.',
+            sp: 'Si seleccionaste “otro”, por favor elabora.'
+          }
+        },
+        {
+          id: 6,
+          type: 'radio',
+          code: 'adequateTraining',
+          question: {
+            en: 'I was provided with adequate training/resources to do my job.',
+            sp: 'Recibí el entrenamiento/los recursos adecuado(s) para realizar mi trabajo.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 7,
+          type: 'radio',
+          code: 'professionalGrowth',
+          question: {
+            en: 'I was given professional growth opportunities while working for the Company.',
+            sp: 'Recibí oportunidades de crecimiento profesional mientras trabajé para la empresa.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 8,
+          type: 'radio',
+          code: 'recognitionReward',
+          question: {
+            en: 'I received recognition/reward from my manager for good work.',
+            sp: 'Recibí reconocimiento de mi gerente por buen desempeño.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 9,
+          type: 'radio',
+          code: 'realisticGoals',
+          question: {
+            en: 'I was presented with realistic goals and objectives for my position.',
+            sp: 'Me presentaron objetivos realistas y objetivos para mi posición.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 10,
+          type: 'radio',
+          code: 'managerComm',
+          question: {
+            en: 'My manager communicated effectively to my team and me.',
+            sp: 'Mi gerente se comunicó de manera efectiva con mi equipo y conmigo.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 11,
+          type: 'radio',
+          code: 'securePosition',
+          question: {
+            en: 'I felt secure in my position with the Company.',
+            sp: 'Me sentí seguro en mi posición con la empresa.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 12,
+          type: 'radio',
+          code: 'workEnv',
+          question: {
+            en: 'I felt the work environment was positive.',
+            sp: 'Sentí que el ambiente laboral era positivo.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 13,
+          type: 'radio',
+          code: 'treatedFairly',
+          question: {
+            en: 'I feel I was treated fairly by my manager while working at the Company.',
+            sp: 'Sentí que fui tratado justamente por mi gerente mientras trabajé en la empresa.'
+          },
+          response: '',
+          required: true,
+          answers: [
+            {
+              en: 'Strongly Agree',
+              sp: 'Completamente de acuerdo'
+            },
+            {
+              en: 'Agree',
+              sp: 'De acuerdo'
+            },
+            {
+              en: 'Disagree',
+              sp: 'En desacuerdo'
+            },
+            {
+              en: 'Strongly Disagree',
+              sp: 'Completamente en desacuerdo'
+            }
+          ]
+        },
+        {
+          id: 14,
+          type: 'range',
+          code: 'recommend',
+          question: {
+            en: 'Would you recommend Qualfon/Dialog Direct as an employer to a friend, colleague, or family member? On a scale of 1 – 10, would you recommend? ',
+            sp: '¿Recomendarías a Qualfon/Dialog Direct como empleador a un amigo, colega o pariente? En la escala del 1 al 10, ¿lo recomendarías?'
+          },
+          response: 5,
+          required: true,
+          min: 1,
+          max: 10,
+          showComments: false,
+          comments: ''
+        },
+        {
+          id: 15,
+          type: 'text',
+          code: 'opportunities',
+          question: {
+            en: 'As we value your input, can you provide areas of opportunity that will help the Company to improve?',
+            sp: 'Como valoramos tu opinión, ¿puedes decirnos qué áreas de oportunidad ayudarán a la empresa a mejorar?'
+          },
+          response: '',
+          required: false,
+          showComments: false,
+          comments: ''
+        }
+      ],
+
+      pageText: {
+        begin: {
+          en: 'Begin Survey',
+          sp: 'Comenzar encuesta'
+        },
+        notStarted: {
+          en: 'Sorry, this survey has not started yet.',
+          sp: 'Lo sentimos, esta encuesta aún no ha comenzado.'
+        },
+        expired: {
+          en: 'Sorry, this survey has expired.',
+          sp: 'Lo sentimos, esta encuesta ha caducado.'
+        },
+        completed: {
+          en: 'Sorry, you have already taken this survey.',
+          sp: 'Lo sentimos, ya ha realizado esta encuesta.'
+        },
+        required: {
+          en: 'Please answer the question before proceeding.',
+          sp: 'Responda la pregunta antes de continuar.'
+        },
+        thankYou: {
+          en: 'Thank you for completing the survey.',
+          sp: 'Gracias por completar la encuesta.'
+        },
+        support: {
+          en: 'For survey assistance,<br />please contact the <span><a class="text-white text-underline" href="mailto:CampaignSupport@qualfon.com?subject=Help Needed with Employee Exit Survey">survey admin</a></span>.',
+          sp: 'Para asistencia con la encuesta,<br />por favor contactenos <span><a class="text-white text-underline" href="mailto:CampaignSupport@qualfon.com?subject=Help Needed with Employee Exit Survey Spanish">aquí</a></span>.'
+        }
+      },
+
+      // Dynamic data - DO NOT EDIT
+      currentStep: 0,
+      
+      todaysDate: new Date(),
+        
+      responder: {
+        email: '',
+        firstName: '',
+        lastName: '',
+        employeeId: ''
+      },
+
+      fieldMerges: new Array
+    };
+    
+    // Get url parameters
+    const params = new URLSearchParams(window.location.search);
+    store.responder.email = params.get('email');
+    store.elqTrackId = params.get('elqTrackId');
+    store.testing.active = params.get('testing') === 'Y' ? true : false;
+    const lang = String(params.get('lang') !== null ? params.get('lang') : '').toLowerCase();
+    store.lang = lang === 'spanish' || lang === 'sp' ? 'sp' : 'en';
+    
+    // Process field merges
+    store.lang = lang === '' && (document.getElementById('mergeCountry').innerText === 'Mexico') ? 'sp' : store.lang; 
+    const fieldMerges = Array.prototype.slice.call(document.getElementsByClassName('eloqua-field-merge'));
+    store.fieldMerges = new Array;
+    fieldMerges.forEach(function(merge) {
+      const surveyName = $(merge).data('survey-name');
+      const eloquaName = $(merge).data('eloqua-name');
+      const value = $(merge).text();
+
+      // Get url parameter
+      store.responder[surveyName] = params.get(surveyName);
+
+      // Get field merge value
+      store.responder[surveyName] = store.responder[surveyName] === null ? value : store.responder[surveyName];
+
+      // Store field merge for later reference
+      const fieldMerge = {
+        surveyName: surveyName,
+        eloquaName: eloquaName
+      };
+      console.log(fieldMerge);
+      store.fieldMerges.push(fieldMerge);
+    });
+    store.responder.requestDate = store.responder.requestDate === '0001-01-01 00:00:00.000' ? moment().format('YYYY-MM-DD HH:mm:ss.SSS') : store.responder.requestDate;
+
+    // Mixin for state retention
+    var StateMixin = {
+      methods: {
+        loadState: function () {
+          if (this.hasState()) {
+          const state = JSON.parse(sessionStorage.getItem('survey-' + store.survey.code));
+          Object.keys(state).forEach(function(key) {
+            store[key] = JSON.parse(JSON.stringify(state[key]));
+          });
+          }
+        },
+        saveState: function () {
+          let state = new Object;
+          state.questions = JSON.parse(JSON.stringify(store.questions));
+
+          sessionStorage.setItem('survey-' + store.survey.code, JSON.stringify(state));
+        },
+        hasState: function () {
+          return sessionStorage.getItem('survey-' + store.survey.code) !== null;
+        }
+      }
+    };
+
+    // Mixin for survey active check
+    var SurveyActiveMixin = {
+      methods: {
+        isSurveyActive: function() {
+          return ((store.todaysDate >= store.survey.startDate && store.todaysDate < moment(store.responder.requestDate).add(store.survey.expirationDate, 'days')) || store.testing.active === true);
+        },
+        hasSurveyStarted: function() {
+          return (store.todaysDate >= store.survey.startDate || store.testing.active === true);
+        },
+        hasSurveyExpired: function() {
+          return (store.todaysDate >= moment(store.responder.requestDate).add(store.survey.expirationDate, 'days') && store.testing.active !== true);
+        }
+      }
+    };
+
+    // Home page
+    var HomePage = Vue.component('home-page', {
+      template: '#home-template',
+      data: function () {
+        return {
+          store: store,
+          isValid: true,
+          errorMessage: ''
+        }
+      },
+      methods: {
+        onBeginSurvey: function () {
+        this.$emit('go-to-survey', '');
+        }
+      },
+      mounted: function () {
+        $('#app-container').addClass('has-photos');
+
+        // Check for survey expiration
+        if (this.hasSurveyExpired() === true) {
+          this.$emit('go-to-expired', '');
+        // Check if survey start date has passed
+        } else if (this.hasSurveyStarted() !== true) {
+          console.log('Not Started');
+          this.$emit('go-to-not-started', '');
+        // Check if survey has already been completed
+        } else if (document.getElementById('surveyCX') !== null && document.getElementById('surveyCX').innerText === "surveyCompleted" && store.testing.active !== true) {
+          this.$emit('go-to-completed', '');
+        }
+
+        // If state exists, load it
+        this.loadState();
+      },
+      destroyed: function () {
+        $('#app-container').removeClass('has-photos');
+      },
+      mixins: [StateMixin, SurveyActiveMixin]
+    });
+
+    // Survey page
+    var SurveyPage = Vue.component('survey-page', {
+      template: '#survey-template',
+      data: function () {
+        return {
+          store: store,
+          isValid: true
+        }
+      },
+      computed: {
+        buttonNext: function () {
+          return store.currentStep >= store.questions.length - 1 ? 'Finish' : 'Next';
+        }
+      },
+      methods: {
+        prepareRequest: function() {
+          // Prepare request
+          var request = { 
+            elqFormName: store.eloqua.formName, 
+            elqSiteID: store.eloqua.siteId, 
+            //elqCustomerGUID: elqIFrame.document.getElementById('surveyform').elements["elqCustomerGUID"].value, 
+            //elqCookieWrite: elqIFrame.document.getElementById('surveyform').elements["elqCookieWrite"].value,
+            emailAddress: store.responder.email,
+            firstName: store.responder.firstName,
+            lastName: store.responder.lastName,
+            surveyCode: store.survey.code,
+            surveyKey: store.responder.employeeId + '-' + store.survey.code,
+            surveyStartDate: moment(store.todaysDate).format(),
+            test: store.testing.active ? 'Y' : 'N'
+          };
+
+          // Add responder fields
+          store.fieldMerges.forEach(function(field) {
+            request[field.eloquaName] = store.responder[field.surveyName];
+          });
+
+          // Add question responses to request
+          store.questions.forEach(function(question, index) {
+            request[question.code] = question.response;
+            if (question.hasOwnProperty('explanation') && question.explanation.length > 0) {
+              request[question.code + 'Other'] = question.explanation;
+            }
+          });
+
+          return request;
+        },
+        submitSurvey: function () {
+          var _this = this;
+          return new Promise(function(resolve, reject) {
+            // Prepare request
+            var request = _this.prepareRequest();
+            console.log(request);
+
+            // Submit request to Eloqua            
+            const url = store.eloqua.formUrl;
+            //const url = 'https://survey.communication.qualfon.com/e/f2';
+            console.log("Form URL", url);
+            
+            $.ajax({  
+              type: 'GET',  
+              crossOrigin: true,  
+              url: url,  
+              data: request,
+              encode: true,
+              success: function (data, status, xhr) {
+                resolve();
+              },
+              error: function (jqXhr, textStatus, errorMessage) { 
+                reject(errorMessage);
+              }
+            });
+          
+          });
+        },
+        logToFirebase: function(result = 'success', request = null, error = null) {
+          // Prepare request
+          if (request === null) {
+            request = this.prepareRequest();
+          }
+          request.result = result;
+          if (error === null) {
+            request.errorMessage = error;
+          }
+          // Add browser details
+          request.url = window.location;
+          request.browser = {
+            appCodeName: navigator.appCodeName,
+            appName: navigator.appName,
+            appVersion: navigator.appVersion,
+            cookieEnabled: navigator.cookieEnabled,
+            language: navigator.language,
+            onLine: navigator.onLine,
+            platform: navigator.platform,
+            userAgent: navigator.userAgent
+          };
+          // Post log to firebase
+          fetch('https://us-central1-dd-campaign-lite.cloudfunctions.net/logSurvey?env=sandbox&surveyCode=' + store.survey.code, { 
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(request)
+          });
+        },
+        onSurveyContinue: function () {
+          // Save current state
+          this.saveState();
+
+          // Check that question has been answered (if required)
+          this.isValid = this.isResponseValid(store.currentStep);
+          
+          if (this.isValid) {
+            // Reached last question, submit and go to thank you
+            if (store.currentStep >= store.questions.length - 1) {
+              var _this = this;
+              this.submitSurvey().then(function() {
+                console.log("Submitted successfully");
+                _this.logToFirebase('success');
+                _this.$emit('go-to-thank-you', '');
+              }).catch(function(error) {
+                console.error("Submission error", error);
+                _this.logToFirebase('error');
+                _this.$emit('go-to-thank-you', '');
+              });
+              
+            // Go to next question
+            } else {
+              store.currentStep = this.getNextStep();
+            }
+          }
+        },
+        onSurveyBack: function () {
+          if (store.currentStep > 0) {
+            store.currentStep = this.getLastStep();
+          } else {
+            this.$emit('go-to-home');
+          }
+        },
+        getNextStep: function () {
+          let step = store.currentStep;
+          let showQuestion = false;
+          do {
+            step++;
+            const question = store.questions[step];
+            if (question.hasOwnProperty('showIf') && question.showIf !== null && Array.isArray(question.showIf)) {
+              question.showIf.forEach(function(showIf) {
+                if (showIf.operator === '=') {
+                  if (store.questions[showIf.question - 1].response === showIf.value) {
+                    showQuestion = true;
+                  }
+                  if (Array.isArray(store.questions[showIf.question - 1].response) && store.questions[showIf.question - 1].response.indexOf(showIf.value) !== -1) {
+                    showQuestion = true;
+                  }
+                } else if (showIf.operator === '!=') {
+                  if (store.questions[showIf.question - 1].response !== showIf.value) {
+                    showQuestion = true;
+                  }
+                  if (Array.isArray(store.questions[showIf.question - 1].response) && store.questions[showIf.question - 1].response.indexOf(showIf.value) === -1) {
+                    showQuestion = true;
+                  }
+                } else {
+                  showQuestion = true;
+                }
+              });
+            } else {
+              break;
+            }
+          } while (step < store.questions.length - 1 && showQuestion === false);
+          return step;
+        },
+        getLastStep: function () {
+          let step = store.currentStep;
+          let showQuestion = false;
+          do {
+            step--;
+            const question = store.questions[step];
+            if (question.hasOwnProperty('showIf') && question.showIf !== null && Array.isArray(question.showIf)) {
+              question.showIf.forEach(function(showIf) {
+                if (showIf.operator === '=') {
+                  if (store.questions[showIf.question - 1].response === showIf.value) {
+                    showQuestion = true;
+                  }
+                  if (Array.isArray(store.questions[showIf.question - 1].response) && store.questions[showIf.question - 1].response.indexOf(showIf.value) !== -1) {
+                    showQuestion = true;
+                  }
+                } else if (showIf.operator === '!=') {
+                  if (store.questions[showIf.question - 1].response !== showIf.value) {
+                    showQuestion = true;
+                  }
+                  if (Array.isArray(store.questions[showIf.question - 1].response) && store.questions[showIf.question - 1].response.indexOf(showIf.value) === -1) {
+                    showQuestion = true;
+                  }
+                } else {
+                  showQuestion = true;
+                }
+              });
+            } else {
+              showQuestion = true;
+            }
+          } while (step > 0 && showQuestion === false);
+          return step;
+        },
+        isPopulated: function (text) {
+          return !text || text === null || text === undefined || String(text).length === 0 ? false : true;
+        },
+        isResponseValid: function (step) {
+          const question = store.questions[step];
+          let valid = false;
+          // Response is populated and 'Other' box is not shown
+          if (this.isPopulated(question.response) && question.showOtherOn !== question.response) {
+            valid = true;
+          }
+          // Response is populated and 'Other' box is also populated
+          if (this.isPopulated(question.response)/* && this.isPopulated(question.explanation)*/) {
+            valid = true;
+          }
+          // Question is not required
+          if (!question.required) {
+            valid = true;
+          }
+          return valid;
+        }
+      },
+      mounted: function () {
+        // Check for survey expiration
+        if(this.hasSurveyExpired() === true) {
+          this.$emit('go-to-expired', '');
+        }
+        // If existing state is present, load it
+        this.loadState();
+      },
+      mixins: [SurveyActiveMixin, StateMixin]
+    });
+
+    // Not Started page
+    var NotStartedPage = Vue.component('not-started-page', {
+      template: '#not-started-template',
+      data: function () {
+        return {
+          store: store,
+          errorMessage: ''
+        }
+      },
+      methods: {
+      },
+      mounted: function () {
+        $('#app-container').addClass('has-photos');
+      
+        // Check for survey start
+        //if (this.hasSurveyStarted() === true) {
+        //  this.$emit('go-to-home', '');
+        //}
+      },
+      destroyed: function () {
+        $('#app-container').removeClass('has-photos');
+      },
+      mixins: [SurveyActiveMixin]
+    });
+
+    // Expired page
+    var ExpiredPage = Vue.component('expired-page', {
+      template: '#expired-template',
+      data: function () {
+        return {
+          store: store,
+          errorMessage: ''
+        }
+      },
+      methods: {
+      },
+      mounted: function () {
+        $('#app-container').addClass('has-photos');
+        
+        // Check for survey expiration
+        // if (this.hasSurveyExpired() === false) {
+        //   this.$emit('go-to-home', '');
+        //}
+      },
+      destroyed: function () {
+        $('#app-container').removeClass('has-photos');
+      },
+      mixins: [SurveyActiveMixin]
+    });
+
+    // Completed page
+    var CompletedPage = Vue.component('completed-page', {
+      template: '#completed-template',
+      data: function () {
+        return {
+          store: store,
+          errorMessage: ''
+        }
+      },
+      methods: {
+      },
+      mounted: function () {
+        $('#app-container').addClass('has-photos');
+        
+          // Check if survey has already been completed
+          //if (document.getElementById('surveyCX') === null || (document.getElementById('surveyCX') !== null && document.getElementById('surveyCX').innerText !== "surveyCompleted") || store.testing.active !== true) {
+          //this.$emit('go-to-home', '');
+        //}
+      },
+      destroyed: function () {
+        $('#app-container').removeClass('has-photos');
+      },
+      mixins: [SurveyActiveMixin]
+    });
+    
+    // Thank You page
+    var ThankYouPage = Vue.component('thank-you-page', {
+      template: '#thank-you-template',
+      data: function () {
+      return {
+        store: store
+      }
+      },
+      methods: {
+      }
+    });
+
+    // Map pages to routes
+    var routes = [
+      { path: '/', component: HomePage },
+      { path: '/not-started', component: NotStartedPage },
+      { path: '/expired', component: ExpiredPage },
+      { path: '/completed', component: CompletedPage },
+      { path: '/survey', component: SurveyPage },
+      { path: '/thank-you', component: ThankYouPage }
+    ];
+
+    var router = new VueRouter({
+      routes: routes
+    });
+
+    var vm = new Vue({
+      data: {
+      store: store
+      },
+      methods: {
+      onGoToHome: function () {
+        this.current = 'home-page';
+        router.push({ path: '/' });
+      },
+      onGoToNotStarted: function () {
+        this.current = 'not-started-page';
+        router.push({ path: 'not-started' });
+      },
+      onGoToExpired: function () {
+        this.current = 'expired-page';
+        router.push({ path: 'expired' });
+      },
+      onGoToCompleted: function () {
+        this.current = 'completed-page';
+        router.push({ path: 'completed' });
+      },
+      onGoToSurvey: function () {
+        this.current = 'survey-page';
+        router.push({ path: 'survey' });
+      },
+      onGoToThankYou: function () {
+        router.push({ path: 'thank-you' });
+      }
+      },
+      mounted: function() {
+        messageBus.$on('nav-to-survey', this.onGoToSurvey);
+      },
+      mixins: [],
+      router: router
+    }).$mount('#app');
+
+  </script>
+  <!-- END Startup Code -->
+  <!-- Eloqua form code -->
+  <script type="text/javascript">
+    
+    var _elqQ = _elqQ || [];
+    _elqQ.push(['elqSetSiteId', store.eloqua.siteId]);
+    _elqQ.push(['elqTrackPageView']);
+    
+    (function(){
+    function async_load(){
+       var s = document.createElement('script');
+       s.type = 'text/javascript';
+       s.async = true;
+       s.src = 'https://img.en25.com/i/elqCfg.min.js';
+       var x = document.getElementsByTagName('script')[0];
+       x.parentNode.insertBefore(s, x);
+    }
+    if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+    else if (window.attachEvent) window.attachEvent('onload', async_load);
+    })();
+    
+    var timerId = null, timeout = 5;
+    
+    function WaitUntilCustomerGUIDIsRetrieved() {
+    if (!!(timerId)) {
+      if (timeout == 0) {
+      return;
+      }
+      if (typeof this.GetElqCustomerGUID === 'function') {
+      elqIFrame.document.getElementById('surveyform').elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+      return;
+      }
+      timeout -= 1;
+    }
+    timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+    return;
+    }
+    
+    window.onload = WaitUntilCustomerGUIDIsRetrieved;
+    
+    _elqQ.push(['elqGetCustomerGUID']);
+    
+  </script>
+  <!-- END Eloqua from code -->
+
+</body>
+</html>

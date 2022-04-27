@@ -1,0 +1,1340 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Qualfon You Matter With Mike Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12ebb599fc.js"></script>
+
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: #d4d6d7;
+            height: 100%;
+        }
+
+        #app-container {
+            padding-top: 1px;
+            background: white;
+            height: 100%;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-row {
+            margin-top: 10%;
+        }
+
+        .home-page-container {
+            background-color: rgba(255, 255, 255, 1);
+            padding: 40px;
+        }
+
+        .step-list-container {
+            background-color: #dddddd;
+            padding: 20px 40px 20px 40px;
+        }
+
+        .step-page-container {
+            background-color: white;
+            padding: 40px 40px 0 40px;
+        }
+
+        .language-switch-container {
+            background-color: rgba(255, 255, 255, 1);
+            padding: 10px 0px 0px 30px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .language-switch-container .custom-switch {
+            width: 223px;
+            margin: 0 auto;
+        }
+
+        .language-switch-container .custom-control-label::before {
+            color: #fff!important;
+            border-color: #002b49!important;
+            background-color: #002b49!important;
+        }
+
+        .language-switch-container .custom-control-label::after {
+            background-color: #fff!important;
+        }
+
+        .language-switch-label {
+            margin-right: 41px;
+        }
+
+        .page-header {
+            background: white;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header-image {
+            width: 100%;
+            height: auto;
+            max-width: 85%;
+            float: center;
+        }
+
+        .page-footer {
+            width: 100%;
+            max-width: 800px;
+            background-color: #002b49 !important;
+            color: white;
+            font-weight: 600;
+            height: 156px;
+            padding-top: 30px;
+            margin: 0 auto;
+        }
+
+        .page-footer .main-text {
+            font-weight: 600;
+        }
+
+        .page-footer .links {
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+        .page-footer .links a, .page-footer .links a:visited, .page-footer .links a:active {
+            color: white;
+        }
+
+        .footer-company {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer-company a {
+            color: #00a7e1;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        [v-cloak] {
+            display: none
+        }
+
+        .text-dark {
+            color: rgb(36,50,103) !important;
+        }
+
+        a, a:visited {
+            color: rgb(36,50,103);
+        }
+
+        .btn-primary.btn-dd {
+            background-color: rgb(36,50,103);
+            border-color: rgb(36,50,103);
+            font-size: 14px;
+        }
+
+        .btn-outline-primary.btn-dd {
+            border-color: rgb(36,50,103);
+            font-size: 14px;
+            color: rgb(36,50,103);
+        }
+
+        .btn-outline-primary.btn-dd:hover {
+            background-color: rgb(36,50,103);
+            color: white;
+        }
+
+        .title {
+            margin-top: 20px;
+            font-size: 32px;
+            font-family: 'Slabo 27px', serif;
+            line-height: 34px;
+        }
+
+        .yes-no {
+            font-weight: bold;
+            color: rgb(20,131,142);
+        }
+
+        .question-header {
+            margin-bottom: 10px;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .component-fade-enter-active, .component-fade-leave-active {
+            transition: opacity .3s ease;
+        }
+
+        .component-fade-enter, .component-fade-leave-to {
+            opacity: 0;
+        }
+
+        .home-page-container h1 {
+            font-family: 'Slabo 27px', serif;
+            font-size: 30px;
+            color: rgb(20,131,142);
+        }
+
+        .header-line {
+            font-weight: bold;
+            font-size: 17px;
+            color: rgb(20,131,142);
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            color: rgb(20,131,142);
+            margin-bottom: 10px;
+        }
+
+        .help-text {
+            font-size: 11px;
+        }
+
+        input.underline {
+            border: 0px;
+            border-bottom: 1px solid #888;
+            padding: 0px;
+        }
+
+        input.underline::placeholder {
+            color: gray;
+            font-size: 12px;
+        }
+
+        input.underline::-ms-input-placeholder {
+            color: #cccccc;
+        }
+
+        input.underline:-ms-input-placeholder {
+            color: #cccccc;
+        }
+
+        input.underline.invalid {
+            border-bottom: 1px solid red;
+        }
+
+        .alert-sm {
+            font-size: 12px;
+            padding: 8px;
+        }
+
+        .text-xs {
+            font-size: 12px;
+        }
+
+        .shaded {
+            background-color: #eee;
+            border-radius: 2px;
+        }
+
+        .confirmation-company-name {
+            color: #656565;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .mb20 {
+            margin-bottom: 20px;
+        }
+
+        .mt10 {
+            margin-top: 10px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .p20 {
+            padding: 20px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .col-border-r {
+                border-right: 1px solid #ccc;
+            }
+        }
+      
+        .progress-bar {
+          background-color: rgb(20,131,142);
+        }
+      
+      	.text-underline {
+          text-decoration: underline;
+      	}
+
+        .radio-form-group {
+            display: flex!important;
+            flex-direction: column!important;
+            flex-wrap: nowrap!important;
+            width: 114px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .radio-form-group .custom-radio {
+            margin-left: 6px;
+        }
+
+        .radio-bottom-label {
+            text-align: center;
+            min-height: 72px;
+            width: 114px;
+            border-top: 1px solid black;
+        }
+
+        .radio-emojis {
+            min-width: 100px;
+            margin: 0 auto;
+        }
+
+        .speak-up-image {
+            max-width: 180px;
+          margin-right: 30px;
+        }
+
+        .list-style-none {
+            list-style-type: none;
+        }
+      
+      hr { 
+  display: block;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 2px;
+} 
+      
+      .txt {
+        font-size: 12px;
+      }
+      
+      
+    </style>
+</head>
+<body class="">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+    <script src="https://unpkg.com/@ungap/url-search-params"></script>
+
+    <div id="app">
+
+        <div class="page-header">
+            <div class="row">
+                <div class="col text-center">
+                    <!--<img class="page-header-image" src="https://img04.en25.com/EloquaImages/clients/QUALFON/%7B9ce678cb-b406-4898-88a4-6fa26a7c2e0e%7D_CEO_Image.png" />-->
+                    <img class="page-header-image" src="http://img04.en25.com/EloquaImages/clients/QUALFON/%7B2b4dc6c5-fad0-4803-98ce-47d4c87cb906%7D_YMWM.png" alt="You Matter With Mike">
+                </div>
+            </div>
+      <br>
+          <hr>
+           <div class="language-switch-container container">
+            <div class="row">
+                <div class="col-sm-8 txt">
+                    <div class="mb-2" v-if="store.lang === 'en'">For urgent topics and incidents, PLEASE use Qualfon’s Speak up feedback channel, not YMWM.
+                    (all reports can be made anonymously):</div>
+                    <div class="mb-2" v-if="store.lang === 'sp'">Para temas urgentes e incidentes, POR FAVOR haz uso del canal Speak up de Qualfon, no la encuesta de YMWM 
+                    (Todos los reportes pueden ser realizados anónimamente):</div class="mb-3">
+                    <a class="btn-dd font-weight-bold" href="https://speakup.qualfon.com/?elqTrackId=80578265a158420d892e335561040bd8#/Home">https://speakup.qualfon.com/#/Home</a>
+                    <ul class="list-style-none pl-0 mt-2">
+                        <li>Philippines - +63 35 532 9055</li>
+                        <li>Guyana - 265-7055</li>
+                        <li>Mexico - +52 55 2122 9755</li>
+                        <li>USA - 800.245.7770 or 855.457.1392</li>
+                    </ul>
+                </div>
+                <div class="col text-center">
+                    <img class="speak-up-image" src="http://img04.en25.com/EloquaImages/clients/QUALFON/%7Bfc6e5718-ac9f-42f5-a4ea-a7e34d852217%7D_speak_up_logo-square.jpg" alt="Speak Up">
+                </div>
+            </div>
+        </div>
+         
+          <hr>
+          
+            <div class="row px-3">
+                <div class="col text-left pt-3 pl-5 header-line" v-html="store.pageText.category[store.lang] + ': ' + store.survey.category[store.lang]"></div>
+                <div class="col text-right pt-3 pr-5 header-line" v-html="store.pageText.statement[store.lang] + ' #' + store.survey.statement"></div>
+            </div>
+            <!--<div class="row title">
+                <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+            </div>-->
+        </div>
+
+        <div id="app-container" class="container">
+            <keep-alive>
+                <transition name="component-fade" mode="out-in">
+                    <router-view v-on:go-to-home="onGoToHome" v-on:go-to-expired="onGoToExpired" v-on:go-to-completed="onGoToCompleted" v-on:go-to-thank-you="onGoToThankYou"></router-view>
+                </transition>
+            </keep-alive>
+        </div>
+
+        <div class="language-switch-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col mx-auto">
+                        <div class="custom-control custom-switch">
+                            <label class="language-switch-label" for="languageSwitch">English</label>
+                            <input type="checkbox" class="custom-control-input" id="languageSwitch">
+                            <label class="custom-control-label" for="languageSwitch">Spanish</label>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+
+        <div class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12" v-html="store.pageText.support[store.lang]"></div>
+                    <div class="col-sm-6 col-xs-12 text-right">
+                        <div class="mb-3">
+                            <img src="https://img04.en25.com/EloquaImages/clients/QUALFON/%7Bca5d105e-d0e4-43f4-bda8-2228c1da9a71%7D_Qualfon_white_on_blue.png" alt="Qualfon">
+                        </div>
+                        <div class="footer-company">
+                            13700 Oakland Avenue,&nbsp;Highland Park, MI 48203<br>
+                            <a href="tel:8772610804" id="phoneNumber">877-261-0804</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  
+    <div id="eloqua-form" class="d-none">
+      <form id="surveyform" name="surveyform" method="post">
+        <input type="hidden" name="elqCustomerGUID" value="">
+        <input type="hidden" name="elqCookieWrite" value="0">
+        <input type="hidden" name="elqFormName" value="">
+        <input type="hidden" name="elqSiteID" value="0">
+        <input type="hidden" name="emailAddress" value="">
+        <input type="hidden" name="employeeID" value="">
+        <input type="hidden" name="employeeCategory" value="">
+        <input type="hidden" name="qualfonLocation" value="">
+        <input type="hidden" name="qualfonGroup" value="">
+        <input type="hidden" name="businessUnit" value="">
+        <input type="hidden" name="originalLocation" value="">
+        <input type="hidden" name="department" value="">
+        <input type="hidden" name="surveyTakenDate" value="">
+        <input type="hidden" name="language" value="">
+        <input type="hidden" name="surveyQuestion" value="">
+        <input type="hidden" name="surveyCode" value="">
+        <input type="hidden" name="surveyKey" value="">
+        <input type="hidden" name="test" value="">
+        <div id="mergeEmailAddress"><span class="eloquaemail">EmailAddress</span></div>
+        <div id="mergeEmployeeID"><span class="eloquaemail">EmpId1</span></div>
+        <div id="mergeEmployeeCategory"><span class="eloquaemail">YMWM_Employee_Category1</span></div>
+        <div id="mergeQualfonLocation"><span class="eloquaemail">QualfonLocation1</span></div>
+        <div id="mergeQualfonGroup"><span class="eloquaemail">YMWM_Qualfon_Group1</span></div>
+        <div id="mergeBusinessUnit"><span class="eloquaemail">YMWM_Business_Unit1</span></div>
+        <div id="mergeHRLocation"><span class="eloquaemail">HR_Location1</span></div>
+        <div id="mergeHRDepartment"><span class="eloquaemail">YMWM_HR_Department1</span></div>
+        <div id="mergeReportingLocation"><span class=eloquaemail >YMWM_Reporting_Location1</span></div>
+        <div id="mergeLanguage"><span class="eloquaemail">Language1</span></div>
+        <!--<div id="surveyCX" style="display:none;">surveyNotCompleted</div>-->
+        <span elqid="58" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+      </form>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Home Page -->
+    <script type="text/x-template" id="home-template">
+        <div class="row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+                <h1><span v-html="store.pageText.pleaseAnswer[store.lang]"></span></h1>
+                <h6><span class="text-danger">*</span> <span v-html="store.pageText.required[store.lang]"></span></h6>
+                
+                <div class="step-page-container col-md-12 text-left">
+                    <div>
+                        <h6><span v-html="store.pageText.scale[store.lang]"></span>, <b>{{ store.questions[0].question[store.lang] }}</b> <span v-if="store.questions[0].required" class="text-danger">*</span></h6>
+                        <div v-if="!store.questions[0].isValid" class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Please answer the question.</div>
+                        <div class="row my-4">
+                            <div class="col mx-4">
+                                <form class="form-inline">
+                                    <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question1Radio1" name="question1Radio" class="custom-control-input required" value="Strongly Disagree" v-model="store.questions[0].response">
+                                            <label class="custom-control-label" for="question1Radio1"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.scaleOptions[0][store.lang]"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question1Radio2" name="question1Radio" class="custom-control-input required" value="Disagree" v-model="store.questions[0].response">
+                                            <label class="custom-control-label" for="question1Radio2"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.scaleOptions[1][store.lang]"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question1Radio3" name="question1Radio" class="custom-control-input required" value="Agree" v-model="store.questions[0].response">
+                                            <label class="custom-control-label" for="question1Radio3"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.scaleOptions[2][store.lang]"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question1Radio4" name="question1Radio" class="custom-control-input required" value="Strongly Agree" v-model="store.questions[0].response">
+                                            <label class="custom-control-label" for="question1Radio4"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.scaleOptions[3][store.lang]"></span></label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h6>{{ store.questions[1].question[store.lang] }} <span v-if="store.questions[1].required" class="text-danger">*</span></h6>
+                        <div v-if="!store.questions[1].isValid" class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Please answer the question.</div>
+                        <div class="row my-4">
+                            <div class="col mx-4">
+                                <form class="form">
+                                    <div class="form-group">
+                                        <select class="custom-select" v-model="store.questions[1].response">
+                                            <option value="" selected disabled hidden v-html="store.pageText.select[store.lang]"></option>
+                                            <option v-for="option in store.pageText.tenureOptions" :value="option['en']" v-html="option[store.lang]"></option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h6>{{ store.questions[4].question[store.lang] }} <span v-if="store.questions[4].required" class="text-danger">*</span></h6>
+                        <div v-if="!store.questions[4].isValid" class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Please answer the question.</div>
+                        <div class="row my-4">
+                            <div class="col mx-4">
+                                <form class="form-inline">
+                                    <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question5Radio1" name="question5Radio" class="custom-control-input required" value="Yes" v-model="store.questions[4].response">
+                                            <label class="custom-control-label" for="question5Radio1"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.yesNoOptions[0][store.lang]"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question5Radio2" name="question5Radio" class="custom-control-input required" value="No" v-model="store.questions[4].response">
+                                            <label class="custom-control-label" for="question5Radio2"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.yesNoOptions[1][store.lang]"></span></label>
+                                        </div></div>
+                                        
+                                        <div class="form-group radio-form-group">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question5Radio3" name="question5Radio" class="custom-control-input required" value="Hybrid" v-model="store.questions[4].response">
+                                            <label class="custom-control-label" for="question5Radio3"></label>
+                                        </div>
+                                        <div class="radio-bottom-label">
+                                            <label><span v-html="store.pageText.yesNoOptions[2][store.lang]"></span></label>
+                                        </div>
+                                        
+   									
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h6>{{ store.questions[2].question[store.lang] }} <span v-if="store.questions[2].required" class="text-danger">*</span></h6>
+                        <div v-if="!store.questions[2].isValid" class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Please answer the question.</div>
+                        <div class="row my-4">
+                            <div class="col mx-4">
+                                <form class="form">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows='8' v-model="store.questions[2].response"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>{{ store.pageText.improve[store.lang] }}</h5>
+                    </div>
+
+                    <div>
+                        <h6>{{ store.questions[3].question[store.lang] }} <span v-if="store.questions[3].required" class="text-danger">*</span></h6>
+                        <div v-if="!store.questions[3].isValid" class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Please answer the question.</div>
+                        <div class="row my-4">
+                            <div class="col mx-4">
+                                <form class="form-inline">
+                                    <div class="form-group radio-form-group radio-emojis">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question4Radio1" name="question4Radio" class="custom-control-input required" value="Excellent" v-model="store.questions[3].response">
+                                            <label class="custom-control-label" for="question4Radio1"></label>
+                                        </div>
+                                        <div class="radio-bottom-label border-0">
+                                            <label><img src="https://img04.en25.com/EloquaImages/clients/QUALFON/%7B11e26ce1-fa9a-4b94-ac0b-9faa5dcf109f%7D_Smiling_70x70.png" :alt="store.pageText.emojies.excellent[store.lang]"></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group radio-form-group radio-emojis">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question4Radio2" name="question4Radio" class="custom-control-input required" value="Neutral" v-model="store.questions[3].response">
+                                            <label class="custom-control-label" for="question4Radio2"></label>
+                                        </div>
+                                        <div class="radio-bottom-label border-0">
+                                            <label><img src="https://img04.en25.com/EloquaImages/clients/QUALFON/%7B3fc28f77-272a-4369-ab41-b95e1ffd6331%7D_Slightly_Smiling_70x70.png" :alt="store.pageText.emojies.neutral[store.lang]"></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group radio-form-group radio-emojis">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="question4Radio3" name="question4Radio" class="custom-control-input required" value="Poor" v-model="store.questions[3].response">
+                                            <label class="custom-control-label" for="question4Radio3"></label>
+                                        </div>
+                                        <div class="radio-bottom-label border-0">
+                                            <label><img src="https://img04.en25.com/EloquaImages/clients/QUALFON/%7Bff37d926-ea31-4a27-8633-f37aa34ac719%7D_Super_Angry_Face_70x70.png" :alt="store.pageText.emojies.poor[store.lang]"></label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-dd my-3 mx-auto" @click="onSurveySubmit" v-html="store.pageText.submit[store.lang]"></button>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Home Page -->
+    <!-- Expired Page -->
+    <script type="text/x-html-template" id="expired-template">
+        <div class="row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+                <div class="mt-4">
+                    <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Sorry, this survey has expired.</div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Expired Page -->
+    <!-- Completed Page -->
+    <script type="text/x-html-template" id="completed-template">
+        <div class="row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+                <div class="mt-4">
+                    <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Sorry, you have already taken this survey.</div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Completed Page -->
+    <!-- Thank You Page -->
+    <script type="text/x-html-template" id="thank-you-template">
+        <div class="row">
+            <div class="step-page-container col-md-12">
+                <div class="text-center">
+                    <h1>Thank you for completing the survey.</h1>
+                    <p class="small mt20"></p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Thank You Page -->
+    <!-- Startup Code -->
+    <script type="text/javascript">
+
+        var messageBus = new Vue({});
+
+        // Global data store shared by all steps.
+        var store = {
+            // Static, customizable information for survey
+            homeTitle: 'Welcome to the Qualfon You Matter With Mike Survey',
+
+            // Use for testing - Change both to false for production
+            testing: {
+                active: false
+            },
+
+            // Survey details - Update for each survey
+            survey: {
+                code: 'YMWM20210519',
+                category: {
+                    en: 'Job',
+                    sp: 'Trabajo'
+                },
+                statement: 10,
+                startDate: new Date('2021-05-19T04:45:00.000-05:00'),
+                expirationDate: new Date('2021-05-24T23:59:00.000-05:00')
+            },
+
+            company: {
+                logoUrl: 'https://img04.en25.com/EloquaImages/clients/QUALFON/%7B3126382b-5349-4042-ad93-b23b5c623cc3%7D_logo2.png',
+                smallLogoUrl: 'https://img04.en25.com/EloquaImages/clients/QUALFON/%7B5470f88b-f2ba-4f5e-9587-ec846abe21be%7D_logo_small.jpg',
+              	supportEmail: 'CampaignMgmt@qualfon.com'
+            },
+          
+            // Eloqua form submission variables
+            eloqua: {
+                formUrl: 'https://s1330859907.t.eloqua.com/e/f2',
+                formName: 'YMWMSurvey2020',
+                siteId: 1330859907
+            },
+          
+            // Survey questions
+            questions: [
+                {
+                  id: 1,
+                  type: 'radio',
+                  question: {
+                      en: 'In my current position, I know what is expected of me.',
+                      sp: 'En mi posición actual de trabajo, sé lo que se espera de mí.',
+                  },
+                  required: true,
+                  // Dynamic values below -- Do not edit
+                  response: '',
+                  isValid: true
+                },
+                {
+                  id: 2,
+                  type: 'select',
+                  question: {
+                      en: 'I am part of the Qualfon family since...',
+                      sp: 'Soy parte de la familia Qualfon desde...',
+                  },
+                  required: true,
+                  // Dynamic values below -- Do not edit
+                  response: '',
+                  isValid: true
+                },
+                {
+                  id: 3,
+                  type: 'text',
+                  question: {
+                      en: 'Please give us your feedback.',
+                      sp: 'Por favor danos tu opinión.',
+                  },
+                  required: false,
+                  // Dynamic values below -- Do not edit
+                  response: '',
+                  isValid: true
+                },
+                {
+                  id: 4,
+                  type: 'radio',
+                  question: {
+                      en: 'Your feedback is valuable. Please click on the icon which best represents your comment.',
+                      sp: 'Valoramos tu opinión. Por favor selecciona el icono que mejor representa tu comentario.',
+                  },
+                  required: false,
+                  // Dynamic values below -- Do not edit
+                  response: '',
+                  isValid: true
+                },
+                {
+                  id: 5,
+                  name: 'workingFromHome',
+                  type: 'radio',
+                  question: {
+                      en: 'Are you currently working from home?',
+                      sp: '¿Te encuentras trabajando desde casa?',
+                  },
+                  required: true,
+                  // Dynamic values below -- Do not edit
+                  response: '',
+                  isValid: true
+                }
+            ],
+
+            // Static page text translations
+            pageText: {
+                category: {
+                    en: 'Category',
+                    sp: 'Categoría'
+                },
+                statement: {
+                    en: 'Statement',
+                    sp: 'Enunciado'
+                },
+                pleaseAnswer: {
+                    en: 'Please answer the following questions:',
+                    sp: 'Por favor, conteste la siguiente pregunta:'
+                },
+                required: {
+                    en: 'Required Question(s)',
+                    sp: 'Preguntas Requeridas'
+                },
+                scale: {
+                    en: 'Using the scale below',
+                    sp: 'En escala de 1 a 4'
+                },
+                scaleOptions: [
+                    {
+                        en: 'Strongly<br> Disagree (1)',
+                        sp: 'Totalmente en desacuerdo (1)'
+                    },
+                    {
+                        en: 'Disagree (2)',
+                        sp: 'En desacuerdo (2)'
+                    },
+                    {
+                        en: 'Agree (3)',
+                        sp: 'De acuerdo (3)'
+                    },
+                    {
+                        en: 'Strongly<br> Agree (4)',
+                        sp: 'Totalmente de acuerdo (4)'
+                    }
+                ],
+                select: {
+                    en: 'Please select...',
+                    sp: 'Por favor seleccione...'
+                },
+                tenureOptions: [
+                    {
+                        en: 'Less than a month',
+                        sp: 'Menos de un mes'
+                    },
+                    {
+                        en: '1-3 months',
+                        sp: '1-3 meses'
+                    },
+                    {
+                        en: '4-6 months',
+                        sp: '4-6 meses'
+                    },
+                    {
+                        en: '7-12 months',
+                        sp: '7-12 meses'
+                    },
+                    {
+                        en: 'Between 1 and 2 years',
+                        sp: 'Entre 1 a 2 años'
+                    },
+                    {
+                        en: 'More than 2 years',
+                        sp: 'Más de 2 años'
+                    }
+                ],
+                yesNoOptions: [
+                    {
+                        en: 'Yes',
+                        sp: 'Sí'
+                    },
+                    {
+                        en: 'No',
+                        sp: 'No'
+                    },
+                    { 
+                        en: 'Hybrid',
+                        sp: 'Híbrido'
+                    }
+                ],
+                improve: {
+                    en: 'We\'re always looking to improve!',
+                    sp: '¡Siempre estamos buscando mejorar!'
+                },
+                emojies: {
+                    excellent: {
+                        en: 'Excellent',
+                        sp: 'Excelente'
+                    },
+                    neutral: {
+                        en: 'Neutral',
+                        sp: 'Neutral'
+                    },
+                    poor: {
+                        en: 'Poor',
+                        sp: 'Pobre'
+                    }
+                },
+                submit: {
+                    en: 'Submit',
+                    sp: 'Enviar'
+                },
+                support: {
+                    en: 'For survey assistance,<br />please contact the <span><a class="text-white text-underline" href="mailto:youmatter@qualfon.com?cc=CampaignSupport@qualfon.com&subject=Help Needed with YMWM Survey">survey admin</a></span>.',
+                    sp: 'Para asistencia con la encuesta,<br />por favor contactenos <span><a class="text-white text-underline" href="mailto:youmatter@qualfon.com?cc=CampaignSupport@qualfon.com&subject=Help Needed with YMWM Survey Spanish">aquí</a></span>.'
+                }
+            },
+
+            // Dynamic data - DO NOT EDIT
+            currentStep: 0,
+          
+            todaysDate: new Date(),
+              
+            responder: {
+              email: '',
+              firstName: '',
+              lastName: '',
+              employeeId: '',
+              employeeCategory: '',
+              qualfonLocation: '',
+              qualfonGroup: '',
+              businessUnit: '',
+              hrLocation: '',
+              hrGroup: '',
+              reportingLocation: '',
+            },
+
+            lang: 'en'
+        };
+
+        // Get url parameters
+        const params = new URLSearchParams(window.location.search);
+        store.responder.email = params.get('email');
+        store.responder.employeeId = params.get('empId');
+        const lang = String(params.get('lang') !== null ? params.get('lang') : '').toLowerCase();
+        store.lang = lang === 'spanish' || lang === 'sp' ? 'sp' : 'en';
+      	store.elqTrackId = params.get('elqTrackId');
+        store.testing.active = params.get('testing') === 'Y' || store.testing.active ? true : false;
+      
+        // Get Eloqua field merges
+      	store.responder.email = store.responder.email === null ? document.getElementById('mergeEmailAddress').innerText : store.responder.email; 
+      	store.responder.employeeId = store.responder.employeeId === null ? document.getElementById('mergeEmployeeID').innerText : store.responder.employeeId;
+      	store.responder.employeeCategory = document.getElementById('mergeEmployeeCategory').innerText;
+      	store.responder.qualfonLocation = document.getElementById('mergeQualfonLocation').innerText;
+      	store.responder.qualfonGroup = document.getElementById('mergeQualfonGroup').innerText;
+      	store.responder.businessUnit = document.getElementById('mergeBusinessUnit').innerText;
+      	store.responder.hrLocation = document.getElementById('mergeHRLocation').innerText;
+      	store.responder.hrDepartment = document.getElementById('mergeHRDepartment').innerText;
+      	store.responder.reportingLocation = document.getElementById('mergeReportingLocation').innerText;
+      	store.lang = lang === '' && (document.getElementById('mergeLanguage').innerText === 'en' || document.getElementById('mergeLanguage').innerText === 'sp')  ? document.getElementById('mergeLanguage').innerText : store.lang; 
+
+        // Set language switch accordingly
+        if (store.lang === 'sp') {
+            $('#languageSwitch').prop('checked', true);
+        } else {
+            $('#languageSwitch').prop('checked', false);
+        }
+
+        // Mixin for validation
+        var ValidationMixin = {
+            methods: {
+                validate: function ($items) {
+                    var isValid = true;
+
+                    console.log($items.length + ' items');
+
+                    $items.each(function (index, elem) {
+                        var isItemValid = true;
+                        var $elem = $(elem);
+                        var v = $elem.val();
+
+                        if ($elem.hasClass('required') && (v === undefined || v === '')) isItemValid = false;
+
+                        if (!isItemValid) {
+                            $elem.addClass('invalid');
+                            isValid = false;
+                        }
+                    });
+
+                    return isValid;
+                }
+            }
+        };
+
+        // Mixin for AJAX
+        var AjaxMixin = {
+            methods: {
+                post: function (url, data, success) {
+                    $.ajax({
+                        type: 'POST',
+                        contentType: 'application/json',
+                        url: url,
+                        data: JSON.stringify(data),
+                        success: function (data) {
+                            success(data.d);    // NOTE: For ASMX endpoints actual response is in "d"
+                        }
+                    });
+                }
+            }
+        };
+
+        // Mixin for state retention
+        var StateMixin = {
+            methods: {
+                loadState: function (id) {
+                    return JSON.parse(this.$cookies.get('state-' + id));
+                },
+                saveState: function (id, state) {
+                    this.$cookies.set('state-' + id, JSON.stringify(state));
+                },
+                hasState: function (id) {
+                    // TODO: Implement
+                    return false;
+                }
+            }
+        };
+
+        // Mixin for survey active check
+        var SurveyActiveMixin = {
+            methods: {
+                isSurveyActive: function() {
+                    return ((store.todaysDate.getTime() >= store.survey.startDate.getTime() && store.todaysDate.getTime() < store.survey.expirationDate.getTime()) || store.testing.active === true);
+                },
+                hasSurveyStarted: function() {
+                    return (store.todaysDate.getTime() >= store.survey.startDate.getTime() || store.testing.active === true);
+                },
+                hasSurveyExpired: function() {
+                    return (store.todaysDate.getTime() >= store.survey.expirationDate.getTime() && store.testing.active !== true);
+                }
+            }
+        };
+
+        // Home page
+        var HomePage = Vue.component('home-page', {
+            template: '#home-template',
+            data: function () {
+                return {
+                    store: store,
+                    isValid: true,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+                addDataToForm: function(form, data) {
+                    if(typeof form === 'string') {
+                        if(form[0] === '#') form = form.slice(1);
+                        form = document.getElementById(form);
+                    }
+
+                    var keys = Object.keys(data);
+                    var name;
+                    var value;
+                    var input;
+
+                    for (var i = 0; i < keys.length; i++) {
+                        name = keys[i];
+                        // removing the inputs with the name if already exists [override]
+                        Array.prototype.forEach.call(form.elements, function (inpt) {
+                            if(inpt.name === name) {
+                                inpt.parentNode.removeChild(inpt);
+                            }
+                        });
+
+                        value = data[name];
+                        input = document.createElement('input');
+                        input.setAttribute('name', name);
+                        input.setAttribute('value', value);
+                        input.setAttribute('type', 'hidden');
+
+                        form.appendChild(input);
+                    }
+
+                    return form;
+                },
+                onSurveySubmit: function () {
+                    // Check that question has been answered (if required)
+                    let surveyValid = true;
+                    store.questions.forEach(function(question, index) {
+                        if(question.response === '' && question.required === true) {
+                            surveyValid = question.isValid = false;
+                        } else {
+                            question.isValid = true;
+                        }
+                    });
+                    
+                    console.log('Valid: ' + surveyValid);
+
+                    if (surveyValid) {
+                        var _this = this;
+                        
+                        // Prepare request
+                        var request = { 
+                            elqFormName: store.eloqua.formName, 
+                            elqSiteID: store.eloqua.siteId, 
+                            elqCustomerGUID: document.forms.surveyform.elements["elqCustomerGUID"].value, 
+                            elqCookieWrite: document.forms.surveyform.elements["elqCookieWrite"].value,
+                            emailAddress: store.responder.email,
+                            employeeID: store.responder.employeeId,
+                            employeeCategory: store.responder.employeeCategory,
+                            qualfonLocation: store.responder.qualfonLocation,
+                            qualfonGroup: store.responder.qualfonGroup,
+                            businessUnit: store.responder.businessUnit,
+                            originalLocation: store.responder.hrLocation,
+                            department: store.responder.hrDepartment,
+                            reportingLocation: store.responder.reportingLocation,
+                            surveyTakenDate: store.todaysDate.toISOString(),
+                          	language: store.lang,
+                            surveyQuestion: store.questions[0].question['en'],
+                            surveyCode: store.survey.code,
+                            surveyKey: store.responder.employeeId + '-' + store.survey.code,
+                            test: store.testing.active ? 'Y' : 'N'
+                        };
+                        
+                        // Add question responses to request
+                        store.questions.forEach(function(question, index) {
+                            if (question.hasOwnProperty('name') && question.name !== '') {
+                                request[question.name] = question.response;
+                            } else {
+                                request['question' + question.id] = question.response;
+                            }
+                        });
+                        
+                        // Add data to form and submit
+                        document.forms.surveyform.action = store.eloqua.formUrl;
+                        this.addDataToForm('surveyform', request);
+                        console.log(request);
+                      
+                      
+                        document.forms.surveyform.submit();
+                      
+                                         
+                    }
+                }
+            },
+          
+           
+          
+          
+          
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+              	const params = new URLSearchParams(window.location.search);
+              	store.elqTrackId = params.get('elqTrackId');
+              	store.elq = params.get('elq');
+              	console.log(store.elqTrackId);
+              	console.log(store.elq);
+              	
+                // Check for survey expiration
+                if (this.hasSurveyExpired() === true) {
+                    window.location = "http://survey.qualfon.com/expired?elqTrackId=" + store.elqTrackId + "&elq=" + store.elq;
+                // Check if survey start date has passed
+                } else if (this.hasSurveyStarted() !== true) {
+                    window.location = "http://survey.qualfon.com/notstarted?elqTrackId=" + store.elqTrackId + "&elq=" + store.elq;
+                // Check if survey has already been completed
+                } else if (document.getElementById('surveyCX') !== null && document.getElementById('surveyCX').innerText === "surveyCompleted" && store.testing.active !== true) {
+                    window.location = "http://survey.qualfon.com/completed?elqTrackId=" + store.elqTrackId + "&elq=" + store.elq;
+                }
+                // Update radio inputs when emojis are clicked
+                $('.radio-emojis .radio-bottom-label').off('click').on('click', function(e) {
+                    let radio = $(this).parent().find('input:radio');
+                    radio.click();
+                });
+                // Change language when switch is toggled
+                $('#languageSwitch').off('change').on('change', function(e) {
+                    let checked = $('#languageSwitch').prop('checked');
+                    store.lang = checked ? 'sp' : 'en';
+                });
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: [ValidationMixin, AjaxMixin, StateMixin, SurveyActiveMixin]
+        });
+
+        // Expired page
+        var ExpiredPage = Vue.component('expired-page', {
+            template: '#expired-template',
+            data: function () {
+                return {
+                    store: store,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+              
+                // Check for survey expiration
+                if(store.todaysDate < store.survey.expirationDate) {
+                  this.$emit('go-to-home', '');
+                }
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: []
+        });
+
+        // Completed page
+        var CompletedPage = Vue.component('completed-page', {
+            template: '#completed-template',
+            data: function () {
+                return {
+                    store: store,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+              
+              	// Check if survey has already been completed
+              	if (document.getElementById('surveyCX') !== null && document.getElementById('surveyCX').innerText !== "surveyCompleted") {
+                  this.$emit('go-to-home', '');
+                }
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: []
+        });
+      
+        // Thank You page
+        var ThankYouPage = Vue.component('thank-you-page', {
+            template: '#thank-you-template',
+            data: function () {
+                return {
+                    store: store
+                }
+            },
+            methods: {
+            },
+        });
+
+        // Filters for miles, dates and times
+        Vue.filter('miles', function (value) {
+            return value.toFixed(1) || 10;
+        });
+        Vue.filter('date', function (value) {
+            // October 5, 2019
+            return months[value.getMonth()] + ' ' + value.getDate() + ', ' + value.getFullYear();
+        });
+        Vue.filter('time', function (value) {
+            var hr = value.getHours();
+            var ampm;
+            if (hr > 11) {
+                hr -= 12;
+                ampm = 'pm';
+            }
+            else
+                ampm = 'am';
+
+            if (hr == 0) hr = 12;
+
+            var min = value.getMinutes();
+            if (min < 10) min = '0' + min;
+
+            return hr + ':' + min + ' ' + ampm;
+        });
+
+
+        // Map pages to routes
+        var routes = [
+            { path: '/', component: HomePage },
+            { path: '/expired', component: ExpiredPage },
+            { path: '/completed', component: CompletedPage },
+            { path: '/thank-you', component: ThankYouPage }
+        ];
+
+        var router = new VueRouter({
+            routes: routes
+        });
+
+        var vm = new Vue({
+            data: {
+                store: store
+            },
+            methods: {
+                onGoToHome: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'home-page';
+                    router.push({ path: '/' });
+                },
+                onGoToExpired: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'expired-page';
+                    router.push({ path: 'expired' });
+                },
+                onGoToCompleted: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'completed-page';
+                    router.push({ path: 'completed' });
+                },
+                onGoToThankYou: function () {
+                    router.push({ path: 'thank-you' });
+                }
+            },
+            mounted: function() {
+                messageBus.$on('nav-to-home', this.onGoToHome);
+            },
+            mixins: [AjaxMixin],
+            router: router
+        }).$mount('#app');
+      
+      
+
+    </script>
+    <!-- END Startup Code -->
+    <!-- Eloqua form code -->
+    <script type="text/javascript">
+      
+      var _elqQ = _elqQ || [];
+      _elqQ.push(['elqSetSiteId', store.eloqua.siteId]);
+      _elqQ.push(['elqTrackPageView']);
+      
+      (function(){
+        function async_load(){
+           var s = document.createElement('script');
+           s.type = 'text/javascript';
+           s.async = true;
+           s.src = 'https://img.en25.com/i/elqCfg.min.js';
+           var x = document.getElementsByTagName('script')[0];
+           x.parentNode.insertBefore(s, x);
+        }
+        if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+        else if (window.attachEvent) window.attachEvent('onload', async_load);
+      })();
+      
+      var timerId = null, timeout = 5;
+      
+      function WaitUntilCustomerGUIDIsRetrieved() {
+        if (!!(timerId)) {
+          if (timeout == 0) {
+            return;
+          }
+          if (typeof this.GetElqCustomerGUID === 'function') {
+            document.forms.surveyform.elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+            return;
+          }
+          timeout -= 1;
+        }
+        timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+        return;
+      }
+      
+      window.onload = WaitUntilCustomerGUIDIsRetrieved;
+      
+      _elqQ.push(['elqGetCustomerGUID']);
+      
+    </script>
+    <!-- END Eloqua from code -->
+
+
+
+</body></html>

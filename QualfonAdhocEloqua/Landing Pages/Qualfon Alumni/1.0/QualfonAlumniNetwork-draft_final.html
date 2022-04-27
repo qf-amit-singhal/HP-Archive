@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qualfon Alumni Network</title>
+    <!-- Bootstrap -->
+  
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	  
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <style>
+		  body{font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif}
+		  
+		  .container{
+			  max-width: 100%;
+		  }
+		  
+		 .dropdown-menu {
+			  background-color:#002b49;
+			 border-top-color: #00b5ef;
+			border-top-width: medium;
+			 
+		  }
+		  .dropdown-item{
+			  color: #ffffff;
+			   
+		  }
+		  .dropdown:hover>.dropdown-menu {
+  		display: block;
+		
+}
+		  
+		  .dropdown-item:hover{background-color: #002b49;color: #ffffff;border-bottom: 1px solid #00b5ef;}
+		  .nav-form{
+			  font-size: 14px;
+			  font-weight: 600;
+			  line-height: 20px;
+		  }
+		  .fa {
+  			padding: 10px;
+  			font-size: 16px;
+  			width: 32px;
+  			height: 32px;
+  			text-align: center;
+  			text-decoration: none;
+ 			 margin: 5px 2px;
+  			border-radius:3px;
+  			font-weight: 900;
+  
+}
+		  .body-overflow{overflow-x: hidden}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #ffffff;
+  color: black;
+}
+
+.fa-twitter {
+  background: #ffffff;
+  color: black;
+}
+ .fa-linkedin {
+  background: #ffffff;
+  color: black;
+}
+ .footerlink{color: #ffffff;
+		  } 
+ .footerlink:hover{color: #ffffff;text-decoration: none;
+		  } 
+		  .hero{color:#fff;padding: 25px 50px;width:100%;background: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B1af5747d-25f7-4ba0-93d1-0247a342b39a%7D_slider_landing_page_QA.png") no-repeat center center; -webkit-background-size: 100% 100%;-moz-background-size: 100% 100%;-o-background-size: 100% 100%;background-size: 100% 100%;border-radius: 0px }
+		  a:hover{text-decoration: none;}
+	.hero-text{color: #ffffff;font-weight: 600;padding: 0px 100px 0px 0px}
+		  .mobile-image-text{font-weight: 600;}
+		  .hero-text-header{color:#005A76;font-weight: 600;}
+	.navbar-light .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(0, 167, 225)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
+		  
+	.btn{border-radius: 0px !important;background-color:#00b5ef;border-color: #00b5ef;width: 260px !important;transition: none;border-width: 2px}
+	.btn:hover{background-color: #005A76 !important;border-color: #005A76 !important;text-decoration: none !important}
+	.btn:after{background-color: #005A76 !important;border-color: #005A76 !important;text-decoration: none !important}
+	.btn-primary{transition: none;background-color: #005A76 !important;border-color: #005A76 !important;text-decoration: none !important }
+    .form{background:#002b49;color:#fff;padding:20px 30px;width:429px;position:relative;top: -16px;left: 70px; padding-bottom:5px;display: none;z-index: 9999}
+    .form h3{color: #00b5ef;;font-size:25px;font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;}
+    .form p{font-size:16px;font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;}
+    .form button{width:100%;text-align:center;background:#00b5ef;color:#fff;font-size:22px;font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;padding:3px;border: 0;}
+    .form p.consent{font-size:14px;margin-top:10px;}
+	.reqiredfields{color: #00b5ef;}	
+	#successMessage{display: none;}
+	#alreadysubmitted{display: none;}
+	#successMessage2{display: none;font-weight: 700;color: #002b49;}
+	.showEmailForm:hover{background-color: #ffffff !important;border-color: #00b5ef !important; }
+	.subheaders{color: #00b5ef;}	 
+		  .navbar-brand{padding-top: 0px;padding-bottom: 0px;}
+	.sticky {
+  				position: fixed;
+  				top: 0;
+  				width: 100%;
+}
+	#StoryForm{display: none;}
+	.sticky + .content {
+  			padding-top: 102px;
+}
+	.header{z-index: 9999;
+		  padding-left: 30px;
+		   padding-right: 30px;
+		  padding-top: 0px;
+		  padding-bottom: 0px
+
+		  }
+		  .footer-table{padding-left: 50px;}
+	.scrollable-testimonial{
+			height:150px;
+  			overflow: auto;
+			overflow-x: hidden;
+			
+		  }
+	.learn-more-links{color: #000000;text-decoration: underline}
+		  .learn-more-links:hover{color:#00b5ef; }
+	.program-paragraph{padding: 0px 25px}
+	.links-paragraph{padding-left: 25px;}
+		 /* width */
+
+		  .blockquote{font-size: 16px}
+
+.paddle {
+  position: absolute;
+  top: 1000;
+  bottom: 0;
+  width: 3em;
+  border: none;
+  background-color:#E9ECEF;
+	color: #00b5ef;
+
+	
+}
+ 
+.left-paddle {
+  left: 0;
+  width: 55px;
+  background-color: none;
+  border: hidden;
+  color: #00b5ef !important;
+  font-size: 35px !important;
+	
+}
+
+.right-paddle {
+  right: 0;
+	
+  width: 20px;
+  background-color: none;
+  border: hidden;
+  color: #00b5ef !important;
+  font-size: 35px !important;
+}
+		 .right-paddle:focus,
+		  .left-paddle:focus{outline: none;}
+.hidden {
+  display: none;
+}
+		 
+		  .card{background-color: #ffffff;padding: 10px;}
+		  .quote{font-size: 56px;color: #B7EDFF;width: 60px;}
+		  hr{width: 50%;}
+		  .submitted-by{font-size: 16px;font-weight: 600;}
+		  
+/* Loading Modal */
+
+	.loader {
+		font-size: 10px;
+		margin: 30px auto;
+		text-indent: -9999em;
+		width: 8em;
+		height: 8em;
+		border-radius: 50%;
+		background: #83c5ea;
+		background: -moz-linear-gradient(left, #83c5ea 10%, rgba(131,197,234, 0) 42%);
+		background: -webkit-linear-gradient(left, #83c5ea 10%, rgba(131,197,234, 0) 42%);
+		background: -o-linear-gradient(left, #83c5ea 10%, rgba(131,197,234, 0) 42%);
+		background: -ms-linear-gradient(left, #83c5ea 10%, rgba(131,197,234, 0) 42%);
+		background: linear-gradient(to right, #83c5ea 10%, rgba(131,197,234, 0) 42%);
+		position: relative;
+		-webkit-animation: load3 1.4s infinite linear;
+		animation: load3 1.4s infinite linear;
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+	.loader:before {
+		width: 50%;
+		height: 50%;
+		background: #83c5ea;
+		border-radius: 100% 0 0 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+	}
+	.loader:after {
+		background: #ffffff;
+		width: 75%;
+		height: 75%;
+		border-radius: 50%;
+		content: '';
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+	@-webkit-keyframes load3 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes load3 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.4);
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+		background-color: #fff;
+		margin: 15% auto;
+		padding: 10px;
+		border-radius: 3px;
+		width: 180px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+
+	.modal-content > h3 {
+		text-align: center;
+		font-family: Arial;
+		color: #83c5ea;
+		font-size: 25px;
+		font-weight: 900;
+		margin: 15px;
+	}			  
+		 /* Media Queries*/
+	
+		  
+		  	 
+		   @media only screen and (max-width: 1336px) and (min-width:1202px){
+			  .mobile-button-align{margin: 140px 0px 75px 0px !important}
+			   .hero-text{padding: 0px 0px 0px 0px !important;}
+		  }	
+		  @media only screen and (max-width: 1201px) and (min-width:1000px){
+			  .mobile-button-align{margin: 120px 0px 185px 0px !important}
+			  .form{left: 0px !important}
+			  .mobile-button{margin-left: 150px !important}
+			  .footer-mobile{padding-left: 150px !important}
+			  .footer-table{padding-left: 100px !important}
+			  .header{padding-left: 100px;
+		   padding-right: 100px;}
+			  .hero-text{padding: 0px 210px 0px 0px}
+		  }	
+		  @media only screen and (max-width: 991px) and (min-width:700px){
+			  .mobile-button-align{margin: 150px 0px 140px 0px !important}
+			  .form{left: 0px !important}
+			  .mobile-button{margin-left: 320px !important}  
+			  .header{padding: 10px !important}
+			  .hero-text{padding: 0px 365px 0px 0px}
+			  .menu-wrapper{margin: 0px !important}
+			  .footer-mobile{padding-left: 100px !important}
+			  .footer-table{padding-left: 50px !important}
+			  
+		  }	
+		 
+	 @media only screen and (max-width:969px) {
+		.logo-postion{padding-left: 0px !important}
+		 .navbar{display: block !important}
+		 .logo-postion{text-align: center !important}
+		 #navbarSupportedContent{justify-content: space-around !important}
+		  .header{padding: 0px !important}
+		 .left-paddle,.right-paddle{display: none !important;}
+		 .footer-mobile{padding-left: 0px !important}
+			  .footer-table{padding-left: 0px !important}
+       .hero{color:#fff;padding: 25px 50px;width:100%;background: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Bb4894a4d-f40e-4382-8f5c-6a1b91f4004d%7D_slider_landing_page_QA_grey.png") no-repeat center center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;border-radius: 0px }
+		.hero-text-header{font-weight: 900;color: #ffffff}  
+       .hero-text{font-weight: 900;}
+		  }
+		  @media only screen and (max-width:768px) {
+			  .mobile-button{margin-left: 200px !important}  
+			  .mobile-button-align{margin: 90px 0px 220px 0px !important}
+			   .form{top:-18px !important;left: 120px !important;z-index:9999 !important;justify-content: flex-start;margin-left: 80px !mportant;}
+            .hero{color:#fff;padding: 25px 50px;width:100%;background: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Bb4894a4d-f40e-4382-8f5c-6a1b91f4004d%7D_slider_landing_page_QA_grey.png") no-repeat center center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;border-radius: 0px }
+			  .hero-text-header{font-weight: 900;}
+			  .hero-text{font-weight: 900;padding: 0px 70px 0px 0px}
+		  }
+		  
+		  @media only screen and (max-width:572px) {
+			  .form-inline{display: block !important;}
+			  .dropdown-toggle{text-align: center !important}
+			  .nav-link{text-align: center !important}
+			  .header{padding: 0px !important}
+			  .tableform{display:block !important;width: auto !important}
+			  #formemail{width: 250px !important}
+			  #message{width:300px !important}
+			  .footer-table-mobile{display: block !important;}
+			  .footer-mobile{width: auto !important;max-width: 100% !important;}
+			  .footer-table{padding: 0px !important}
+			  .mobile-image-text{margin: 0px !important;padding: 0px !important}
+			  .subheaders-Submit-story{padding: 0px 0px !important}
+			  .hero{height: 450px !important;width: 100% !important}
+			  .mobile-button-align{margin: 0px 0px 20px 0px !important}
+			 
+			  .mobile-hide{display: none !important}
+			  .form{top:0px !important;left: 0px !important;z-index:9999 !important;justify-content: flex-start;margin-left: 0px !mportant;}
+		  }
+		  @media only screen and (max-width: 414px) {
+			  .form{top:0px !important;width: 300px !important;left: -40px !important;z-index:9999 !important;padding: 10px;justify-content: flex-start;margin: 0px 0px 0px 0px !mportant;align-self: flex-start}
+			  #StoryForm{margin: 0px 0px 0px 0px}
+			  #fname{width: 300px !important}
+			  #lname{width: 300px !important}
+			  #formemail{width: 300px !important}
+			  .mobile-spacing-storyform{margin: 10px 0px 0px 0px !important}
+			  .mobile-button-align{margin: -20px 0px 50px 0px !important}
+			  .hero-text-header{font-size: 22px !important;font-weight: 900;color: #ffffff}
+			  .mobile-story{padding-left: 60px !important}
+			  .hero-text{font-size: 15px !important;padding-right: 0px !important;font-weight: 900;}
+			  .mobile-image-text{font-size: 15px !important;font-weight: 900;}
+			  .mobile-button{margin-left: 13px !important;}
+			  .bottom-container{margin-top: 50px !important}
+			  .footer-mobile{padding-left: 80px !important; }
+			  .footer-table{padding-left: 80px !important}
+			  .hero{color:#fff;padding: 25px 50px;width:100%;background: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Bb4894a4d-f40e-4382-8f5c-6a1b91f4004d%7D_slider_landing_page_QA_grey.png") no-repeat center center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;border-radius: 0px }
+			  
+		  }
+		  @media only screen and (max-width: 320px) {
+			  .mobile-button-align{margin: 0px 0px 0px 0px !important}
+			  .mobile-story{
+				 padding-left: 20px !important
+			  }
+			  #StoryForm{padding-left: 15px !important}
+			 .mobile-button{margin-left: -20px !important;}
+			  .bottom-container{margin-top: 50px !important}
+			  .footer-mobile{padding-left: 40px !important; }
+			  .footer-table{padding-left: 40px !important}
+		  }
+	  
+	  </style>
+	  
+  </head>
+  <body class="body-overflow">
+	  
+    <nav id="myHeader" class="navbar navbar-expand-sm container logo-postion header" style="background-color:#002b49;">
+      <a class="navbar-brand" href="https://www.qualfon.com/?elqTrackId=3012ec6dd35b4f8085f377d6847e0930&elqTrack=true" ><img src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B876fceeb-3830-47cb-89d5-5cb97eb9b32f%7D_alumni-network-logo-white.png" width="350" alt="Qualfon Alumni Network" class="img-fluid"></a>
+      <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+        <form class="form-inline my-2 my-lg-0 nav-form ">
+           <ul class="navbar-nav mr-auto">
+         
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff">What We Do</a>
+            <div class="dropdown-menu menu1" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item item1" href="https://www.qualfon.com/contact-center/?elqTrackId=d1ee4b3af1e54b2bad89fabe8080ec5d&elqTrack=true">Contact Center</a><a class="dropdown-item item1" href="https://www.qualfon.com/digital-and-direct-marketing/?elqTrackId=cf14e361194c4b1aa156a7d5bd276c59&elqTrack=true">Digital and Direct Marketing</a>
+			<a class="dropdown-item item1" href="https://www.qualfon.com/print/?elqTrackId=fdee0d32f9774e458b531c3dd943c54b&elqTrack=true">Print</a>
+			<a class="dropdown-item item1" href="https://www.qualfon.com/fulfillment/?elqTrackId=805cd6871ff14fd7b8fd50f3f1acac7b&elqTrack=true">Fulfillment</a>
+			<a class="dropdown-item item1" href="https://www.qualfon.com/data-and-analytics/?elqTrackId=4d7ea69bd0664038a84d42ecc9ed3900&elqTrack=true">Data and Analytics</a>
+			<a class="dropdown-item item1" href="https://www.qualfon.com/mail/?elqTrackId=8e439e53ea374a2e9841d7dbcdcfd283&elqTrack=true">Mail</a>
+			<a class="dropdown-item item1" href="https://www.qualfon.com/back-office/?elqTrackId=044500dad6684acca6ae5b6c1e1062d3&elqTrack=true">Back Office</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>--> 
+            </div>
+          </li> 
+			<li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff">Solutions</a>
+            <div class="dropdown-menu menu2" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://www.qualfon.com/solutions/customer-care/?elqTrackId=753b32dc71e547d0aa5eef0e6fbe64a7&elqTrack=true">Customer Care</a><a class="dropdown-item" href="https://www.qualfon.com/solutions/lead-generation/?elqTrackId=3d383c97fbed4224a6d45743ba0ce384&elqTrack=true">Lead Generation</a><a class="dropdown-item" href="https://www.qualfon.com/solutions/acquisition-retention/?elqTrackId=d4f65ad48f74457985cefb47091d03af&elqTrack=true">Acquisition &#38; Rentention</a>
+			<a class="dropdown-item" href="https://www.qualfon.com/solutions/sales/?elqTrackId=e290ecd582ba4c5dbe57b41ba7ef6993&elqTrack=true">Sales</a>
+			<a class="dropdown-item" href="https://www.qualfon.com/solutions/customer-support/?elqTrackId=1de28308ea264b96ae5403076b37547f&elqTrack=true">Customer Support</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a> -->
+            </div>
+          </li>  
+		<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff"> Who We Are </a>
+            <div class="dropdown-menu menu3" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://www.qualfon.com/who-we-are/our-mission/?elqTrackId=f1979903f59942b1bab63d1a15e1a7d2&elqTrack=true">Our Mission</a><a class="dropdown-item" href="#">Locations</a><a class="dropdown-item" href="https://www.qualfon.com/who-we-are/executive-leadership/?elqTrackId=4db723cca2bc4742a3928867c83f20db&elqTrack=true">Executive Leadership</a>
+				<a class="dropdown-item" href="https://www.qualfon.com/mission-advisory-board/?elqTrackId=bdc7bf8f9d2c4b2199a9b74518e4c39c&elqTrack=true">Mission Advisory Board</a><a class="dropdown-item" href="https://www.qualfon.com/who-we-are/blog/?elqTrackId=2b9bdab5e9db48d18bb93d8edb0a9482&elqTrack=true">Blog</a><a class="dropdown-item" href="https://www.qualfon.com/who-we-are/press-releases/?elqTrackId=0b91855300d640beb092eb798a151e49&elqTrack=true">Press Release</a><a class="dropdown-item" href="https://www.qualfon.com/thought-leadership/?elqTrackId=ace0df463df3422289abdebe75c2c98f&elqTrack=true">Thought Leadership</a><a class="dropdown-item" href="https://www.qualfon.com/who-we-are/podcast/?elqTrackId=98a3f7ea15264b87ae18cb76b11072f9&elqTrack=true">Mission Qualfon Podcast</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>--> 
+            </div>
+          </li> 
+		<li class="nav-item"> <a class="nav-link" href="https://www.qualfon.com/contact-us/?elqTrackId=bf078f5c0a9344b7919df894cfe75548&elqTrack=true" style="color: #ffffff;">Contact</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="tel:8772610804" style="color: #00a7e1;font-weight: 600;font-size: 20px">877-261-0804</a> </li>
+        </ul>
+        </form>
+      </div>
+    </nav>
+    <header>
+      <div class="jumbotron container hero" style="height: 640px">
+                          
+          <div class="row">
+            <div class="mobile-image-text mobile-button-align offset-xl-0 col-sm-11 col-xl-5 offset-md-1 col-md-12 col-lg-8" style="margin-bottom: 115px;margin-top: 100px;">
+              <h1 class="text-left hero-text-header">Qualfon Alumni Network</h1>
+				<div class="hero-text">
+              <p class="text-left">To be the best and make each person’s life better. This mission we hold so dear to our hearts does not end when you leave Qualfon. We want to stay in touch and offer you and your family every opportunity we can to make YOUR lives better!</p>
+
+ <p class="text-left">
+As we grow our network we intend to bring you even more benefits so make sure to sign up and be on the lookout for our emails.</p>
+
+<p class="text-left">Please join us in this new venture and share with your past Qualfon friends!</p></div>
+
+                            
+            </div>
+          </div>
+			<div class="row row-margin">
+				<div class="offset-xl-1 col-11 mobile-button container">
+		  <p class="text-left" style="font-weight: 600;"><a class="btn btn-primary btn-lg CTAButton" href="#mainform" role="button" title="Join Today" style="font-weight: 600;">Join Today</a></p></div></div>
+			<div class="form text-center" >
+			  <div id="loadingModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="loader">Loading...</div>
+				<h3>Loading</h3>
+			</div>
+		
+		</div>
+            <form id="mainForm">
+            <h3 class="formheader">Let us contact you<br/> at your convenience.</h3>
+            <p>Please complete the fields below<br/> so we can best serve you.</p>
+            
+             <div class="form-group">
+                
+                <input type="text" class="form-control" id="firstname" placeholder="*First name">
+               
+              </div>
+                <div class="form-group">
+                <input type="text" class="form-control" id="lastname" placeholder="*Last name">
+                
+              </div>
+            
+				<div class="form-group">
+                <input type="text" class="form-control" id="email" placeholder="*Email address">
+                
+              </div>
+				
+              <div class="form-group">
+                <select class="form-control" id="Country" name="country">
+                  <option value="">
+                    *Country
+                  </option>
+                  
+   <option value="Costa Rica">Costa Rica</option>
+   <option value="Guyana">Guyana</option>
+   <option value="India">India</option>
+   <option value="Mexico">Mexico</option>
+   <option value="Phillipines">Philippines</option>
+   <option value="United States">United States</option>
+                   </select>
+                
+              </div>
+				 <div class="form-group">
+                <select class="form-control" id="Years" name="years">
+                  <option value="">
+                    *Years at Qualfon
+                  </option>
+					<option value="Less than a month">
+                    Less than a month
+                  </option>
+                  <option value="1-3 months">
+                    1-3 months
+                  </option>
+                  <option value="4-6 months">
+                    4-6 months
+                  </option>
+					<option value="7-12 months">
+                    7-12 months
+                  </option>
+                  <option value="Between 1 and 2 years">
+                    Between 1 and 2 years
+                  </option>
+                  <option value="Between 3 and 5 years">
+                    Between 3 and 5 years
+                  </option>
+				<option value="More than 5 years">
+                    More than 5 years
+                  </option>
+                </select>
+               
+              </div>
+				<div class="form-group">
+                <select class="form-control" id="position" name="position">
+                  <option value="">
+                    *Last Position
+                  </option>
+                  <option value="Agent">
+                    Agent
+                  </option>
+					<option value="Supervisor">
+                    Supervisor
+                  </option>
+                  <option value="Management & Staff">
+                    Management &amp; Staff
+                  </option>
+                  <option value="Executive">
+                    Executive
+                  </option>
+                </select>
+                <small class="form-text text-right">*Required field</small>
+              </div>
+              <div class="invalid-feedback" id="formValidation">You must complete the required fields in order to submit your request.</div>
+              <div class="invalid-feedback" id="firstnameValidation">Please enter a valid First Name.</div>
+              <div class="invalid-feedback" id="lastnameValidation">Please enter a valid Last Name.</div>
+              <div class="invalid-feedback" id="ajaxError">An unknown error has occurred please try again.</div>
+  			  <div class="invalid-feedback" id="emailValidation">Please enter a Valid email.</div>
+			  <div class="invalid-feedback" id="YearsValidation">Please select a Years at Qualfon.</div>
+			  <div class="invalid-feedback" id="countryValidation">Please select a country.</div>
+			  <div class="invalid-feedback" id="positionValidation">Please select a Last Position.</div>
+			  <div class="invalid-feedback" id="consentValidation">Please agree to the consent by checking the box below.</div>	
+              <button id="submit_btn">SUBMIT</button>
+				<div class="check" style="display: inline-flex;padding-top: 10px;vertical-align: middle"><input type="checkbox" id="consent" name="consent1" value="Y" style="margin-top: 30px">
+  				<label for="consent1" style="margin-left: 20px;text-align: left"> By submitting this form, you agree to receive emails from Qualfon pertaining the benefits of the Qualfon Alumni Network. <a href="https://www.qualfon.com/privacy-policy?elqTrackId=a177b26b723745e9a7f2b9b7b9e83aad" style="color: #ffffff">Privacy Policy</a>.</label></div>
+             
+            </form>
+            <div id="successMessage">
+              Thank you for signing up for the Qualfon Alumni Network! You will receive a welcome email shortly.
+            </div>
+			  <div id="alreadysubmitted">
+
+				  Thank you.  Your request has already been submitted.
+			  </div>
+          </div>
+
+      </div>
+    </header>
+    <section>
+      
+      <div class="container bottom-container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 text-center offset-xl-2 offset-lg-2">
+            <img class="" alt="140x140" style="width: 140px; height: 140px;" src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B06530a99-bbec-41aa-aa1b-764f7381305d%7D_education_icon_140x140.png" data-holder-rendered="true">
+            <h3 class="subheaders">Education</h3>
+            <p class="program-paragraph text-left">Providing opportunities for continuous education. Learn new skills, create new opportunities, and take course to increase your knowledge so you can live your best life.</p>
+			  <p class="text-left links-paragraph">
+			    <strong class="subheaders"> Learn More</strong><br>
+				<a class="learn-more-links" href="http://mystairway.org/index.html?elqTrackId=5906a1d9ec7d48f4842fc9c8d1785c38&elqTrack=true">Stairway Program</a><br/>
+				  <a class="learn-more-links" href="https://rochatsb.ch/?elqTrackId=bb20418cc9a5471d87746fdec53f8fd1&elqTrack=true">Rochat School of Business</a>
+			  
+			  </p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 text-center offset-xl-2 offset-lg-2">
+            <img class="" alt="140x140" style="width: 140px; height: 140px;" src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B0318a9c7-a867-4ea1-abce-3695d147699e%7D_mission_icon_140x140.png" data-holder-rendered="true">
+            <h3 class="subheaders">Mission</h3>
+            <p class="program-paragraph text-left">Giving back to our communities and working towards making the world a better place is in our DNA. Check out the opportunities and programs we support.</p>
+			  <p class="text-left links-paragraph">
+			    <strong class="subheaders"> Learn More</strong><br>
+				<a class="learn-more-links" href="https://www.care-coach.com/?elqTrackId=a531795eef4c4d44addfaf97b041453d">Care@Work</a><br/>
+				  <a class="learn-more-links" href="#">Because of you</a><br/>
+				 <a class="learn-more-links" href="https://newgenerationsfoundation.org/plan-cuatro-cienegas-2040/?elqTrackId=0990374b23d4403e9ac3ebfd41d881af">2040 Plan</a><br/>
+			  <a class="learn-more-links" href="https://www.genesis4c.mx/?elqTrackId=99885c9081a94d5584a78364f18f4272">Genesis</a>
+			  </p>
+          </div>
+          
+        </div>
+        <div class="row" style="background-color:#E9ECEF;padding-bottom: 20px">
+          <div class="col-sm-12 col-md-12 text-center" style="background-color:#E9ECEF;padding: 20px 10px 10px 10px">
+            <h2 class="subheaders">TESTIMONIALS</h2>
+          </div>
+        </div>
+		  
+		  
+      </div>
+      <div class="container menu-wrapper" style="background-color:#E9ECEF">
+		  
+    <div id="demo" class="carousel slide" data-ride="carousel">
+ <a class="carousel-control-prev" href="#demo" data-slide="prev" style="width: 50px">
+    <span class="fa fa-arrow-circle-left left-paddle"></span>
+  </a>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner col-xl-11 offset-xl-1 mx-auto" style="margin-right:40px">
+	  
+    <div class="carousel-item active">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">"Qualfon is in it for the long term. It’s not just about making each person’s life better, but to make more people’s lives better over the next 5, 10, 50 years.  As leaders we are paid for three things and three things only: our judgement, our integrity, and our character. The way to treat everyone, not just at work or home, but everyone, treat everyone with fairness dignity and respect. <br/><br/>
+
+The scope of our impact on the world isn’t just the 15,000 people that work for Qualfon and their families, it goes well beyond that over the years. That makes it an exciting place to be in.  If you learn and do the right things and take advantage of opportunities, the sky is the limit. As we grow and continue to look for more opportunity for good supervisors and team leads and operations managers and next thing you know somebody does a good job as the director of operations. <br/><br/> 
+
+One thing that can never be taken away from you is your education.  We help people get an education and make their lives better not only for themselves, but also for their family. With that, they’re able to move forward with whatever their calling is in life. Giving them that start is very exciting."
+</blockquote>
+              </div>
+    </div>
+    <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">Without the experience and education I built at Qualfon, I would not have this amazing oppourtunity in my life. I am 26 years old and the future is bright thanks to my early career at Qualfon. Cloud Operations Engineer
+</blockquote></div>
+    </div>
+    <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">I had the opportunity to work for Qualfon for 20 years and the experience obtained throughout those years, was extraordinary and enriching that allowed me to grow professionally as well as spiritually and as a person, thanks to the leaders I had.  I met people from other cultures and backgrounds and encourage them understand and embrace Qualfon’s Mission. I am grateful because Qualfon´s culture is to help as many people as possible to pursue their vocation and as a In Qualfon, each person can transcend if they do it with enthusiasm and professionalism towards our internal and external clients. company, we want that each employee live Qualfon’s values, take advantage of the opportunities available for all of them as well as their families like the Chaplaincy Program, Higher education, etc.
+</blockquote></div>
+    </div>
+	  <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">"For me Qualfon was more than a job,  it was a school that trained me and changed my life by learning the way to run a company and valuing the people, the clients, and the partners who put their assets at risk to make all this possible.<br/><br/> 
+
+At Qualfon I learned that it is not enough to meet the expectations of our customers, but that you must strive every day to exceed them.  I learned that a company is only as strong as its leaders, and that these leaders must guide their work teams with integrity towards a common goal that enriches them humanly and spiritually."
+</blockquote></div>
+    </div>
+	  <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">There are companies that find their purpose over the years; Qualfon had a purpose even before becoming an actual company.  I had many, significant and unforgettable experiences in more than two decades of collaboration. Now, I keep not only memories but good friends that will remain for the rest of my life. Qualfon will be always in my heart
+</blockquote></div>
+    </div>
+	  <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">On 7/9/2021, I will have been employed with Qualfon for 9 years. This is the first and only company I’ve had a job with; while I may not have anything to compare my experience to, I can say that I love working for Qualfon for many reasons. I enjoy the opportunities I’ve had with Qualfon. I started as a phone agent, but I’ve also held positions as a quality analyst, trainer, and team leader/supervisor. I’m currently an operations manager and I am going through the certification to become a site director. As a result of these opportunities, it’s clear how much Qualfon invests in its employee’s careers, skills, and futures. This doesn’t even touch on the educational opportunities available through Coursera, LinkedIn Learning, and Rochat – something I plan on enrolling in to finally receive my degree in business administration. I also enjoy the people I work with at Qualfon. I’ve made many friends and everyone approaches work as a team but acts like a family. I plan on continuing to stay with Qualfon for my career! One day when I retire, I’ll be able to proudly say I worked with Qualfon since I was 19 years old. Thank you, Qualfon!
+</blockquote></div>
+    </div>
+	  <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">“I’ve been with this company for about 14 years. Over the years I have seen tons of change happen to our organization. The most amazing change happened when we joined the Qualfon family. Qualfon is so unique due to the manner in which the organization is structured and how they invest in their employees. For example, I’ve never heard of a company provide so many opportunities for career growth, and helping the individual team members in EVERY aspect of their life. From meeting home needs to impacting our communities in a positive way. The company truly lives and breathes our mission to “Be the best and make each person’s life better”. I’m grateful for my career here at Qualfon”.
+</blockquote></div>
+    </div>
+	  <div class="carousel-item">
+      <div class="card card-block text-center"><blockquote><i class="fa fa-quote-left quote"></i></blockquote><blockquote class="blockquote text-left">"In 2007 began my employment with Dialog Direct as an auditor for the Dependent Audit vertical of Customer Support Services, being promoted to Quality Control Analyst after 6 months.  Then I transitioned to Program Manager for our inbound call center, which acted as a liaison between clients and the call center operations.<br/><br/>
+
+In 2011, Dialog Direct merged with NOVO 1, Inc. followed by DMI, GC Holdings and Allegra Direct.  Our VP of Call Center Solutions and Human Resources VP at that time, approached me to partake in a large project to source, recruit and seat 250 call center agents for a large contract that was being seated in the Highland Park location. Shortly after the initial 250 agents were sat, the realization that there was going to be a larger, ongoing need for recruitment efforts transitioning out of utilizing staffing agencies, the Talent Acquisition Team was launched. In 2014 I moved from TA to a Human Resources/Benefits/Payroll hybrid role and subsequently to an HRIS/Benefits/Payroll roll in 2016. In 2020 I was assigned to the Payroll Administration role exclusively, ultimately being promoted to Sr. Payroll Administrator in 2021. <br/><br/>
+
+Throughout my tenure at Qualfon/Dialog Direct, I have had the pleasure to work with a plethora of teams and personalities. The most outstanding evolution that has occurred in the culture of the company is cohesiveness. Prior to the merge with NOVO 1, DMI and Allegra Direct, each department operated in a silo. There was no functional communication or collaboration between departments. Each department had their respective tasks and never the two shall meet for enhancement of processes and procedures. Fast forward to present day, Qualfon teams are consistently reviewing ownership in specific tasks and working as a unit to guarantee success for all departments. Personal relationships have flourished. The majority of individual team members hold a high standard in the output of their work and do not hesitate to offer assistance to one another, regardless of department, title or location. This is a company and pseudo family that I am proud to be a part of and cannot wait to see what the future of Qualfon will bring. "
+</blockquote></div>
+    </div>
+	  
+  
+  <!-- Left and right controls -->
+	  
+  
+ 
+	
+</div>
+	<a class="carousel-control-next" href="#demo" data-slide="next" style="width: 50px">
+    <span class="fa fa-arrow-circle-right right-paddle"></span>
+  </a>
+	</div>
+	
+		</div>
+		
+        <div class=" subheaders-Submit-story" style="width: 100%;">
+          
+			<div class="text-center" style="background-color: #E9ECEF;padding-bottom: 10px;padding-top: 30px"><p class="subheaders subheaders-Submit-story" style="font-size: 24px;font-weight: 500;">Have a story you’d like to share?<br/> We invite you to tell us about your experience with Qualfon and to hear from other Alumni about what makes Qualfon special.</p>
+		  </div>
+			
+			
+			<div id="loadingModal2" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="loader">Loading...</div>
+				<h3>Loading</h3>
+			</div>
+		
+		</div>
+			
+          <div  id="mobile-storform" class="text-center" style="background-color: #ffffff;"><div align="center" style="padding-top: 40px">
+             <a class="btn btn-block btn-lg btn-success showEmailForm" style="background-color: #ffffff;border-color: #00b5ef;color:#00b5ef;border-radius: 5px !important;" href="#StoryForm" title="Submit your story">Submit your story!</a> </div></div>
+          
+				
+			 <div class="row" style="margin-top: 20px;background-color: #ffffff;">
+            <div class="col-md-10 offset-md-1 offset-lg-1 col-xl-6 col-lg-9 col-12 form-postion text-left offset-xl-3"> 
+				 <form id="StoryForm">
+					 <table class="tableform" cellpadding="0" cellspacing="0" width="100%"><tr><td class="tableform" width="61%">
+						 <div class="">
+					<span class="reqiredfields">*</span>First Name:<br/>
+					<input id="fname" type="text" size="30" name="fname"/>
+					 </div>
+						 </td>
+						 <td class="tableform text-center">
+						<div class="text-left mobile-spacing-storyform"><span class="reqiredfields"> *</span>Last Name:<br/><input id="lname" type="text" size="30" name="lname"/></div>
+						 </td></tr>
+						</table>
+						 <div style="margin-top:20px"><span class="reqiredfields">*</span>Email:<br>
+<input type="text" size="50" name="Storyemail" id="formemail"/><br><br></div>
+						
+						 
+							
+<span class="reqiredfields">*</span>Testimonial:<br> <textarea id="message" name="message" rows="6" cols="90" form="StoryForm"></textarea><br><span class="reqiredfields" style="font-size: 12px">*</span><span style="font-size: 12px">Required Fields</span><br>
+					 <div class="invalid-feedback text-center" id="StoryformValidation">You must complete the required fields in order to submit your Story.</div>
+					 <div class="invalid-feedback text-center" id="StoryemailValidation">Please enter a Valid email.</div>
+					  <div class="invalid-feedback text-center" id="StoryfnameValidation">Please enter a First Name.</div>
+					 <div class="invalid-feedback text-center" id="StorylnameValidation">Please enter a Last Name.</div>
+					 <div class="invalid-feedback text-center" id="MessageValidation">Please enter a Story.</div>
+					 <div class="text-center"> <button id="submit_btn2" style="background-color: #ffffff;border-color: #00b5ef;color:#00b5ef;border-radius: 5px !important;width: 150px;height: 40px;border-style: solid">SUBMIT</button></div>
+					
+					 
+				
+				</form>
+				 <div class="text-center" id="successMessage2">
+              Thank you for your Story Submit.
+            </div> 
+				 </div>
+          </div>
+        </div>
+     
+     
+		
+		
+		
+    </section>
+
+    <footer class="" style="color: #ffffff;margin-top: 30px">
+      <div class="container text-center" style="background-color: #002b49;color: #ffffff">
+        <div class="row footer-table-mobile" >
+          <div class=" col-6" style="text-align-last: center;padding: 0px 0px;">
+           <table cellpadding="0" cellspacing="0" class="col-12 h-100"><tr><td class="footer-table" style="text-align-last: left;vertical-align: bottom;padding-bottom: 75px;">
+			 <img src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{656c0b99-9dbc-4bd5-9b54-6b8ca6161824}_best-bpo-footer-tagline-1.png" width="auto" height="auto" alt="" title="Be the best and make each person's life better">
+			  </td></tr></table>
+          </div>
+			<div class="footer-mobile col-6 text-left" style="padding-left: 250px">
+            <div style="padding: 50px 0px 30px 0px"><a href="#"><img src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{a2ebd0e2-c6b1-4777-af56-4928d21f76ac}_qualfon_logo.png" alt="Qualfon" width="200"></a></div>
+			<div>13700 Oakland Avenue<br/>
+				Highland Park, MI 48203<br/>
+				<span style="color: #00a7e1;font-weight: 600;font-size: 20px;padding-bottom: 10px"><a href="http://tel:8772610804?elqTrackId=e1fb0f8f8cae456599bb8de1e8490a1f&elqTrack=true" style="color: #00a7e1">877-261-0804</a></span></div>
+			<div style="padding: 10px 0px 0px 0px;"><a href="https://www.facebook.com/QualfonAmerica?elqTrackId=eaeaf6c8a11843bb8284debd054eb171&elqTrack=true" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/qualfoncorp?elqTrackId=ae6c9074cce344dabbce076d1c5a06ac&elqTrack=true" class="fa fa-twitter"></a>
+			<a href="https://www.linkedin.com/company/qualfon?elqTrackId=91943c3019204e34a85c993ce884e55e&elqTrack=true" class="fa fa-linkedin"></a></div>
+				<div style="padding:10px 10px 50px 0px;line-height: 30px"><a href="https://www.qualfon.com/privacy-policy/?elqTrackId=796ebc9cf5dc4be2a7f9c86ac7a4f610&elqTrack=true" class="footerlink">Privacy Policy</a> | <a href="https://www.qualfon.com/site-map/?elqTrackId=46ad039653df43ecaed24a209fada4bd&elqTrack=true" class="footerlink">Site Map</a><br/>
+					<a href="https://www.qualfon.com/privacy-policy/do-not-sell-request/?elqTrackId=176bf427b20445a59b252ff2dc82ae35&elqTrack=true" class="footerlink">Do Not Sell My Personal Information</a><br/>
+			© <span id="currentYear"></span> Qualfon. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    
+	 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+	  <script>
+		  document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+		  $( "#navbarDropdown" ).click(function() {
+			  $(".menu1").slideToggle('slow');
+			  $(".menu2").hide();
+
+			  $(".menu3").hide();
+			  
+		  })
+		  $( "#navbarDropdown2" ).click(function() {
+			  $(".menu2").slideToggle('slow');
+			  $(".menu1").hide();
+			  $(".menu3").hide();
+		  })
+		  $( "#navbarDropdown3" ).click(function() {
+			  $(".menu3").slideToggle('slow');
+			  $(".menu1").hide();
+			  $(".menu2").hide();
+		  })
+		 
+		  
+		 window.onscroll = function() {myFunction()};
+
+		  var header = document.getElementById("myHeader");
+		  var sticky = header.offsetTop;
+
+		  function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+		  // Populate personalization fields
+    $('.eloqua-field-merge').each(function(i, field) {
+      const fieldName = $(field).data("field-name");
+      const value = $(field).text();
+      if ($('#' + fieldName).length) {
+          $('#' + fieldName).val(value);
+      }
+    });
+		
+    
+    
+	/*$( ".CTAButton2" ).click(function() {
+		if($('#successMessage').css('display') =='block'){
+		   $("#successMessage").hide();
+			 document.getElementById("form2").style.display = "block";
+			
+		   }else{
+		
+      $( ".form" ).slideToggle( "slow" );
+		document.getElementById("fistname").focus();}
+    }); */	
+		
+    $( ".CTAButton" ).click(function() {
+		if($('#successMessage').css('display') =='block'){
+		   $("#successMessage").hide();
+			 $("#alreadysubmitted").show();
+		   }else{
+      $( ".form" ).slideToggle( "slow" );}
+	  $("#firstname").focus();	
+    }); 
+    
+	 $( ".showEmailForm" ).click(function() {
+		 $( "#StoryForm" ).slideToggle( "slow" );
+		  $('#StoryForm').ready(function () {
+    	$("#fname").focus();
+		 
+	 });
+   
+  });
+		
+    $(window).bind("load", function() {
+      var hero = $('.mobile.CTAButton').outerHeight();
+      var mobileNav = $('.mobileNav').outerHeight();
+      var total =  25 + hero + mobileNav;        
+      if(window.mobileCheck()){$('.form').css({'top' : total + 'px'});}
+    });
+    
+	 function showLoadingModal() {
+		const modal = document.getElementById("loadingModal");
+		modal.style.display = "block";
+	}
+
+	function hideLoadingModal() {
+		const modal = document.getElementById("loadingModal");
+		modal.style.display = "none";
+	}
+		  
+	 function showLoadingModal2() {
+		const modal = document.getElementById("loadingModal2");
+		modal.style.display = "block";
+	}
+
+	function hideLoadingModal2() {
+		const modal = document.getElementById("loadingModal2");
+		modal.style.display = "none";
+	}
+
+    
+    $( '#submit_btn' ).click( function( event ){ 
+		event.preventDefault();
+      var regex = /^[a-zA-Z\s]+$/;
+	  
+      var firstname = document.getElementById( 'firstname' ).value;
+	  var lastname = document.getElementById( 'lastname' ).value;
+      var nameValid;
+      var email = document.getElementById('email').value;
+      var firstnameRegEx = regex.test(firstname);
+	  var lastnameRegEx = regex.test(lastname);	
+      var refCode = generateRefCode();
+	  var country = document.getElementById('Country').value;
+	  var years = document.getElementById('Years').value;
+	  var position = document.getElementById('position').value;
+      var formData = { 
+		
+        'firstName': firstname,
+		'lastName': lastname,
+        'emailAddress': email,
+		'country': country,
+		'yearsatQualfon1': years,
+		 'lastposition1': position,
+        //'ReferenceCode': refCode        
+      };  
+      
+      if (firstnameRegEx === false && lastnameRegEx === false && firstname.length <= 1 && lastname.length <= 1 && email.length == 0) {
+        $("#formValidation").show();
+		  return false;
+      } else if(firstnameRegEx === false || firstname.length <= 1) {
+        $("#firstnameValidation").show();
+		  return false;
+      } else if(lastnameRegEx === false || lastname.length <=1) {
+		  $("#lastnameValidation").show();
+		  return false;
+	  } else if(IsEmail(email)===false){
+        $("#emailValidation").show();
+		  return false; 
+	  } else if(country.length == 0){
+        $("#countryValidation").show();
+		  return false; 
+	  } else if(years.length == 0){
+        $("#YearsValidation").show();
+		  return false; 
+	  } else if(position.length == 0){
+        $("#positionValidation").show();
+		  return false; 
+	  } else if ($('#consent').is(":checked") == false){
+		  $("#consentValidation").show();
+		  return false;
+	  }	
+			else {
+        submitToEloqua(formData);
+      }
+      
+    });
+		
+	
+    $( "#firstname" ).focus(function() {
+      $("#firstnameValidation").hide();
+	  $("#formValidation").hide();
+    });
+	$( "#lastname" ).focus(function() {
+      $("#lastnameValidation").hide();
+      $("#formValidation").hide();
+    });
+   
+    $( "#email" ).focus(function() {
+      $("#emailValidation").hide();
+      $("#formValidation").hide();
+    });
+	$( "#country" ).focus(function() {
+      $("#countryValidation").hide();
+      $("#formValidation").hide();
+    });
+	$( "#years" ).focus(function() {
+      $("#yearsValidation").hide();
+      $("#formValidation").hide();
+    });
+	$( "#postion" ).focus(function() {
+      $("#postionValidation").hide();
+      $("#formValidation").hide();
+    });
+	$( "#consent" ).focus(function() {
+      $("#consentValidation").hide();
+      $("#formValidation").hide();
+    });
+   
+  $( '#submit_btn2' ).click( function( event ){ 
+		event.preventDefault();
+      var regex = /^[a-zA-Z\s]+$/;
+	  
+      var fname = document.getElementById( 'fname' ).value;
+	  var lname = document.getElementById( 'lname' ).value;
+      var nameValid;
+      var formemail = document.getElementById('formemail').value;
+	  var message = document.getElementById('message').value;
+      var fnameRegEx = regex.test(fname);
+	  var lnameRegEx = regex.test(lname);	
+      var refCode1 = generateRefCode();
+      var formData2 = { 
+		
+        'firstName': fname,
+		'lastName': lname,
+        'emailAddress': formemail,
+		 'Testimonial': message,
+        //'ReferenceCode': refCode1        
+      };  
+      
+      if (fnameRegEx === false && lnameRegEx === false && fname.length <= 1 && lname.length <= 1 && formemail.length == 0 && message.length < 10) {
+        $("#StoryformValidation").show();
+		  return false;
+      } else if(fnameRegEx === false || fname.length <= 1) {
+        $("#StoryfnameValidation").show();
+		  return false;
+      } else if(lnameRegEx === false || lname.length <=1) {
+		  $("#StorylnameValidation").show();
+		  return false;
+	  } else if(IsEmail(formemail)===false){
+        $("#StoryemailValidation").show();
+		  return false; 
+	  } else if(message.length < 10){
+        $("#MessageValidation").show();
+		  return false; 
+	  } 	
+			else {
+        submitStoryToEloqua(formData2);
+      }
+      
+    });  
+      
+      $( "#fname" ).focus(function() {
+      $("#StoryfnameValidation").hide();
+	  $("#StoryformValidation").hide();
+		
+    });
+	$( "#lname" ).focus(function() {
+      $("#StorylnameValidation").hide();
+      $("#StoryformValidation").hide();
+    });
+   
+    $( "#formemail" ).focus(function() {
+      $("#StoryemailValidation").hide();
+      $("#StoryformValidation").hide();
+    });
+	  $( "#message" ).focus(function() {
+      $("#MessageValidation").hide();
+      $("#StoryformValidation").hide();
+    });
+    
+	function IsEmail(email) {
+  var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if(!regex.test(email)) {
+    return false;
+  }else{
+    return true;
+  }
+	}	
+		
+  window.mobileCheck = function() {
+
+      let check = false;
+      (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+      return check;
+      isMobile = check;
+    };
+    
+  function submitToEloqua(formData){
+		showLoadingModal();
+      $.ajax({  
+        type: 'GET',  
+        crossOrigin: true,  
+        url: 'https://s1702368288.t.eloqua.com/e/f2?elqFormName=QANSignUpForm&elqSiteID=1702368288',  
+        data: formData,  
+        encode: true,
+        success: function (data,status,xhr) {
+		hideLoadingModal();
+          $("#mainForm").hide();
+          $("#successMessage").show();
+        },
+        error: function (jqXhr, textStatus, errorMessage) { 
+          $("#ajaxError").show();
+        }
+      });
+    }
+ function submitStoryToEloqua(formData2){
+		showLoadingModal2();
+      $.ajax({  
+        type: 'GET',  
+        crossOrigin: true,  
+        url: 'https://s1702368288.t.eloqua.com/e/f2?elqFormName=QANTestimonialsForm&elqSiteID=1702368288',  
+        data: formData2,  
+        encode: true,
+        success: function (data,status,xhr) {
+		hideLoadingModal2();
+          $("#StoryForm").hide();
+          $("#successMessage2").show();
+        },
+        error: function (jqXhr, textStatus, errorMessage) { 
+          $("#ajaxError").show();
+        }
+      });
+    }
+      
+    // Generate a unique reference code
+	function generateRefCode() {
+      return 'QALP-' + Date.now();
+	}
+		
+
+		 // Activate Carousel with a specified interval
+  $("#demo").carousel({interval: 8000}); 
+
+  
+
+	  </script>
+  </body>
+</html>
+
+

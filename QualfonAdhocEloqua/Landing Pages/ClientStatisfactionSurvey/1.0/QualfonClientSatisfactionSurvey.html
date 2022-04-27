@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Qualfon Client Satisfaction Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <script src="https://kit.fontawesome.com/12ebb599fc.js"></script>
+
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: #002B49 ;
+            background: linear-gradient(169deg, rgba(36,50,103,1) 0%, rgba(20,131,142,1) 100%);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #app {
+            height: 100%;
+        }
+
+        #app-container {
+            padding-top: 150px;
+            height: 100%;
+        }
+
+        .footer-fix {
+            margin-bottom: 200px;
+        }
+
+        .has-photos {
+            background-image: url('https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B97a390f9-71a5-4280-8aac-f7f6a9284bbc%7D_%7B167359b8-2376-4550-a59b-0450758750ab%7D_Duma-Guyana-2.jpg');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+
+        /*.page-row {
+            margin-top: 10%;
+        }*/
+
+        .home-page-container {
+            background-color: rgba(255, 255, 255, 1);
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        .company-header > img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .step-list-container {
+            background-color: #dddddd;
+            padding: 20px 40px 20px 40px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .step-page-container {
+            background-color: white;
+            padding: 40px;
+            z-index: 2000;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .page-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #002b49 !important;
+            color: white;
+            height: 156px;
+            padding-top: 30px;
+        }
+
+        .page-footer .main-text {
+            font-weight: normal;
+        }
+
+        .page-footer .links {
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+        .page-footer .links a, .page-footer .links a:visited, .page-footer .links a:active {
+            color: white;
+        }
+
+        .footer-company {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer-company a {
+            color: #00a7e1;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        [v-cloak] {
+            display: none
+        }
+
+        .text-dark {
+            color: #002B49  !important;
+        }
+
+        a, a:visited {
+            color: #002B49 ;
+        }
+
+        .btn-primary.btn-dd {
+            background-color: #002B49 ;
+            border-color: #002B49 ;
+            font-size: 14px;
+        }
+
+        .btn-outline-primary.btn-dd {
+            border-color: #002B49 ;
+            font-size: 14px;
+            color: #002B49 ;
+        }
+
+        .btn-outline-primary.btn-dd:hover {
+            background-color: #002B49 ;
+            color: white;
+        }
+
+        .title {
+            margin-top: 20px;
+            font-size: 32px;
+            /*font-family: 'Slabo 27px', serif;*/
+            line-height: 34px;
+        }
+
+        .rsvp-code-panel {
+            margin-top: 20px;
+        }
+
+        .yes-no {
+            font-weight: bold;
+            color: #00A8E2;
+        }
+
+        .question-header {
+            margin-bottom: 10px;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .component-fade-enter-active, .component-fade-leave-active {
+            transition: opacity .3s ease;
+        }
+
+        .component-fade-enter, .component-fade-leave-to {
+            opacity: 0;
+        }
+
+        .step-panel .step-name {
+            /*font-family: 'Slabo 27px', serif;*/
+            font-size: 27px;
+            line-height: 27px;
+            color: #888888;
+        }
+
+        .step-panel .step-label {
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .step-list-container .company-header {
+            margin-bottom: 30px;
+        }
+
+        .step-panel {
+            margin-top: 15px;
+        }
+
+        .step-panel.active .step-name {
+            color: #00A8E2;
+        }
+
+        .step-panel.active .step-label {
+            color: #333333;
+        }
+
+        .page-row h1 {
+            /*font-family: 'Slabo 27px', serif;*/
+            font-size: 27px;
+            color: #00A8E2;
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            color: #00A8E2;
+            margin-bottom: 10px;
+        }
+
+        .help-text {
+            font-size: 11px;
+        }
+
+        input.underline {
+            border: 0px;
+            border-bottom: 1px solid #888;
+            padding: 0px;
+        }
+
+        input.underline::placeholder {
+            color: gray;
+            font-size: 12px;
+        }
+
+        input.underline::-ms-input-placeholder {
+            color: #cccccc;
+        }
+
+        input.underline:-ms-input-placeholder {
+            color: #cccccc;
+        }
+
+        input.underline.invalid {
+            border-bottom: 1px solid red;
+        }
+
+        .alert-sm {
+            font-size: 12px;
+            padding: 8px;
+        }
+
+        .text-xs {
+            font-size: 12px;
+        }
+
+        .shaded {
+            background-color: #eee;
+            border-radius: 2px;
+        }
+
+        .confirmation-company-name {
+            color: #656565;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .mb20 {
+            margin-bottom: 20px;
+        }
+
+        .mt10 {
+            margin-top: 10px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .p20 {
+            padding: 20px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .col-border-r {
+                border-right: 1px solid #ccc;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            #app-container {
+                height: calc(100% - 220px);
+            }
+            .page-footer {
+                position: inherit;
+                text-align: center;
+                height: 220px;
+            }
+            .footer-logo {
+                margin-top: 1.5rem;
+                text-align: center;
+            }
+            .footer-company {
+                text-align: center;
+            }
+        }
+      
+        .progress-bar {
+          background-color: #00A8E2;
+        }
+      
+      	.text-underline {
+          text-decoration: underline;
+      	}
+
+        .z-index-fix {
+          z-index: -1;
+        }
+
+        .range-value {
+          width: calc(100% - 30px);
+          text-align: center;
+          font-weight: bold;
+          color: #00A8E2;
+        }
+      
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+    <script src="https://unpkg.com/@ungap/url-search-params"></script>
+
+    <div id="app">
+        <div id="app-container" class="container">
+            <div class="footer-fix">
+                <keep-alive>
+                    <transition name="component-fade" mode="out-in">
+                        <router-view v-on:go-to-home="onGoToHome"
+                                     v-on:go-to-expired="onGoToExpired"
+                                     v-on:go-to-not-started="onGoToNotStarted"
+                                     v-on:go-to-completed="onGoToCompleted"
+                                     v-on:go-to-survey="onGoToSurvey"
+                                     v-on:go-to-thank-you="onGoToThankYou"></router-view>
+                    </transition>
+                </keep-alive>
+            </div>
+        </div>
+
+        <nav class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        For survey assistance,<br />please contact the <span><a class="text-white text-underline" href="mailto:CampaignSupport@qualfon.com?subject=Help Needed with Client Satisfaction Survey">survey admin</a></span>.
+                    </div>
+                    <div class="col-sm-6 col-xs-12 text-right">
+                        <div class="mb-3 footer-logo">
+                            <img :src="store.survey.logos[store.survey.category].footerUrl" height="34px" alt="Qualfon" />
+                        </div>
+                        <div class="footer-company">
+                            13700 Oakland Avenue, Highland Park, MI 48203<br />
+                            <a href="tel:8772610804" id="phoneNumber">877-261-0804</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+  
+    <div id="eloqua-form" class="d-none">
+      <div id="mergeEmailAddress"><span class=eloquaemail >EmailAddress</span></div>
+      <div id="mergeFirstName"><span class=eloquaemail >First_Name___Forms1</span></div>
+      <div id="mergeLastName"><span class=eloquaemail >LastName</span></div>
+      <div id="mergeClient"><span class=eloquaemail >Client</span></div>
+      <div id="mergeSurveyCategory"><span class=eloquaemail >SurveyCategory1</span></div>
+      <span elqid="2" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Survey Progress -->
+    <script type="text/x-html-template" id="progress-template">
+        <div class="row">
+            <div class="col col-xs col-md-12">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :style="'width: ' + progress + '%'">{{ progress }}%</div>
+              </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript">
+        var SurveyProgress = Vue.component('survey-progress', {
+            template: '#progress-template',
+            methods: {
+                navigateToStep: function (step) {
+                    //alert(JSON.stringify(step));
+                    messageBus.$emit(step);
+                }
+            },
+            computed: {
+              progress: function() {
+                const questions = Array.isArray(store.questions[store.survey.category]) ? store.questions[store.survey.category].length - 1 : 1;
+                const current = !isNaN(store.currentStep) ? store.currentStep : 1;
+                return Math.round((current / questions) * 100);
+              }
+            }
+        });
+    </script>
+    <!-- END Survey Progress -->
+    <!-- Home Page -->
+    <script type="text/x-template" id="home-template">
+        <div class="row page-row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+
+                <div class="company-header">
+                    <img v-bind:src="store.survey.logos[store.survey.category].mainUrl" alt="Qualfon" />
+                </div>
+                <div class="row title">
+                    <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+                </div>
+                <div class="rsvp-code-panel">
+                    <div class="mt-4">
+                        <button class="btn btn-primary btn-dd" @click="onBeginSurvey">Begin Survey</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Home Page -->
+    <!-- Not Started Page -->
+    <script type="text/x-html-template" id="not-started-template">
+        <div class="row page-row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+
+                <div class="company-header">
+                  <img v-bind:src="store.survey.logos[store.survey.category].mainUrl" alt="Qualfon" />
+                </div>
+                <div class="row title">
+                    <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+                </div>
+                <div class="rsvp-code-panel">
+                    <div class="mt-4">
+                        <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Sorry, this survey has not started yet.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Expired Page -->
+    <!-- Expired Page -->
+    <script type="text/x-html-template" id="expired-template">
+        <div class="row page-row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+
+                <div class="company-header">
+                  <img v-bind:src="store.survey.logos[store.survey.category].mainUrl" alt="Qualfon" />
+                </div>
+                <div class="row title">
+                    <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+                </div>
+                <div class="rsvp-code-panel">
+                    <div class="mt-4">
+                        <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Sorry, this survey has expired.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Expired Page -->
+    <!-- Completed Page -->
+    <script type="text/x-html-template" id="completed-template">
+        <div class="row page-row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+
+                <div class="company-header">
+                  <img v-bind:src="store.survey.logos[store.survey.category].mainUrl" alt="Qualfon" />
+                </div>
+                <div class="row title">
+                    <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+                </div>
+                <div class="rsvp-code-panel">
+                    <div class="mt-4">
+                        <div class="alert alert-sm alert-danger"><i class="fas fa-exclamation-circle"></i> Sorry, you have already taken this survey.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Completed Page -->
+    <!-- Survey Page -->
+    <script type="text/x-html-template" id="survey-template">
+        <div class="row page-row text-center">
+            <div class="step-list-container col-md-12">
+                <survey-progress></survey-progress>
+            </div>
+            <div class="step-page-container col-md-12 text-left">
+              <div v-for="(question, qindex) in store.questions[store.survey.category]">
+                  <div v-if="store.currentStep === qindex">
+                    <h1>{{ question.question }}</h1>
+                    <div v-if="!isValid" class="alert alert-sm alert-warning"><i class="fas fa-exclamation-circle"></i> Please answer the question before proceeding.</div>
+                    <div class="row my-4">
+                        <div class="col mx-4">
+                            <form>
+                              <div class="form-group" v-if="question.type === 'radio'">
+                                <div class="custom-control custom-radio" v-for="(answer, index) in question.answers">
+                                  <input type="radio" :id="'surveyRadio-' + qindex + '-' + index" :name="'customRadio' + qindex" class="custom-control-input required" :value="answer" v-model="question.response">
+                                  <label class="custom-control-label" :for="'surveyRadio-' + qindex + '-' + index">{{ answer }}</label>
+                                </div>
+                              </div>
+                              <div class="form-group" v-if="question.type === 'text'">
+                                <textarea class="form-control" rows='8' v-model="question.comments"></textarea>
+                              </div>
+                              <div class="form-group" v-if="question.type === 'short-text'">
+                                <input type="text" class="form-control" v-model="question.response">
+                              </div>
+                              <div class="form-group" v-if="question.type === 'range'">
+                                <label :for="'surveyRange-' + qindex" class="float-left">{{ question.min }}</label>
+                                <label :for="'surveyRange-' + qindex" class="range-value">{{ question.response }}</label>
+                                <label :for="'surveyRange-' + qindex" class="float-right">{{ question.max }}</label>
+                                <input :id="'surveyRange-' + qindex" type="range" class="custom-range" :min="question.min" :max="question.max" v-model="question.response">
+                              </div>
+                              <div class="form-group" v-if="question.showComments === true">
+                                <div class="form-group">
+                                  <label :for="'comments-' + qindex">Comments</label>
+                                  <textarea :id="'comments-' + qindex" class="form-control" rows='4' v-model="question.comments"></textarea>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-dd mt-3" @click="onSurveyBack">Back</button> <button class="btn btn-primary btn-dd mt-3" @click="onSurveyContinue">{{ buttonNext }}</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Survey Page -->
+    <!-- Thank You Page -->
+    <script type="text/x-html-template" id="thank-you-template">
+        <div class="row page-row">
+            <div class="home-page-container col-md-12">
+                <div class="row mb20">
+                    <div class="col-md-12 text-center">
+                        <div class="company-header">
+                          <img v-bind:src="store.survey.logos[store.survey.category].mainUrl" alt="Qualfon" />
+                        </div>
+                        <span class="confirmation-company-name text-uppercase">{{ store.company.name }}</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h1>Thank you for completing the survey.</h1>
+                    <p class="small mt20"></p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Thank You Page -->
+    <!-- Startup Code -->
+    <script type="text/javascript">
+
+        var messageBus = new Vue({});
+
+        // Global data store shared by all steps.
+        var store = {
+            // Static, customizable information for survey
+            homeTitle: 'Client Satisfaction Survey',
+
+            // Use for testing - Change to false for production
+            testing: {
+                active: true
+            },
+
+            company: {
+                logoUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Bc100bdb3-3925-4ef6-a383-1273350119fd%7D_%7B98945db6-a9c3-4c87-af94-30267f9893ca%7D_QualfonLogo.png',
+                smallLogoUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Be86ed7ab-c714-44b2-a4b1-b0a7541967a7%7D_%7B5470f88b-f2ba-4f5e-9587-ec846abe21be%7D_logo_small.jpg',
+              	supportEmail: 'CampaignSupport@qualfon.com'
+            },
+
+            survey: {
+              category: 'ces',
+              code: 'CSS2021',
+              startDate: new Date('2021-07-19T06:00:00.000-05:00'),
+              expirationDate: new Date('2021-09-30T23:59:00.000-05:00'),
+              logos: {
+                'ces': {
+                  mainUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B3d94b2c3-7a1c-49eb-88b3-d17eeb674912%7D_%7B98945db6-a9c3-4c87-af94-30267f9893ca%7D_Qualfon-Logo.png',
+                  footerUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Bacded040-1db6-4be3-bf1d-de293d3eb675%7D_%7Bca5d105e-d0e4-43f4-bda8-2228c1da9a71%7D_Qualfon_white_on_blue.png'
+                },
+                'ms': {
+                  mainUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B5180872a-2e3d-4ccc-9733-92ac53a53e62%7D_%7B5a10e8ef-82bb-4464-82e2-c91960adb449%7D_dd_qualfon_logo_horiz.png',
+                  footerUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Be52efe8b-909c-4650-a6bf-2eb8447f7214%7D_%7B9f62f0a0-54c3-4e57-9e89-61eb5f7ccd1b%7D_dd_qualfon_logo_horiz_rev.png'
+                },
+                'kr': {
+                  mainUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B9a647680-5c6e-4e9d-9a10-81d7c660d7d9%7D_%7B0995dbe6-bbba-45ca-be07-790c8d0991e4%7D_KramerDirectLogo_Spot.png',
+                  footerUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7Bcbaaf987-5f4f-4475-8620-3505ecd34707%7D_%7Bc16bcee4-9ed6-4074-a655-6d954c62755e%7D_KramerDirectLogo_Wt.png'
+                }
+                /* 'ss': {
+                  mainUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B7458f172-d261-4dce-808f-8330fe20de41%7D_%7B5c6a23e5-c488-4c8d-8006-b16c0100a90c%7D_SouthShoreLogo_Spot.png',
+                  footerUrl: 'https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/%7B8c6f58e4-bf1e-4517-ad09-a02730543cfb%7D_%7Bdd6d4d22-7c50-46a9-93da-7deb39cdde38%7D_SouthShoreLogo_Wht.png'
+                }*/
+              }
+            },
+          
+            eloqua: {
+              formUrl: 'https://s1702368288.t.eloqua.com/e/f2',
+              formName: 'ClientSurvey',
+              siteId: 1702368288
+            },
+          
+            questions: {
+              'ces': [
+                {
+                  id: 1,
+                  type: 'short-text',
+                  question: 'Name of person completing the survey:',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 2,
+                  type: 'short-text',
+                  question: 'What client company do you represent?',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 3,
+                  type: 'radio',
+                  question: 'How satisfied are you with the overall service and support Qualfon provides your company?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 4,
+                  type: 'radio',
+                  question: 'How responsive is the Qualfon team to your business needs, requests, and concerns?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely responsive',
+                    'Very responsive',
+                    'Not so responsive',
+                    'Not at all responsive'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 5,
+                  type: 'radio',
+                  question: 'How satisfied are you with Qualfon’s ability to timely track and share performance results with you?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 6,
+                  type: 'radio',
+                  question: 'How satisfied are you with Qualfon’s ability to act on performance results?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                  },
+                {
+                  id: 7,
+                  type: 'radio',
+                  question: 'How would you rate Qualfon’s knowledge and understanding of your business goals and needs for 2021?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely aware',
+                    'Very aware',
+                    'Not so aware',
+                    'Not at all aware'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 8,
+                  type: 'radio',
+                  question: 'How would you rate Qualfon’s ability to proactively offer innovative ideas directly related to your overall business needs?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely valuable',
+                    'Very valuable',
+                    'Not so valuable',
+                    'Not at all valuable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 9,
+                  type: 'text',
+                  question: 'What are the biggest challenges and trends that are impacting your business in 2021?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 10,
+                  type: 'range',
+                  question: 'How likely would you be to recommend Qualfon to other organizations and internal departments? (1 being least likely and 10 being most likely)',
+                  response: 5,
+                  required: true,
+                  min: 1,
+                  max: 10,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 11,
+                  type: 'radio',
+                  question: 'If you are still in a remote environment due to COVID-19, how satisfied are you with our work-at-home solutions? (if applicable)',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied',
+                    'Not applicable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 12,
+                  type: 'text',
+                  question: 'If there is one thing Qualfon should do differently what would it be?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                }
+              ],
+              'ms': [
+                {
+                  id: 1,
+                  type: 'short-text',
+                  question: 'Name of person completing the survey:',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 2,
+                  type: 'short-text',
+                  question: 'What client company do you represent?',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 3,
+                  type: 'radio',
+                  question: 'How satisfied are you with the overall service and support Dialog Direct provides your company?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 4,
+                  type: 'radio',
+                  question: 'How responsive is the Dialog Direct team to your business needs, requests, and concerns?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very responsive',
+                    'Adequately responsive',
+                    'Not responsive enough',
+                    'Not at all responsive'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 5,
+                  type: 'radio',
+                  question: 'How satisfied are you with the frequency of Dialog Direct’s SLA reporting?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 6,
+                  type: 'radio',
+                  question: 'How satisfied are you with how Dialog Direct responds to gaps in SLAs?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                  },
+                {
+                  id: 7,
+                  type: 'radio',
+                  question: 'How would you rate Dialog Direct’s knowledge and understanding of your business goals and needs for 2021?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely aware',
+                    'Very aware',
+                    'Not so aware',
+                    'Not at all aware'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 8,
+                  type: 'radio',
+                  question: 'How would you rate Dialog Direct’s ability to proactively offer innovative ideas directly related to your overall business needs?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely valuable',
+                    'Very valuable',
+                    'Minimally valuable',
+                    'Not at all valuable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 9,
+                  type: 'text',
+                  question: 'What are the biggest challenges and trends that are impacting your business in 2021?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 10,
+                  type: 'range',
+                  question: 'How likely would you be to recommend Dialog Direct to other organizations and internal departments? (1 being least likely and 10 being most likely)',
+                  response: 5,
+                  required: true,
+                  min: 1,
+                  max: 10,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 11,
+                  type: 'text',
+                  question: 'If there is one thing Dialog Direct should do differently what would it be?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                }
+              ],
+              'kr': [
+                {
+                  id: 1,
+                  type: 'short-text',
+                  question: 'Name of person completing the survey:',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 2,
+                  type: 'short-text',
+                  question: 'What client company do you represent?',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 3,
+                  type: 'radio',
+                  question: 'How satisfied are you with the overall service and support Kramer Direct provides your company?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 4,
+                  type: 'radio',
+                  question: 'How responsive is the Kramer Direct team to your business needs, requests, and concerns?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very responsive',
+                    'Adequately responsive',
+                    'Not responsive enough',
+                    'Not at all responsive'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 5,
+                  type: 'radio',
+                  question: 'How satisfied are you with the response rate Kramer Direct has provided your company during your 2021 campaigns?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 6,
+                  type: 'radio',
+                  question: 'How satisfied are you with Kramer Direct’s ability to share and track your response results?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                  },
+                {
+                  id: 7,
+                  type: 'radio',
+                  question: 'How would you rate Kramer Direct’s ability to proactively offer innovative ideas directly related to your marketing efforts?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very valuable',
+                    'Somewhat valuable',
+                    'Minimally valuable',
+                    'Not at all valuable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 8,
+                  type: 'radio',
+                  question: 'How would you rate Kramer Direct’s knowledge and understanding of your marketing goals and needs?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely valuable',
+                    'Very valuable',
+                    'Not so valuable',
+                    'Not at all valuable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 9,
+                  type: 'text',
+                  question: 'What are the biggest marketing challenges and trends that are impacting your business in 2021?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 10,
+                  type: 'range',
+                  question: 'How likely would you be to recommend Kramer Direct to other organizations and internal departments? (1 being least likely and 10 being most likely)',
+                  response: 5,
+                  required: true,
+                  min: 1,
+                  max: 10,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 11,
+                  type: 'text',
+                  question: 'If there is one thing Kramer Direct should do differently what would it be?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                }
+              ],
+              /*'ss': [
+                {
+                  id: 1,
+                  type: 'short-text',
+                  question: 'Name of person completing the survey:',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 2,
+                  type: 'short-text',
+                  question: 'What client company do you represent?',
+                  response: '',
+                  required: true
+                },
+                {
+                  id: 3,
+                  type: 'radio',
+                  question: 'How satisfied are you with the overall service and support South Shore provides your company?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 4,
+                  type: 'radio',
+                  question: 'How responsive is the South Shore team to your business needs, requests, and concerns?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very responsive',
+                    'Adequately responsive',
+                    'Not responsive enough',
+                    'Not at all responsive'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 5,
+                  type: 'radio',
+                  question: 'How satisfied are you with the response rate South Shore has provided your company during your 2020 campaigns?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 6,
+                  type: 'radio',
+                  question: 'How satisfied are you with South Shore’s ability to share and track your response results?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Very satisfied',
+                    'Satisfied',
+                    'Dissastisfied',
+                    'Very dissastisfied'
+                  ],
+                  showComments: true,
+                  comments: ''
+                  },
+                {
+                  id: 7,
+                  type: 'radio',
+                  question: 'How would you rate South Shore’s ability to proactively offer innovative ideas directly related to your Marketing efforts?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely valuable',
+                    'Very valuable',
+                    'Not so valuable',
+                    'Not at all valuable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 8,
+                  type: 'radio',
+                  question: 'How would you rate South Shore’s knowledge and understanding of your marketing goals and needs?',
+                  response: '',
+                  required: true,
+                  answers: [
+                    'Extremely valuable',
+                    'Very valuable',
+                    'Not so valuable',
+                    'Not at all valuable'
+                  ],
+                  showComments: true,
+                  comments: ''
+                },
+                {
+                  id: 9,
+                  type: 'text',
+                  question: 'What are the biggest marketing challenges and trends that are impacting your business in 2020?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 10,
+                  type: 'range',
+                  question: 'How likely would you be to recommend South Shore to other organizations and internal departments? (1 being least likely and 10 being most likely)',
+                  response: 5,
+                  required: true,
+                  min: 1,
+                  max: 10,
+                  showComments: false,
+                  comments: ''
+                },
+                {
+                  id: 11,
+                  type: 'text',
+                  question: 'If there is one thing South Shore should do differently what would it be?',
+                  response: '',
+                  required: true,
+                  showComments: false,
+                  comments: ''
+                }
+              ], */
+            },
+
+            steps: [
+                { name: 'Step 1', label: 'Survey', emitEvent: 'nav-to-survey', navUnlocked: false },
+            ],
+
+            // Dynamic data - DO NOT EDIT
+            currentStep: 0,
+          
+            todaysDate: new Date(),
+              
+            responder: {
+              email: '',
+              firstName: '',
+              lastName: '',
+              client: ''
+            }
+        };
+        
+        // Get url parameters
+        const params = new URLSearchParams(window.location.search);
+        store.responder.email = params.get('email');
+        store.responder.firstName = params.get('firstName');
+        store.responder.lastName = params.get('lastName');
+        store.responder.client = params.get('client');
+      	store.elqTrackId = params.get('elqTrackId');
+        store.testing.active = params.get('testing') === 'Y' ? true : false;
+        store.survey.category = params.get('category');
+      
+        // Get Eloqua field merges
+        store.responder.email = store.responder.email === null ? document.getElementById('mergeEmailAddress').innerText : store.responder.email; 
+      	store.responder.firstName = store.responder.firstName === null ? document.getElementById('mergeFirstName').innerText : store.responder.firstName; 
+      	store.responder.lastName = store.responder.lastName === null ? document.getElementById('mergeLastName').innerText : store.responder.lastName; 
+      	store.responder.client = store.responder.client === null ? document.getElementById('mergeClient').innerText : store.responder.client; 
+      	store.survey.category = store.survey.category === null ? String(document.getElementById('mergeSurveyCategory').innerText).toLowerCase() : String(store.survey.category).toLowerCase(); 
+        store.survey.category = store.survey.category === '' || store.survey.category === 'surveycategory1' ? 'ces' : store.survey.category;
+
+        // Mixin for validation
+        var ValidationMixin = {
+            methods: {
+                validate: function ($items) {
+                    var isValid = true;
+
+                    console.log($items.length + ' items');
+
+                    $items.each(function (index, elem) {
+                        var isItemValid = true;
+                        var $elem = $(elem);
+                        var v = $elem.val();
+
+                        if ($elem.hasClass('required') && (v === undefined || v === '')) isItemValid = false;
+
+                        if (!isItemValid) {
+                            $elem.addClass('invalid');
+                            isValid = false;
+                        }
+                    });
+
+                    return isValid;
+                }
+            }
+        };
+
+        // Mixin for AJAX
+        var AjaxMixin = {
+            methods: {
+                post: function (url, data, success) {
+                    $.ajax({
+                        type: 'POST',
+                        contentType: 'application/json',
+                        url: url,
+                        data: JSON.stringify(data),
+                        success: function (data) {
+                            success(data.d);    // NOTE: For ASMX endpoints actual response is in "d"
+                        }
+                    });
+                }
+            }
+        };
+
+        // Mixin for state retention
+        var StateMixin = {
+            methods: {
+                loadState: function (id) {
+                    return JSON.parse(this.$cookies.get('state-' + id));
+                },
+                saveState: function (id, state) {
+                    this.$cookies.set('state-' + id, JSON.stringify(state));
+                },
+                hasState: function (id) {
+                    // TODO: Implement
+                    return false;
+                }
+            }
+        };
+
+        // Mixin for survey active check
+        var SurveyActiveMixin = {
+            methods: {
+                isSurveyActive: function() {
+                    return ((store.todaysDate >= store.survey.startDate && store.todaysDate < store.survey.expirationDate) || store.testing.active === true);
+                },
+                hasSurveyStarted: function() {
+                    return (store.todaysDate >= store.survey.startDate || store.testing.active === true);
+                },
+                hasSurveyExpired: function() {
+                    return (store.todaysDate >= store.survey.expirationDate && store.testing.active !== true);
+                }
+            }
+        };
+
+        // Home page
+        var HomePage = Vue.component('home-page', {
+            template: '#home-template',
+            data: function () {
+                return {
+                    store: store,
+                    isValid: true,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+              onBeginSurvey: function () {
+                this.$emit('go-to-survey', '');
+              }
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+              
+              	// Check if redirected from Eloqua form submission
+              	if (document.location.href.indexOf('t.eloqua.com') !== -1) {
+                  this.$emit('go-to-thank-you', '');
+                // Check for survey expiration
+                } else if (this.hasSurveyExpired() === true) {
+                    this.$emit('go-to-expired', '');
+                // Check if survey start date has passed
+                } else if (this.hasSurveyStarted() !== true) {
+                    console.log('Not Started');
+                    this.$emit('go-to-not-started', '');
+              	// Check if survey has already been completed
+                } else if (document.getElementById('surveyCX') !== null && document.getElementById('surveyCX').innerText === "surveyCompleted" && store.testing.active !== true) {
+                  this.$emit('go-to-completed', '');
+                }
+
+                // If state exists, load it
+//                if (this.hasState(store.company.accountOid))
+//                    store = this.loadState(store.company.accountOid);
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: [ValidationMixin, AjaxMixin, StateMixin, SurveyActiveMixin]
+        });
+
+        // Not Started page
+        var NotStartedPage = Vue.component('not-started-page', {
+            template: '#not-started-template',
+            data: function () {
+                return {
+                    store: store,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+            
+                // Check for survey start
+                //if (this.hasSurveyStarted() === true) {
+                //  this.$emit('go-to-home', '');
+                //}
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: [SurveyActiveMixin]
+        });
+
+        // Expired page
+        var ExpiredPage = Vue.component('expired-page', {
+            template: '#expired-template',
+            data: function () {
+                return {
+                    store: store,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+              
+                // Check for survey expiration
+                // if (this.hasSurveyExpired() === false) {
+                //   this.$emit('go-to-home', '');
+                //}
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: [SurveyActiveMixin]
+        });
+
+        // Completed page
+        var CompletedPage = Vue.component('completed-page', {
+            template: '#completed-template',
+            data: function () {
+                return {
+                    store: store,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+              
+              	// Check if survey has already been completed
+              	//if (document.getElementById('surveyCX') === null || (document.getElementById('surveyCX') !== null && document.getElementById('surveyCX').innerText !== "surveyCompleted") || store.testing.active !== true) {
+                  //this.$emit('go-to-home', '');
+                //}
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: [SurveyActiveMixin]
+        });
+
+        // Survey page
+        var SurveyPage = Vue.component('survey-page', {
+            template: '#survey-template',
+            data: function () {
+                return {
+                    store: store,
+
+                    isValid: true,
+                  
+                    buttonNext: 'Next'
+                }
+            },
+            methods: {
+                onSurveyContinue: function () {
+                  const questions = store.questions[store.survey.category];
+                  // Check that question has been answered (if required)
+                  if(questions[store.currentStep].response !== '' || (questions[store.currentStep].comments !== '' && questions[store.currentStep].type === 'text') || questions[store.currentStep].required === false) {
+                    this.isValid = true;
+                  } else {
+                    this.isValid = false;
+                  }
+                  
+                  if (this.isValid) {
+                    // Reached last question, submit and go to thank you
+                    if (store.currentStep >= questions.length - 1) {
+                      var _this = this;
+                      this.submitSurvey().then(function() {
+                        console.log("Submitted successfully");
+                        _this.logToFirebase('success');
+                        _this.$emit('go-to-thank-you', '');
+                      }).catch(function(error) {
+                        console.error("Submission error", error);
+                        _this.logToFirebase('error');
+                        _this.$emit('go-to-thank-you', '');
+                      });
+                      
+                    // Go to next question
+                    } else {
+                      store.currentStep++;
+                      
+                      // Check if the last question has been reached
+                      if (store.currentStep >= questions.length - 1) {
+                        this.buttonNext = 'Finish'; 
+                      } else {
+                        this.buttonNext = 'Next';
+                      }
+                    }
+                  }
+                },
+                //Ajax change
+                prepareRequest: function() {
+                  // Prepare request
+                  var request = { 
+                    elqFormName: store.eloqua.formName, 
+                    elqSiteID: store.eloqua.siteId, 
+                    // elqCustomerGUID: elqIFrame.document.getElementById('surveyform').elements["elqCustomerGUID"].value, 
+                    // elqCookieWrite: elqIFrame.document.getElementById('surveyform').elements["elqCookieWrite"].value,
+                    emailAddress: store.responder.email,
+                    firstName: store.responder.firstName,
+                    lastName: store.responder.lastName,
+                    client: store.responder.client,
+                    surveyCode: store.survey.code,
+                    surveyKey: store.responder.email + '-' + store.survey.code,
+                    SurveyCategory: store.survey.category,
+                    test: store.testing.active ? 'Y' : 'N'
+                  };
+
+                  // Add responder fields
+                  // store.fieldMerges.forEach(function(field) {
+                  //   request[field.eloquaName] = store.responder[field.surveyName];
+                  // });
+
+                  // Add question responses to request
+                  const questions = store.questions[store.survey.category];
+                  questions.forEach(function(question, index) {
+                    request['SurveyQuestion' + question.id] = question.response;
+                    request['SurveyQuestion' + question.id + 'Comments'] = question.comments;
+                  });
+
+                  return request;
+                },
+                submitSurvey: function () {
+                  var _this = this;
+                  return new Promise(function(resolve, reject) {
+                    // Prepare request
+                    var request = _this.prepareRequest();
+                    console.log(request);
+
+                    // Submit request to Eloqua            
+                    const url = store.eloqua.formUrl;
+                    //const url = 'https://survey.communication.qualfon.com/e/f2';
+                    console.log("Form URL", url);
+                    
+                    $.ajax({  
+                      type: 'GET',  
+                      crossOrigin: true,  
+                      url: url,  
+                      data: request,
+                      encode: true,
+                      success: function (data, status, xhr) {
+                        resolve();
+                      },
+                      error: function (jqXhr, textStatus, errorMessage) { 
+                        reject(errorMessage);
+                      }
+                    });
+                  
+                  });
+                },
+                logToFirebase: function(result = 'success', request = null, error = null) {
+                  // Prepare request
+                  if (request === null) {
+                    request = this.prepareRequest();
+                  }
+                  request.result = result;
+                  if (error === null) {
+                    request.errorMessage = error;
+                  }
+                  // Add browser details
+                  request.url = window.location;
+                  request.browser = {
+                    appCodeName: navigator.appCodeName,
+                    appName: navigator.appName,
+                    appVersion: navigator.appVersion,
+                    cookieEnabled: navigator.cookieEnabled,
+                    language: navigator.language,
+                    onLine: navigator.onLine,
+                    platform: navigator.platform,
+                    userAgent: navigator.userAgent
+                  };
+                  // Post log to firebase
+                  fetch('https://us-central1-dd-campaign-lite.cloudfunctions.net/logSurvey?env=sandbox&surveyCode=' + store.survey.code, { 
+                    method: 'POST', 
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(request)
+                  });
+                },
+                //Ajax change end
+                onSurveyBack: function () {
+                  if (store.currentStep > 0) {
+                    store.currentStep--;
+                  } else {
+                    this.$emit('go-to-home');
+                  }
+                }
+            },
+            mounted: function () {
+                // Check for survey expiration
+                if(this.hasSurveyExpired() === true) {
+                  this.$emit('go-to-expired', '');
+                }
+            },
+            created: function () {
+              // Pre-populate name and client questions
+              Object.keys(store.questions).forEach(function(client) {
+                const questions = store.questions[client];
+                console.log(questions);
+                // Name
+                store.questions[client][0].response = questions[0].response === '' ? store.responder.firstName + ' ' + store.responder.lastName : questions[0].response;
+                // Client
+                store.questions[client][1].response = questions[1].response === '' ? store.responder.client : questions[1].response;
+              });
+            },
+            mixins: [ValidationMixin, AjaxMixin, SurveyActiveMixin]
+        });
+      
+        // Thank You page
+        var ThankYouPage = Vue.component('thank-you-page', {
+            template: '#thank-you-template',
+            data: function () {
+                return {
+                    store: store
+                }
+            },
+            methods: {
+            }
+        });
+
+        // Filters for miles, dates and times
+        Vue.filter('miles', function (value) {
+            return value.toFixed(1) || 10;
+        });
+        Vue.filter('date', function (value) {
+            // October 5, 2019
+            return months[value.getMonth()] + ' ' + value.getDate() + ', ' + value.getFullYear();
+        });
+        Vue.filter('time', function (value) {
+            var hr = value.getHours();
+            var ampm;
+            if (hr > 11) {
+                hr -= 12;
+                ampm = 'pm';
+            }
+            else
+                ampm = 'am';
+
+            if (hr == 0) hr = 12;
+
+            var min = value.getMinutes();
+            if (min < 10) min = '0' + min;
+
+            return hr + ':' + min + ' ' + ampm;
+        });
+
+
+        // Map pages to routes
+        var routes = [
+            { path: '/', component: HomePage },
+            { path: '/not-started', component: NotStartedPage },
+            { path: '/expired', component: ExpiredPage },
+            { path: '/completed', component: CompletedPage },
+            { path: '/survey', component: SurveyPage },
+            { path: '/thank-you', component: ThankYouPage }
+        ];
+
+        var router = new VueRouter({
+            routes: routes
+        });
+
+        var vm = new Vue({
+            data: {
+                store: store
+            },
+            methods: {
+                onGoToHome: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'home-page';
+                    router.push({ path: '/' });
+                },
+                onGoToNotStarted: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'not-started-page';
+                    router.push({ path: 'not-started' });
+                },
+                onGoToExpired: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'expired-page';
+                    router.push({ path: 'expired' });
+                },
+                onGoToCompleted: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'completed-page';
+                    router.push({ path: 'completed' });
+                },
+                onGoToSurvey: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'survey-page';
+                    router.push({ path: 'survey' });
+                },
+                onGoToThankYou: function () {
+                    router.push({ path: 'thank-you' });
+                }
+            },
+            mounted: function() {
+                messageBus.$on('nav-to-survey', this.onGoToSurvey);
+            },
+            mixins: [AjaxMixin],
+            router: router
+        }).$mount('#app');
+
+    </script>
+    <!-- END Startup Code -->
+    <!-- Eloqua form code -->
+    <script type="text/javascript">
+      
+      var _elqQ = _elqQ || [];
+      _elqQ.push(['elqSetSiteId', store.eloqua.siteId]);
+      _elqQ.push(['elqTrackPageView']);
+      
+      (function(){
+        function async_load(){
+           var s = document.createElement('script');
+           s.type = 'text/javascript';
+           s.async = true;
+           s.src = 'https://img.en25.com/i/elqCfg.min.js';
+           var x = document.getElementsByTagName('script')[0];
+           x.parentNode.insertBefore(s, x);
+        }
+        if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+        else if (window.attachEvent) window.attachEvent('onload', async_load);
+      })();
+      
+      var timerId = null, timeout = 5;
+      
+      function WaitUntilCustomerGUIDIsRetrieved() {
+        if (!!(timerId)) {
+          if (timeout == 0) {
+            return;
+          }
+          // if (typeof this.GetElqCustomerGUID === 'function') {
+          //   elqIFrame.document.getElementById('surveyform').elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+          //   return;
+          // }
+          timeout -= 1;
+        }
+        timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+        return;
+      }
+      
+      window.onload = WaitUntilCustomerGUIDIsRetrieved;
+      
+      _elqQ.push(['elqGetCustomerGUID']);
+      
+    </script>
+    <!-- END Eloqua from code -->
+
+</body>
+</html>
