@@ -1,0 +1,411 @@
+<!DOCTYPE html><html dir="ltr" lang="en"><head>
+    
+      
+    <title>Linkedin Articles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<style>
+      body 
+      
+      {
+        font-family: 'Open Sans',sans-serif;
+        color: #333;
+      }
+      header {
+        background: #202e4c;
+        background: -moz-linear-gradient(left, #202e4c 0, #202e4c 100%);
+        background: -webkit-linear-gradient(left, #202e4c 0, #202e4c 100%);
+        background: linear-gradient(to right, #202e4c 0, #202e4c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202e4c', endColorstr='#202e4c', GradientType=1);
+        font-size: 28px;
+      }
+      .header a {
+        color: #fff;
+        font-size: 30px}
+      .header {
+        padding: 20px 50px 25px 50px;
+      }
+      .container {
+        color: #fff!important;
+        max-width: 1440px;
+      }
+      .top {
+        margin-left:35px;
+        margin-top:25px}
+      .top h1{
+        margin-top:10px;
+        color: #202e4c;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+      }
+      .top h3{
+        margin-left:0;
+        font-family: 'Open Sans',sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 40px;
+        text-align: left;
+        color:black;
+      }
+      a{
+        color: #202e4c;
+      }
+      a,a:hover {
+        text-decoration: none;
+      }
+      .list{
+        overflow: hidden;
+      }
+      .list img {
+        padding: 0 25px;
+        float: left;
+        margin: 10px 30px 20px 10px;
+        width: auto;
+      }
+      .list h3{
+        font-family: 'Open Sans',sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        position: relative;
+        margin: 30px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+		color: #202e4c;
+      }
+      .list h4{
+        color: #202e4c;
+        font-family: 'Open Sans',sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        position: relative;
+        margin: 30px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+      .list h6{
+        color: #000000;
+        font-size: 15px;
+        margin: 30px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+      .list p {
+        color: #000000;
+        font-family: 'Open Sans',sans-serif;
+        font-size: 15px;
+        margin: 30px;
+        margin-top:10px;
+        margin-bottom: 10px;
+      }
+      .list .readmore{
+        color:black;
+        font-size:14px;
+        text-decoration: none;
+      }
+      .list .bottom{
+        padding-left: 30px;
+      }
+      hr {
+        background: #202e4c;
+        border: #202e4c;
+        border-bottom: none;
+        width: 95%;
+        height: 1px;
+      }
+      footer {
+        background: #7f848a;
+        color: #fff;
+        font-size: 12px;
+        padding: 30px;
+        padding-top: 15px;
+        padding-bottom: 40px;
+      }
+      .footer .copyright {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .footer a {
+        color: #fff;
+      }
+		.CTAButton{font-family: 'Open Sans',sans-serif; font-size:20px;background-color:#ee3124;height:60px;width:300px;text-align: center;font-weight:bold;padding:0px 0px 0px 0px;box-shadow: -2px -2px 5px #a72219 inset;color: #ffffff;cursor:pointer;line-height: normal;}
+		.CTAButton2{font-family: 'Open Sans',sans-serif; font-size:14px;background-color:#ee3124;height:50px;width:205px;text-align: center;font-weight:bold;padding:5px 0px 0px 0px;box-shadow: -2px -2px 5px #a72219 inset;color: #ffffff;cursor:pointer;line-height: normal;}
+		 .card{border-color: #ffffff !important;padding-left: 0px !important;display:contents !important}
+		.card-body{padding: 0px !important}
+		.article-margin{margin-left: 260px}
+		.article2{display: none;}
+		.article3{display: none;}
+		.article4{display: none;}
+		
+		.article-postion{padding-left: 260px;}
+		
+		@media only screen and (max-width: 991px) and (min-width: 768px){
+			.mobile-CTAButton{justify-content: center !important;padding-top: 10px !important}
+			.mobile-header-logo{text-align:  center !important}
+			.article-align{display: inline-block !important}
+			.article-margin{margin-left: 0px !important}
+			.article-postion{padding-left: 0px;}
+			.readmore-postion{padding-left:0px !important;}
+		
+		}
+		
+      @media only screen and (max-width: 767px) {
+        header {
+          font-size: 16px;
+          text-align: center;
+        }
+        .header a {
+          font-size: 18px;
+        }
+        .headerCallUs {
+          margin-top: 10px;
+        }
+        .list img {
+          margin: 10px 10px 20px 10px;
+        }
+        footer {
+          padding: 20px 0;
+        }
+		  .mobile-CTAButton{justify-content: center !important; padding-top: 10px !important}
+		  .article-margin{margin-left: 0px !important}
+		  .article-header{display: inline-block!important}
+		  .mobile-image{display: block !important}
+		  .mobile-font-size{font-size: 15px !important;}
+		  .article-postion{padding-left: 0px;}
+		  .readmore-postion{padding-left:0px !important;}
+      }
+		@media only screen and (max-width: 414px) {
+			.mobile-break{display: block !important}
+			.article-postion{padding-left: 0px;}
+			.readmore-postion{padding-left:0px !important;}
+			
+		}
+    </style>
+    
+  </head>
+  <body class="">
+    <header>
+      <div class="container header">
+        <div class="row">
+          <div class="col-md-12 col-lg-6 justify-content-center align-self-center mobile-header-logo">
+            <a href="" target="_blank" data-targettype="landingpage" data-targetname="">
+            <img src="https://img04.en25.com/EloquaImages/clients/QUALFONADHOC/{0fd6c2b8-1b77-4b8c-a083-83dc5af45646}_qualfon_logo.png" class="img-fluid" alt="Qualfon">
+          </a></div>
+			<div class="col-md-12 col-lg-6 d-flex justify-content-end mobile-CTAButton" style="padding-top: 5px">
+				<a href="https://360direct.qualfon.com/integratedsolutions?elqTrackId=05a15f4a9ea34acf996abd84fd6532c6"><div class="CTAButton text-center" style="">Learn more about<br/>Qualfon Integrated Solutions</div></a>
+			</div>
+				
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="top">
+        <h1 class="">Integrated Solutions Blogs</h1>
+        
+      </div>
+      <div class="list article1">
+        <img src="https://img04.en25.com/EloquaImages/clients/QUALFONADHOC/%7B4b1f51bd-def0-471b-b0cd-87cf49f7be13%7D_Business_Insomnia_LinkedIn_Article_Pic.png" alt="Business Insomnia" width="200" height="142" class="mobile-image" style="margin-top: 17px">
+		  <div class="article-header" style="display:inline">
+        <h3 class="" style="padding-bottom: 5px">
+          Business Insomnia
+        </h3>
+        <h4>Today, there are many more reasons given by executives when asked: &#10075;What keeps you up at night?&#10076;</h4>
+		<h4 style="font-weight: 100;padding-bottom: 5px">Without being too self-serving, we might just have some remedies.</h4> 
+        <h6> By Ian Jones
+        </h6>
+        <p class="mobile-font-size article-align article-postion">
+			Ask decision makers to prioritize issues that adversely affect their world and it seems the number of problems and their intensity have grown during these topsy-turvy, pandemic influenced times. These issues affect everything from human resources to changing customer behaviors and crafting strategies to address them. There appears no let-up in sight.</p>
+  <p style="padding-left: 260px" class="readmore-postion"><a class="readmore" id="read1" data-toggle="collapse" href="#Article1" role="button" aria-expanded="false" aria-controls="Article1" onClick="Hidereadmore()"><strong>READ MORE</strong></a></p>
+ </div>
+
+		  <div class="collapse article-margin" id="Article1">
+  <div class="card card-body mobile-font-size">
+    <p style="font-size: 15px !important">As a business leader you ask yourself this question because, better than most, you recognize traditional marketing methods are being blown up. Indeed, few industries are changing, metamorphosing faster than customer communications.</p>
+<p>I ask this question of myself every day because it’s my job.</p>
+<p style="padding-left: 45px"><strong>How can I help our customers better serve their customers?<br>
+ What client solutions work best and how can we help direct shopping journeys when it comes to our customer’s product or service? </strong>
+</p>
+<p>Admittedly, it’s a bit like looking in a mirror, with a mirror positioned behind you – the depth of questioning seems almost endless.</p>
+	  <p><strong>But this is what we do</strong>.</p>
+	  <p>The global Covid-19 pandemic has pushed more people online, in some reports doubling – <strong>DOUBLING!</strong> – daily online activities. The average number of exposures to a message has decreased by half, bringing to just fewer than five exposures across all channels. The question – the reason for the insomnia – is how to best get a message connected to a customer to start a brand relationship.</p>
+<p>Clutter exists because digital content has exploded in size and scope. This past year, the average amount of time someone spent online went from three to nearly seven hours. Think of life pre-covid: 
+	   the on-line experience was faster and less burdened, but it has become bogged down; the pandemic forced consumers to spend more time and money in front of their screens, some might say reducing the efficiency and efficacy of marketing investments. Consumers with internet access find screen shopping more convenient but less emotionally satisfying. Uncertainty surrounds the consumer privacy landscape, as exhibited with the demise of tracking cookies, all of which makes the job harder to find specific audience targets.</p>
+	  <p><strong>What’s a marketer to do? </strong> </p>
+	  <p>Big players do what they always do and muscle in with large teams and large investments to wrest consumers and capture share. Where does this leave the small-to-midsize companies that either don’t have a dedicated, flexible team or cubic-dollar budgets?</p>
+	  <p><strong>We think we have an answer. </strong> </p>
+	  <p>Our value prop gives clients an on-point message that’s clear, on-brand and compelling. We include a proven strategy to amplify it across channels, while understanding our clients’ audience, their consumption habits, and the most relevant message to help them find the products and services they need. </p>
+	  <p>Using this combination of contextual and personalized messaging is the only way to capture consumer attention in today’s landscape. Once you have their attention, reinforcing these tactics with data-enhanced, multi-channel creative is essential to driving interest. It is also important to shorten the distance to the moment of purchase. This speaks to our ecommerce and digital campaign ecosystems that lower the barrier to purchase.</p>
+	  <p>Finally – and most importantly – are the insights obtained along the way. To analyze and optimize campaign data is invaluable to boosting campaign performance and to further explore and understand the audience’s media consumption and patterns. Data helps us optimize throughout and data tells us how we did at the end.</p>
+	  <p>It all sounds good, right? So why isn’t everyone doing this? The simple answer is that to do it right is hard. </p>
+	  <p>Many firms don’t have the infrastructure – the people, the investment, the wherewithal – to handle this level of contextual/precision based/multi-channel marketing. It is not easy to get competing departments to work toward a common goal. And it’s fair to say not every company has its own boutique marketing agency waiting to tackle this kind of program.</p>
+	  <p><strong>Which is where we come in.</strong></p>
+	  <p>We provide all these services to free up your associates to take care of your customers. We do the hard work for you, and we do it well.</p>
+	  <p>To prove it, I’ll publish articles that speak to different aspects of these multi-channel, fully integrated programs. Yes, you’ll read the occasional nod to my team, not as a plea for work but because they know this space and I am incredibly proud of them.</p>
+	  <p>Look for me to share our thoughts about crafting the customer journey, data analytics and modeling, CRM, creative – all leading to a complete marketing solution that extends to kitting and order fulfillment. <strong>And in so doing, I’ll do everything in my power to help you rest just a little bit easier. </strong> </p>
+	  <p style="text-decoration: underline;font-size:12px"><strong>ABOUT THE AUTHOR</strong></p>
+	  <p style="font-size: 12px">As head of Qualfon’s Integrated Solutions, Ian aligns discreet corporate services in support of clients looking for a comprehensive marketing strategy. Few are better prepared to handle these advertising and marketing rigors, whether it’s strategy, analytics, creative or the use of varied media channels, Ian’s ability to develop and nurture his team’s skills has achieved remarkable results everywhere he’s been. Prior to joining Qualfon he worked with the Ford and Dodge Dealer Advertising Associations managing teams across the US, Canada and globally. The breadth of his marketing savvy includes pioneering targeted TV buys for local clients, search-derived marketing campaigns, launching cooperative dealer websites, and integrating social media support into Buick and GMC brand strategies. He has extensive experience developing integrated marketing campaigns, digital ecosystems (site/social/CRM), lifestyle and motor sports marketing, strategic partnerships and new business development. Most importantly, he surrounds himself with exceptionally talented people ready to help.</p>
+	  <div class="d-flex justify-content-center"><a href="https://360direct.qualfon.com/integratedsolutions?elqTrackId=7637ee7a01104722a9e2060f36601b3e"><div class="CTAButton2 text-center">Learn more about<br/>Qualfon Integrated Solutions</div></a></div>
+  </div>
+			  
+</div>
+        
+      </div>
+      <hr class="article2">
+      <div class="list article2">
+        <img class="mobile-image" src="https://img04.en25.com/EloquaImages/clients/QUALFONADHOC/{ce55bd00-3b1c-4368-b187-68138d546f14}_200x200_image.png" alt="Image here">
+        <div class="article-header" style="display:inline">
+		  <h3>
+          Buy the Numbers
+        </h3>
+        <h4>Too many marketers &#10075;go with their gut&#10076; when it comes to their business practice, when in fact the practice demands good data science.
+        </h4>
+        <h6>By Ian Jones
+        </h6>
+          <p class="mobile-font-size article-align article-postion">
+			If you don't believe data analytics should start the marketing process, you might want to reconsider. Don't get me wrong: Product is king. But to know where, how, when, to whom, at what price, for how long - and myriad other answers - can easily, quickly and cleanly be gleaned through data science.</p>
+  <p style="padding-left: 260px" class="readmore-postion"><a class="readmore" id="read2" data-toggle="collapse" href="#Article2" role="button" aria-expanded="false" aria-controls="Article2" onClick="Hidereadmore2()">READ MORE</a></p>
+		  </div>
+
+		  <div class="collapse article-margin" id="Article2">
+  <div class="card card-body mobile-font-size">
+    <p>Not everyone, however, has a bank of statisticians at their disposal to find these answers. And you needn't have access to an &#10075;AI-powered black box&#10076; to crack the code. But you do have to think data are your friend.</p>
+<p>Antoine Georges and data have been very close for his entire career, the last 20 of which has been with Dialog Direct. Georges, an Egyptian-born self-professed number's guy, is VP of Strategy and Analytics and sees numbers as the roadmap to any successful campaign, from start to finish. A campaign succeeds through the rigorous examination and execution of good, clean data and what it tells you. Georges recognizes not every marketer has the ability to analyze data, but for Antoine and his team it's second nature to do the hard work looking at and synthesizing millions of data points, both for the benefit of Dialog Direct and for its customers.</p>
+<p>Data analytics at the start of the marketing process allows for sales forecast models to be created and for audiences to be identified. During a campaign, data shows how to hone messages to sharpen their impact. And at the campaign's conclusion data identifies statistically relevant performance indices. Some see data analytics as only useful at the beginning, but we see it like a first date.</p>
+<p>Let me explain. The examination of clean data - which are paramount to a successful campaign and is something we insist on having and insist on making happen - helps a client discover the easiest route to success. But what if data analysis also showed other opportunities for a customer? They know they have needs, but sometimes our clients don't know the extent of those needs and the areas that can be mined. That's where data science can unearth other opportunities and be the subject of more than one dance together.</p>
+<p>Now we don't see data science entirely as an a la carte discipline that can be jobbed out for a customer's benefit, though we do offer the services of our scientists to those who need it. We see data science as part of a holistic marketing menu; one piece in a cog to keep the gears of commerce running smoothly. </p>
+<p>"There are a lot of companies that specialize in data science and only data science," Georges says. "We as a company do provide data science as part of our service."</p>
+<p>One perception is that successful marketing data science can only be executed through expensive Artificial Intelligence programs. Not entirely so, says Georges whose tenure in the field gives him a kind of all-seeing vision when it comes to ones and zeroes. "You'd be surprised at how many times, when you look at data, how easy it is to solve the problems," he says. Statistical analysis can help identify probabilities, as in "this person has a 90 percent chance of responding to a message while this one is ten percent." Anyone who is trying to sell a good or service needs to know who-is-who and where attention must be paid for the highest likelihood of success.</p>
+<p>"We have been using AI for a while,"" Georges says. "Most of my team are statisticians. [The answers are in the numbers. They're always in the numbers.] What we don't do is &#10075;black box&#10076; AI which is a version of AI where you feed data inputs into a machine to come up with an answer. I'm not saying that's wrong. It is a system that works especially well for a company like Google or General Motors that can have billions of data points about its customers. We don't do that. We use statistical techniques to measure the variables. So-called Black box AI is more suited to where you have a lot of data. We are more suited to support the smaller-to-medium-size companies." </p>
+<p>Analytics aren't restricted to marketing problems, either, as they can help with everything from creative executions to operations decisions. For instance, let's say you have a call center as part of your business. Analytics can look at text mining on the calls and see ways that the successful agents respond to customers. We take those responses and implement that throughout the company. While this is ultimately marketing, it is also operations.</p>
+<p>A customer came to us and said they wanted to add an east coast distribution center to their west coast operations, we stepped in with analytics. We looked at travel logs, among other data, to determine the best possible location for that customer's new footprint. The analytics helped determine optimal workflow, at the best cost. Some companies also factor in work-force access in their data considerations, too.</p>
+<p>Georges knows where his and his team's talents lie. "I solve other people's problems," he says without equivocation. "We are very good at what we do. I can see the impact of what we do for our customers in real time and that's very satisfying."</p>
+	<div class="d-flex justify-content-center"><a href="https://360direct.qualfon.com/integratedsolutions?elqTrackId=736164466e6c4358ba6d84fe224cc4ae"><div class="CTAButton2 text-center" style="">Learn more about<br/>Qualfon Integrated Solutions</div></a></div>
+  </div>
+</div>
+      </div>
+      <hr class="article3">
+      <div class="list article3">
+        <img class="mobile-image" src="https://img04.en25.com/EloquaImages/clients/QUALFONADHOC/{ce55bd00-3b1c-4368-b187-68138d546f14}_200x200_image.png" alt="Image here">
+        <div class="article-header" style="display:inline">
+		  <h3>
+          Cash in on Creative
+        </h3>
+        <h4>Using creative executions, directed by analytics, leaves nothing to chance in making sales effective and efficient.</h4>
+        <h6>By Ian Jones</h6>
+         <p class="mobile-font-size article-align article-postion">
+			Wouldn't it be nice to know how to speak to your audience in a language they appreciate to get your message across? It makes sales much easier.</p>
+  <p style="padding-left: 260px" class="readmore-postion"><a class="readmore" id="read3" data-toggle="collapse" href="#Article3" role="button" aria-expanded="false" aria-controls="Article3" onClick="Hidereadmore3()">READ MORE</a></p>
+ 
+			</div>
+		  <div class="collapse article-margin" id="Article3">
+  <div class="card card-body mobile-font-size">
+    <p>Far too frequently when you give an agency the charge to craft a story, they scamper off in a frenzy and (after sizing up your budget) create &#10075;award-winning&#10076; executions that have little or no effect on your bottom line. What's great for their office trophy case may not be so good for your stakeholders.</p>
+<p>We use creative differently. For us creative is a sales tool. We have so much confidence in messages we craft that we even pay one client for the opportunity to represent them.</p>
+<p>Now before we get to that story, understand our confidence comes from us knowing not just our business, but the business of those for whom we do business. And it comes with a creative director with almost three decades of work in our shop has honed skills unique in the industry. </p>
+<p>Thomas Gulock is anything but an artsy guy who believes his work is too precious to manipulate for the client's advantage. He's that rare breed of right- and left-brained creative who brings design and pragmatism; he and his team are exceptional at reflecting a client's brand brief without infusing it with their own stylistic opinions.</p>
+<p>Second, Thom uses data gleaned ahead of a campaign to craft an effective message. And he uses more data, gathered in a program's early execution, to bring into greater clarity what does and does not work; this ability to pivot and respond is exceptional and extraordinary in the ad community.</p>
+<p>Additionally, Thomas' team is fluent with multiple media - from emails to Facebook, video, carousels, magazines, direct mail - whose messages must be client tailored. And they understand not all media best serve all clients; some firms just don't need direct-mail pieces or television or radio spots.</p>
+<p>Creative success comes back to storytelling well executed. Doesn't matter if it's in an email or on Facebook, direct mail, or video: If the storytelling is badly executed, the campaign suffers. Which is why he cringes at the thought of some companies who farm out creative to places, many of them offshore, that commoditize the process. </p>
+<p>Relying on data science before, during and after the campaign is essential for Thomas' team to execute seasonal messaging, demographic and psychographic messaging, with the granularity of delivering custom messages for one client when it comes to something like car make and color.</p>
+<p>For his entire career at Dialog Direct Thomas has worked on the Ford Motor Company's extended warranty business. It might not be &#10075;sexy&#10076; to some, but to have a client trust your work going on three decades is almost unheard of in the advertising world. That's probably because it continually evolves while also adhering to strict Ford brand guidelines. The messages are tailored for each car and truck model, for each owner's vehicle color, for geography and for where it falls in the vehicle's lifecycle.  </p>
+<p>Thomas and his team are so adept at forming a message - and with their ability to generate Ford Protect contract renewals - that the company pays Ford for the opportunity to make the business work. This is business symbiosis.</p>
+<p>"The beauty of a program like Ford Protect is to make the phone ring upstairs where they are selling the extended warranty plans," Thomas says. "The analytics we get help our company to focus the message, to fish in the right pool - and the timing of that message - and to create variable content that talks to her directly. When I'm talking to a customer, now we're sending targeted direct mail with variable design and text for that person."  </p>
+	  <p>This isn't only about the car business. Thom and team also produce creative for industries as diverse as insurance, health care, pharma and on-line e-stores. Analytics makes creative more efficient and easier, he says. "It sets a goal for me. It narrows the focus and I like to have those well-defined lanes." </p>
+	  <p>The best designers are those who can work both left and right sides of their brains. They are hard to find, but when Thom hires that's one of the things he looks for because it will make the creative department's team work that much better.</p>
+	  <p>"I can do fabulous design," Thom says with confidence. "I can do design that resonates with the audience. And I take great pride in knowing I can do both - great design that works."</p>
+	<div class="d-flex justify-content-center"><a href="https://360direct.qualfon.com/integratedsolutions?elqTrackId=19d676c5335d44be96d91cc7141006bc"><div class="CTAButton2 text-center" style="">Learn more about<br/>Qualfon Integrated Solutions</div></a></div>
+  </div>
+</div>
+      </div>
+      <hr class="article4">
+      <div class="list article4">
+        <img class="mobile-image" src="https://img04.en25.com/EloquaImages/clients/QUALFONADHOC/{ce55bd00-3b1c-4368-b187-68138d546f14}_200x200_image.png" alt="Image here">
+       <div class="article-header" style="display:inline">
+		  <h3 class="">
+          Article #4
+        </h3>
+        <h4>Subheader
+        </h4>
+        <h6 class="">By Ian Jones
+        </h6>
+             <p class="mobile-font-size">
+			First Paragraph goes here</p>
+  <p style="padding-left: 260px" class="readmore-postion"><a class="readmore" id="read4" data-toggle="collapse" href="#Article4" role="button" aria-expanded="false" aria-controls="Article4" onClick="Hidereadmore4()">READ MORE</a></p>
+		  </div>
+
+		  <div class="collapse article-margin article-postion" id="Article4">
+  <div class="card card-body mobile-font-size">
+    <p>  Article goes here</p>
+	<div class="d-flex justify-content-center"><a href="https://360direct.qualfon.com/integratedsolutions?elqTrackId=ff038c2e942e446a85eb9ee9a7d877dc"><div class="CTAButton2 text-center" style="">Learn more about<br/>Qualfon Integrated Solutions</div></a></div>
+  </div>
+</div>
+      </div>
+    </div>
+    <footer class="">
+      <div class="container footer">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div>
+              <div class="copyright" style="border-style: none;">&#169;<span id="currentYear"></span>2021 Qualfon. All Rights Reserved.<br class="mobile-break" style="display:none"/>  | <a href="https://www.qualfon.com/privacy-policy?elqTrackId=0b59eda82bb64d17b5bbbcd1c6e85cea&elqTrack=true" target="_blank"> Privacy Policy</a> | <a href="https://www.qualfon.com/privacy-policy/do-not-sell-request/?elqTrackId=3dbd44a3d7c44cbb99751be2347bba59" alt="Privacy Policy">Do Not Sell My Personal Information</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <!-- Optional JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	
+	function Hidereadmore(){
+	$("#read1").hide();
+		$("#Article2").hide();
+		$("#Article3").hide();
+		$("#Article4").hide();
+		$("#Article1").show();
+}
+	
+	function Hidereadmore2(){
+	$("#read2").hide();
+		$("#read1").show();
+		$("#read3").show();
+		$("#read4").show();
+		$("#Article2").show();
+		$("#Article1").hide();
+		$("#Article3").hide();
+		$("#Article4").hide();
+		
+	
+}	
+	function Hidereadmore3(){
+	$("#read3").hide();
+		$("#read1").show();
+		$("#read2").show();
+		$("#read4").show();
+		$("#Article3").show();
+		$("#Article1").hide();
+		$("#Article2").hide();
+		$("#Article4").hide();
+}
+	function Hidereadmore4(){
+	$("#read4").hide();
+		$("#read1").show();
+		$("#read2").show();
+		$("#read3").show();
+		$("#Article4").show();
+		$("#Article1").hide();
+		$("#Article2").hide();
+		$("#Article3").hide();
+}
+	</script>
+</body></html>

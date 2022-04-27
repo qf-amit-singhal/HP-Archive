@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>InsuranceDialogue</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		body{
+			font-family:"sans-serif", Arial,Helvetica;
+		}
+		.bluestyle{font-family:"sans-serif", Arial,Helvetica;}
+	
+		.background {background-image: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{e02ba094-b747-4fec-b69c-d70bf9e2871f}_524673-0011-aig_web_site_dev_top_row_v2.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 765px;
+			width: 100%;
+			max-width: 1365px
+		}
+		.background2 {background-image: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{6497f3f0-ad70-45a3-81b0-3c94c572d217}_524673-0011-aig_web_site_dev_middle_row_v2.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 657px;
+			width: 100%;
+			max-width: 1365px
+		}
+		.background3 {background-image: url("https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{44773630-12a9-4083-9720-d51ccebd2488}_524673-0011-aig_web_site_dev_bottom_row_v2.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 369px;
+			width: 100%;
+			max-width: 1365px
+		}
+		.hero-pos{position: relative; left: 125px;top: 535px}
+		.hero-pos2{position: relative; left: 10px;top: 30px}
+		.hero-pos3{position: relative; left: 125px;top: 60px}
+		.hero-pos4{position: relative; left: 125px;top: 40px}
+		.hero-pos5{position: relative; left: 130px;top: 80px}
+		.hero-pos6{position: relative; left: 300px;top: 700px}
+		.header{font-size: 35px;color:#00A7E9;font-weight: 400;font-family: "sans-serif";line-height: 30px}
+		.header2{font-size: 16px;color:#00A7E9;font-weight: 400}
+		.header3{font-size: 35px;color:#001A80;font-weight: 600;line-height: 30px}
+		.header4{font-size: 35px;color:#ffffff;font-weight: 700;line-height: 35px;padding-bottom: 10px}
+		
+		.linkstyle{text-decoration: underline;}
+		.bottomrow{background-color: #5A73AC}
+		.button{border-radius: 40px;font-weight: 400;color: #031970;padding: 5px 40px;font-size: 22px;background-color: #ffffff;border: none;}
+		ul{font-size: 16px;color: #000000;font-weight: 600;margin-left: -20px;margin-top: -2px;font-family: sans-serif;}
+		li{line-height: 18px;font-weight: 400;font-family: sans-serif;}
+		 footer{background:#dfdfdf;color:#000000;font-size:14px;padding:30px;height: 72px;width:50%;align-content: center;}
+      .footer a{color:#000000;}
+	  footer a{word-break: keep-all !important;white-space: nowrap !important;}
+		footer{width: 1365px;}
+		.links{margin-left: 2px;}
+		
+		@media only screen and (max-width:1550px) {
+			.background{background-size: cover}
+			.background2{height: 657px;background-size: cover}
+			.background3{height: 365px;background-size: cover}
+			.button{font-size: 20px !important}
+			.hero-pos{position: relative; left: 120px;top: 535px}
+			.hero-pos2{position: relative; left: 40px;top: 55px}
+			.hero-pos3{position: relative; left: 120px;top: 80px}
+			.hero-pos4{position: relative; left: 120px;top: 60px}
+			.hero-pos5{position: relative; left: 120px;top: 100px}
+			.mobile-top{display: block !important}
+		
+		}
+		
+		@media only screen and (max-width:1400px) {
+			.background{background-size: cover;background-position:top;}
+			.hero-pos{position: relative; left: 120px;top: 520px}
+			.hero-pos2{position: relative; left: 40px;top: 55px}
+			.hero-pos3{position: relative; left: 120px;top: 80px}
+			.hero-pos4{position: relative; left: 120px;top: 70px}
+			.hero-pos5{position: relative; left: 130px;top: 100px}
+			.mobile-top{display: block !important}
+		}
+		@media only screen and (max-width:1292px) {
+			.mobile-break{display: none;}
+			.hero-pos{position: relative; left: 80px;top: 520px}
+			.hero-pos2{position: relative; left: 40px;top: 55px}
+			.hero-pos3{position: relative; left: 80px;top: 80px}
+			.hero-pos4{position: relative; left: 80px;top: 70px}
+			.hero-pos5{position: relative; left: 90px;top: 100px}
+			.footer{margin-left: -35px !important;}
+		}
+		@media only screen and (max-width:1200px) {
+			.background{background-size: cover}
+			.background2{background-size: cover}
+			.background3{background-size: cover}
+			.hero-pos{position: relative; left: 50px;top: 530px}
+			.hero-pos2{position: relative; left: 10px;top: 55px;width: 95%}
+			.hero-pos3{position: relative; left: 50px;top: 40px}
+			.hero-pos4{position: relative; left: 50px;top: 40px}
+			.hero-pos5{position: relative; left: 60px;top: 80px}
+			.mobile-break{display: none;}
+			footer{width: 1182px !important}
+			
+			.bottomlogo{width: 250px !important}
+			
+		}
+		@media only screen and (max-width:991px) {
+			.background{background-size: cover;max-height: 600px}
+			.background2{max-height: 500px;background-size: cover}
+			.background3{max-height: 280px;background-size: cover}
+			.hero-pos{position: relative; left: 60px;top: 400px}
+			.hero-pos2{position: relative; left: 10px;top: 55px;width: 95%}
+			.hero-pos3{position: relative; left: 60px;top: 30px}
+			.hero-pos4{position: relative; left: 66px;top: 30px}
+			.hero-pos5{position: relative; left: 70px;top: 50px}
+			.mobile-break{display: none;}
+			footer{width: 972px !important}
+			.background{height: 1307px !important}
+			
+			.subheader{font-size: 18px !important;line-height: normal !important}
+			.subheader-2{font-size: 22px !important;line-height: normal !important}
+			.bluestyle{font-size: 22px !important;}
+			ul{font-size: 14px !important}
+			
+			
+			.bottomlogo{width: 150px !important}
+			
+		}
+     
+		@media only screen and (max-width:768px) {
+			.background{background-size: cover !important;}
+			.background2{background-size: cover !important}
+			.background3{background-size: cover !important}
+			.hero-pos{position: relative; left: 50px;top: 400px;width: 85%}
+			.hero-pos2{position: relative; left: 0px;top: 10px;}
+			.hero-pos3{position: relative; left: 50px;top: 30px;width: 70%}
+			.hero-pos4{position: relative; left: 50px;top: 40px;}
+			.hero-pos5{position: relative; left: 55px;top: 70px}
+			.mobile-top{display: none !important}
+			.mobile-break{display: none;}
+			footer{width: 768px !important;}
+			.background{height: 1011px !important}
+			.footer{margin-left: 20px !important}
+			.subheader{font-size: 16px !important;line-height: 16px !important}
+			.subheader-2{font-size: 22px !important;line-height: normal !important}
+			.bluestyle{font-size: 22px !important;}
+			ul{font-size: 14px !important}
+			
+			
+			.bottomlogo{width: 150px}
+			.button{font-size: 16px !important}
+			.logo-top{width: 250px}
+			
+		}
+		@media only screen and (max-width:590px) {
+			.button{font-size: 14px !important;padding-left:20px;padding-right: 20px}
+			.background{background-size: cover;background-position: left center !important;}
+			.background2{background-size: cover;background-position: left center !important;max-height: 620px;}
+			.background3{;background-size: cover;background-position: left center !important;max-height: 350px}
+          .hero-pos5{position: relative; left: 55px;top: 90px}
+          footer{max-width: 590px !important;height: 100px !important}
+		}
+		@media only screen and (max-width:575px) {
+			
+			.button{font-size: 14px !important;padding-left:20px;padding-right: 20px}
+			.background{background-size: contain;background-position: center center !important;}
+			.background2{background-size: cover;background-position: left center !important;max-height: 600px;}
+			.background3{;background-size: contain;background-position: center center !important;max-height: 350px}
+          .hero-pos5{position: relative; left: 55px;top: 90px}
+          .logo-top{width: 150px !important}
+			.button{padding: 5px 15px;font-size: 10px !important}
+			.header{font-size: 25px !important}
+			.header-sub{font-size: 20px !important}
+			.header3{font-size: 25px !important}
+			.subheader-2{font-size: 20px !important}
+			.hero-pos{position: relative; left: 0px;top: 420px;width: 100%;line-height: normal !important}
+			.hero-pos2{position: relative; left: 0px;top: 10px;width: 100%}
+			.hero-pos3{position: relative; left: 0px;top: 20px;width: 100%}
+			.hero-pos4{position: relative; left: 0px;top: 40px;width: 100%}
+			.hero-pos5{position: relative; left: 0px;top: 90px;width: 100%}
+			footer{max-width: 575px !important;height: 100px;}
+			.footer{margin-left: -40px !important}
+			
+			
+		}
+		
+		@media only screen and (max-width:414px) {
+			.footer{margin-left: -10px !important;margin-top: -15px !important}
+			footer{height: 120px;max-width: 414px !important;height: 120px !important}
+			ul{margin-left: -22px !important}
+			
+		}
+		@media only screen and (max-width:384px) {
+			footer{max-width: 384px !important}
+			.footer{margin-top: -15px !important}
+		}
+		@media only screen and (max-width:360px) {
+			footer{max-width: 360px !important;height: 400px;margin-left: 0px !important;}
+			.footer{margin-left: 0px !important;margin-top: -20px !important}
+		}
+		@media only screen and (max-width:320px) {
+			footer{max-width: 320px !important;height: 750px;margin-left: 0px !important;}
+			.footer{margin-left: 0px !important;margin-top: -20px !important}
+			.background2{max-height: 620px !important}
+			.background3{max-height: 335px !important}
+			.logo-top{width: 120px !important}
+			.subheader{font-size: 14px !important}
+			.subheader-2{font-size: 16px !important}
+			.footer-table{height: 150px !important}
+		}
+      
+	</style>
+</head>
+
+<body style="overflow-x: hidden">
+	<section class="container background">
+		
+	<table class="hero-pos2" width="92%" cellpadding="0" cellspacing="0" ><tr><td class="header2">
+		<span class="header2"><button class="button" onclick="window.location.href='#postions';">SEE OPEN POSITIONS NOW</button></span><br/>
+		<span style="font-size: 20px;color: #ffffff;font-weight: 600"></span>
+		</td>
+		<td class="img" align="right">
+		<img class="logo-top" src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{524149ab-024c-412c-9a16-83eaf8c73840}_524673-00101-insurance_dialog_logo_final.png" width="300" alt="InsuranceDialogue"/>
+		</td>
+		</tr></table>
+		<table class="hero-pos" width="80%" cellpadding="0" cellspacing="0"><tr><td>
+		<span class="header" style="font-family: sans-serif;">I<span class="header-sub" style="font-size: 30px">NSURANCE</span>D<span class="header-sub" style="font-size: 30px">IALOGUE</span></span><br/>
+		<span class="subheader" style="font-size: 24px;color: #ffffff;font-weight: 400;line-height: 25px">We are a captive broker providing licensed insurance services for a leading global insurance organization with operations in approximately 80 countries and jurisdictions<br class="mobile-top" style="display: none"/> focused on the High-Net-Worth market.</span>
+			</td></tr></table></section>
+	<section class="background2 container">
+	<table class="hero-pos3" width="50%" cellpadding="0" cellspacing="0"><tr><td>
+		<span class="header3" style="font-family: sans-serif">JOIN OUR TEAM OF<br/> LICENSED PROFFESSIONALS!</span><br/>
+		<span class="subheader subheader-2" style="font-size: 28px;color: #000000;font-weight: 600;font-family: sans-serif">A few of the benefits that our team enjoys:</span>
+		<div class="bluestyle" style="font-size: 28px;color: #00ADEE;font-weight: 600;margin-top: 20px;font-family: sans-serif">Work from Home<br/>
+			<ul style="font-size: 16px;color: #000000;font-weight: 600;margin-left: -20px;font-family: sans-serif">
+			<li style="font-family: sans-serif"> Virtual access to phones and systems</li>
+			</ul>
+			</div>
+		<div class="bluestyle" style="font-size: 28px;color: #00ADEE;font-weight: 600;font-family: sans-serif">Tenured Team<br/>
+			<ul>
+			<li style="font-family: sans-serif"> Our average team member has 17 years of insurance experience</li>
+			<li> Long-term partnership with a captive High-Net-Worth carrier</li>
+			</ul>
+			</div>
+		<div class="bluestyle" style="font-size: 28px;color: #00ADEE;font-weight: 600;font-family: sans-serif">Full Benefits Package<br/>
+			<ul>
+			<li style="font-family: sans-serif">401(k), medical, dental, vision, life &amp; accident insurance, and vacation</li>			
+			</ul>
+			</div>
+		<div class="bluestyle" style="font-size: 28px;color: #00ADEE;font-weight: 600;font-family: sans-serif">Career Opportunities<br/>
+			<ul>
+			<li style="font-family: sans-serif">Strong focus on mentorship and collaboration</li>
+			<li style="font-family: sans-serif">Expand experience in the sought-after High-Net-Worth market</li>
+			<li style="font-family: sans-serif">Multi-state risk engagement</li>
+			<li style="font-family: sans-serif">Reward and recognition programs</li>
+			
+			</ul>
+			</div>
+		</td></tr></table>
+	</section>
+	<section class="background3 container">
+	<table width="50%" cellpadding="0" cellspacing="0" class="hero-pos4"><tr><td>
+				<div id="postions" class="header4">Click to apply:</div>
+				<div><span class="links" style="color:#00ADEE;font-weight: 900;font-size: 20px">&#62;&nbsp;&nbsp;</span><a class="linkstyle" style="font-size: 20px;color:#ffffff" href="https://forms.office.com/r/VdLJJSVih3?elqTrackId=f8322c051b734808b633c89421c49522">P&amp;C Sales Producer</a><br/>
+				<span class="links" style="color:#00ADEE;font-weight: 900;font-size: 20px">&#62;&nbsp;&nbsp;</span><a class="linkstyle" style="font-size: 20px;color:#ffffff" href="https://forms.office.com/r/psynJeXsaL?elqTrackId=7479a0a5540442f2a0aae4c39f6f0963">Sr. P&amp;C Insurance CSR</a><br/>
+				<span class="links" style="color:#00ADEE;font-weight: 900;font-size: 20px">&#62;&nbsp;&nbsp;</span><a class="linkstyle" style="font-size: 20px;color:#ffffff" href="https://forms.office.com/r/NUPfe3ztWw?elqTrackId=1924480b4b3f4cadb9d92efdafe02502">P&amp;C Insurance CSR</a><br/>
+				<span class="links" style="color:#00ADEE;font-weight: 900;font-size: 20px">&#62;&nbsp;&nbsp;</span><a class="linkstyle" style="font-size: 20px;color:#ffffff" href="https://forms.office.com/r/yCWA45KRWu?elqTrackId=4e35e66af9504c30a466c8ad1edb8edb">Receptionist</a><br/>
+				</div>
+				</td>
+		</tr></table><table width="50%" cellpadding="0" cellspacing="0" class="hero-pos5">
+		<tr>
+				<td style="margin-top: 20px">
+		<img class="bottomlogo" src="https://images.communication.qualfon.com/EloquaImages/clients/QUALFONADHOC/{524149ab-024c-412c-9a16-83eaf8c73840}_524673-00101-insurance_dialog_logo_final.png" width="220" alt="InsuranceDialogue"/>
+		</td></tr>
+		</table>
+		
+	</section>
+
+	<table class="footer-table" align="center" cellpadding="0" cellspacing="0" style="vertical-align: middle"><tr><td>
+		<footer class="footer-table">
+      <div class="footer align-middle">
+        <div class="row align-middle col-12">
+          <div class="col-sm-12 text-center align-middle">
+			  <div>| 13700  Oakland Avenue, Highland Park, MI 48203 | <a href="https://www.qualfon.com/privacy-policy?elqTrackId=76113dc3421344aab13cb0b1c94d9f06" alt="Privacy Policy">Privacy Policy</a> | <a href="https://www.qualfon.com/privacy-policy/do-not-sell-request?elqTrackId=d0216eea64514eda90fb7d3e3e1a0d00" alt="Do Not Sell">Do Not Sell My Personal Information</a><br class="mobile-break-footer" style="display: none"/> &copy; 2022 InsuranceDialogue. All rights reserved
+</div>
+           
+        </div>
+      </div>
+    </div></footer>
+		</td></tr></table>
+</body>
+</html>
