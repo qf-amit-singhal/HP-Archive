@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "ae7d9715-4b76-475b-9af0-81d56e5240bd",
+		"name": "Eloqua - VWAUDI (RTM)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Real Time Emails",
+			"item": [
+				{
+					"name": "Find Contact (Email)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contacts?search=\"emailAddress=angela.plafcan@qualfon.com\"",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "\"emailAddress=angela.plafcan@qualfon.com\""
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Contact (ID)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/63",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"63"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\":\"angela.plafcan@qualfon.com\",\r\n    \"firstName\":\"Angela\",\r\n    \"lastName\":\"Plafcan\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"620158\",\r\n    \"emailAddress\":\"benjamin.chiappetta@dialog-direct.com\",\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Chiappetta\",\r\n    \"address1\":\"4 Applegate Dr\",\r\n    \"address2\":\"Suite A\",\r\n    \"city\":\"Robbinsville\",\r\n    \"state\":\"NJ\",\r\n    \"postalCode\":\"08691\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/620158",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"620158"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test Email\",\r\n    \"contactIds\": [\"226287\"],\r\n    \"email\": {\r\n        \"id\": \"74\", \r\n        \"name\": \"VW eSign Registration API Email\"\r\n    },\r\n   \"sendFromUserId\":\"43\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send - VW eSign Registration API Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - VW eSign Registration API Email\",\r\n    \"contactIds\": [\"226287\"],\r\n    \"email\": {\r\n        \"id\": \"74\", \r\n        \"name\": \"VW eSign Registration API Email\"\r\n    },\r\n   \"sendFromUserId\":\"43\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send - Audi Response instant Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Audi Response instant Email\",\r\n    \"contactIds\": [\"226287\"],\r\n    \"email\": {\r\n        \"id\": \"73\", \r\n        \"name\": \"Audi Response instant Email\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send - Audi Esignature Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Audi Esignature Email\",\r\n    \"contactIds\": [\"226287\"],\r\n    \"email\": {\r\n        \"id\": \"76\", \r\n        \"name\": \"Audi Esignature Email\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/users",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"REST",
+						"1.0",
+						"system",
+						"users"
+					]
+				},
+				"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/user/42",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"REST",
+						"1.0",
+						"system",
+						"user",
+						"42"
+					]
+				},
+				"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact Fields",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/fields/?orderBy=name ASC",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"bulk",
+						"2.0",
+						"contacts",
+						"fields",
+						""
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "VWAUDI\\",
+				"type": "string"
+			},
+			{
+				"key": "saveHelperData",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "showPassword",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "737a6e47-a1bf-4f01-a40a-d338b5e6f44b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5dcfbd39-c71b-45f8-bc92-b8a66a7b7900",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

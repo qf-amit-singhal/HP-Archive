@@ -1,0 +1,1200 @@
+{
+	"info": {
+		"_postman_id": "90fe137c-7edb-49ea-ae90-43f88b498936",
+		"name": "Eloqua API Generic Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Form APIs",
+			"item": [
+				{
+					"name": "Get List of Forms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "{{rest_2.0_url}}assets/forms?orderBy=createdAt DESC",
+							"host": [
+								"{{rest_2.0_url}}assets"
+							],
+							"path": [
+								"forms"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "createdAt DESC"
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Form",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "{{rest_2.0_url}}assets/form/1",
+							"host": [
+								"{{rest_2.0_url}}assets"
+							],
+							"path": [
+								"form",
+								"1"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Real Time Emails",
+			"item": [
+				{
+					"name": "Find Contact (Email)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "{{rest_1.0_url}}data/contacts?search=\"emailAddress=angela.plafcan@qualfon.com\"",
+							"host": [
+								"{{rest_1.0_url}}data"
+							],
+							"path": [
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "\"emailAddress=angela.plafcan@qualfon.com\""
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Contact (ID)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "{{rest_1.0_url}}data/contact/1",
+							"host": [
+								"{{rest_1.0_url}}data"
+							],
+							"path": [
+								"contact",
+								"1"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\":\"angela.plafcan@qualfon.com\",\r\n    \"firstName\":\"Angela\",\r\n    \"lastName\":\"Plafcan\"\r\n}"
+						},
+						"url": {
+							"raw": "{{rest_1.0_url}}data/contact",
+							"host": [
+								"{{rest_1.0_url}}data"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"emailAddress\":\"angela.plafcan@qualfon.com\",\r\n    \"firstName\":\"Angela\",\r\n    \"lastName\":\"Plafcan\",\r\n    \"address1\":\"4 Applegate Dr\",\r\n    \"address2\":\"Suite A\",\r\n    \"city\":\"Robbinsville\",\r\n    \"state\":\"NJ\",\r\n    \"postalCode\":\"08691\"\r\n}"
+						},
+						"url": {
+							"raw": "{{rest_1.0_url}}data/contact/1",
+							"host": [
+								"{{rest_1.0_url}}data"
+							],
+							"path": [
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test Email\",\r\n    \"contactIds\": [\"615449\"],\r\n    \"email\": {\r\n        \"id\": \"129\", \r\n        \"name\": \"Ford Dealer Brouchers - ExtraCARE\"\r\n    },\r\n   \"sendFromUserId\":\"26\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "{{rest_2.0_url}}assets/email/deployment",
+							"host": [
+								"{{rest_2.0_url}}assets"
+							],
+							"path": [
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activities",
+			"item": [
+				{
+					"name": "Activity Exports-EmailSends",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Email Send Activity Export\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"SubjectLine\": \"{{Activity.Field(SubjectLine)}}\",\r\n        \"EmailWebLink\": \"{{Activity.Field(EmailWebLink)}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"EmailSendType\": \"{{Activity.Field(EmailSendType)}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='EmailSend' AND '{{Activity.CreatedAt}}' >= '2020-12-15'\"\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_url}}activities/exports/",
+							"host": [
+								"{{bulk_url}}activities"
+							],
+							"path": [
+								"exports",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity Exports-EmailOpen",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - Email Open\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"SubjectLine\": \"{{Activity.Field(SubjectLine)}}\",\r\n        \"EmailWebLink\": \"{{Activity.Field(EmailWebLink)}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"EmailSendType\": \"{{Activity.Field(EmailSendType)}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"IpAddress\": \"{{Activity.Field(IpAddress)}}\",\r\n        \"VisitorId\": \"{{Activity.Visitor.Id}}\",\r\n        \"VisitorExternalId\": \"{{Activity.Visitor.ExternalId}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='EmailOpen' AND '{{Activity.CreatedAt}}' >= '2020-12-15'\"\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_url}}activities/exports/",
+							"host": [
+								"{{bulk_url}}activities"
+							],
+							"path": [
+								"exports",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity Exports-EmailClickthrough",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Email Clickthrough Activity Export\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"SubjectLine\": \"{{Activity.Field(SubjectLine)}}\",\r\n        \"EmailWebLink\": \"{{Activity.Field(EmailWebLink)}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"EmailSendType\": \"{{Activity.Field(EmailSendType)}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='EmailClickthrough' AND '{{Activity.CreatedAt}}' >= '2020-12-15'\"\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_url}}activities/exports/",
+							"host": [
+								"{{bulk_url}}activities"
+							],
+							"path": [
+								"exports",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity Exports-Bounceback",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - Bounceback\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"SmtpErrorCode\": \"{{Activity.Field(SmtpErrorCode)}}\",\r\n        \"SmtpStatusCode\": \"{{Activity.Field(SmtpStatusCode)}}\",\r\n        \"SmtpMessage\": \"{{Activity.Field(SmtpMessage)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='Bounceback' AND '{{Activity.CreatedAt}}' >= '2020-12-15'\"\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_url}}activities/exports/",
+							"host": [
+								"{{bulk_url}}activities"
+							],
+							"path": [
+								"exports",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activity Exports-Unsubscribe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - Unsubscribe\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='Unsubscribe' AND '{{Activity.CreatedAt}}' >= '2020-12-15'\"\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_url}}activities/exports/",
+							"host": [
+								"{{bulk_url}}activities"
+							],
+							"path": [
+								"exports",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Activity Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_activities_url}}types",
+							"host": [
+								"{{bulk_activities_url}}types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Activity Exports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_activities_url}}exports",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Syncs",
+			"item": [
+				{
+					"name": "Get Syncs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_url}}syncs/?orderBy=syncStartedAt DESC",
+							"host": [
+								"{{bulk_url}}syncs"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "syncStartedAt DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sync Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_url}}syncs/1/logs",
+							"host": [
+								"{{bulk_url}}syncs"
+							],
+							"path": [
+								"1",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sync Rejects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_url}}syncs/1/rejects",
+							"host": [
+								"{{bulk_url}}syncs"
+							],
+							"path": [
+								"1",
+								"rejects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sync Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_url}}syncs/1/data",
+							"host": [
+								"{{bulk_url}}syncs"
+							],
+							"path": [
+								"1",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Sync",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_url}}syncs/",
+							"host": [
+								"{{bulk_url}}syncs"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Real Time Emails",
+			"item": [
+				{
+					"name": "Find Contact by Email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contacts?search=\"emailAddress=angela.plafcan@dialog-direct.com\"",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "\"emailAddress=angela.plafcan@dialog-direct.com\""
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Contact by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/1",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"1"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\":\"benjamin.chiappetta@dialog-direct.com\",\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Chiappetta\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"620158\",\r\n    \"emailAddress\":\"benjamin.chiappetta@dialog-direct.com\",\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Chiappetta\",\r\n    \"address1\":\"4 Applegate Dr\",\r\n    \"address2\":\"Suite A\",\r\n    \"city\":\"Robbinsville\",\r\n    \"state\":\"NJ\",\r\n    \"postalCode\":\"08691\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/1",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/users",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"system",
+								"users"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "FCAMVP\\Angela.Plafcan",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "Shakira!35",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/user/1",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"system",
+								"user",
+								"1"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Email Send\",\r\n    \"contactIds\": [\"1\"],\r\n    \"email\": {\r\n       \"id\": \"1\",\r\n       \"name\": \"Email Name\"\r\n    },\r\n    \"sendFromUserId\":\"1\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Contact Fields",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{bulk_url}}contacts/fields/?orderBy=name ASC",
+					"host": [
+						"{{bulk_url}}contacts"
+					],
+					"path": [
+						"fields",
+						""
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact Field",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{bulk_url}}contacts/fields/?orderBy=name ASC",
+					"host": [
+						"{{bulk_url}}contacts"
+					],
+					"path": [
+						"fields",
+						""
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}system/users",
+					"host": [
+						"{{rest_1.0_url}}system"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}system/user/9",
+					"host": [
+						"{{rest_1.0_url}}system"
+					],
+					"path": [
+						"user",
+						"9"
+					]
+				},
+				"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact Imports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_url}}contacts/imports",
+					"host": [
+						"{{bulk_url}}contacts"
+					],
+					"path": [
+						"imports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Custom Objects Imports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_url}}/customobjects/1/imports",
+					"host": [
+						"{{bulk_url}}"
+					],
+					"path": [
+						"customobjects",
+						"1",
+						"imports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Custom Objects Fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_url}}/customobjects/1/fields",
+					"host": [
+						"{{bulk_url}}"
+					],
+					"path": [
+						"customobjects",
+						"1",
+						"fields"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Email Folders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}assets/email/folders?orderBy=name ASC",
+					"host": [
+						"{{rest_1.0_url}}assets"
+					],
+					"path": [
+						"email",
+						"folders"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"My Test Email\",\r\n    \"emailFooterId\": 1,\r\n    \"emailHeaderId\": 1,\r\n    \"encodingId\": 1,\r\n    \"emailGroupId\": 1,\r\n    \"subject\": \"Test subject line\",\r\n    \"htmlContent\": {\r\n        \"type\": \"RawHtmlContent\",\r\n        \"html\": \"<html><head></head><body>This is the email.</body></html>\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rest_2.0_url}}assets/email",
+					"host": [
+						"{{rest_2.0_url}}assets"
+					],
+					"path": [
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Email Groups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}assets/email/groups?orderBy=name ASC",
+					"host": [
+						"{{rest_1.0_url}}assets"
+					],
+					"path": [
+						"email",
+						"groups"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Email Headers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}assets/email/headers?orderBy=name ASC",
+					"host": [
+						"{{rest_1.0_url}}assets"
+					],
+					"path": [
+						"email",
+						"headers"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Email Footers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}assets/email/footers?orderBy=name ASC",
+					"host": [
+						"{{rest_1.0_url}}assets"
+					],
+					"path": [
+						"email",
+						"footers"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Email Folders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "{{rest_1.0_url}}assets/email/folders?orderBy=name ASC",
+					"host": [
+						"{{rest_1.0_url}}assets"
+					],
+					"path": [
+						"email",
+						"folders"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "[Instance]\\[User Name]",
+				"type": "string"
+			},
+			{
+				"key": "saveHelperData",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "showPassword",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bulk_url",
+			"value": "https://secure.p04.eloqua.com/api/bulk/2.0/"
+		},
+		{
+			"key": "rest_1.0_url",
+			"value": "https://secure.p04.eloqua.com/api/REST/1.0/"
+		},
+		{
+			"key": "rest_2.0_url",
+			"value": "https://secure.p04.eloqua.com/api/REST/2.0/"
+		}
+	]
+}

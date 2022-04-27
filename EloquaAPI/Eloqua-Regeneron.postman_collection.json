@@ -1,0 +1,2214 @@
+{
+	"info": {
+		"_postman_id": "325c6ee8-acc0-46d8-a4a4-3a90860faaac",
+		"name": "Eloqua - Regeneron",
+		"description": "Eloqua Bulk API endpoints for the Regeneron instance.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Import Definitions",
+			"item": [
+				{
+					"name": "Regeneron (LTYF ) Primary Contact Email Match Import",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"LTYF Primary Contact Import (Match on Email)\",\r\n   \"fields\":{\r\n        \"DD_CLIENT\": \"{{Contact.Field(C_DD_Client1)}}\",\r\n        \"CONT_ID\": \"{{Contact.Field(C_DD_Contact_ID1)}}\",\r\n        \"CONTACT_TYPE\": \"{{Contact.Field(C_Contact_Type1)}}\",\r\n        \"CONT_ACTIVE_FLAG\": \"{{Contact.Field(C_Contact_Active_Flag1)}}\",\r\n        \"PRIORITY_INDICATOR\": \"{{Contact.Field(C_Priority_Indicator1)}}\",\r\n        \"PREFIX\": \"{{Contact.Field(C_Title)}}\",\r\n        \"FIRST_NAME\": \"{{Contact.Field(C_FirstName)}}\",\r\n        \"LAST_NAME\": \"{{Contact.Field(C_LastName)}}\",\r\n        \"SUFFIX\": \"{{Contact.Field(C_Suffix1)}}\",\r\n        \"DATE_OF_BIRTH\": \"{{Contact.Field(C_Date_of_Birth1)}}\",\r\n        \"GENDER\": \"{{Contact.Field(C_Gender1)}}\",\r\n        \"EMAIL_ADDRESS\": \"{{Contact.Field(C_EmailAddress)}}\",\r\n        \"CONTACT_CREATE_DATE\": \"{{Contact.Field(C_DD_Contact_Create_Date1)}}\",\r\n        \"ADDRESS_1\": \"{{Contact.Field(C_Address1)}}\",\r\n        \"ADDRESS_2\": \"{{Contact.Field(C_Address2)}}\",\r\n        \"CITY\": \"{{Contact.Field(C_City)}}\",\r\n        \"STATE\": \"{{Contact.Field(C_State_Prov)}}\",\r\n        \"ZIP\": \"{{Contact.Field(C_Zip_Postal)}}\",\r\n        \"ADDRESS_VALID_FLAG\": \"{{Contact.Field(C_Valid_Address_Flag1)}}\",\r\n        \"HOME_PHONE\": \"{{Contact.Field(C_Home_Phone1)}}\",\r\n        \"HOME_PHONE_VALID_FLAG\": \"{{Contact.Field(C_Valid_Home_Phone_Flag1)}}\",\r\n        \"MOBILE_PHONE\": \"{{Contact.Field(C_MobilePhone)}}\",\r\n        \"MOBILE_PHONE_VALID_FLAG\": \"{{Contact.Field(C_Valid_Mobile_Phone_Flag1)}}\",\r\n        \"WORK_PHONE\": \"{{Contact.Field(C_BusPhone)}}\",\r\n        \"WORK_PHONE_VALID_FLAG\": \"{{Contact.Field(C_Valid_Business_Phone_Flag1)}}\",\r\n        \"EYLEA_OPT_EMAIL\": \"{{Contact.Field(C_Eylea_Email_Opt_Status1)}}\",\r\n        \"EYLEA_OPT_SMS\": \"{{Contact.Field(C_Eylea_SMS_Opt_Status1)}}\",\r\n        \"EYLEA_OPT_DIRECT_MAIL\": \"{{Contact.Field(C_Eylea_Direct_Mail_Opt_Status1)}}\",\r\n        \"EYLEA_OPT_PHONE\": \"{{Contact.Field(C_Eylea_Phone_Opt_Status1)}}\",\r\n        \"EYLEA_HCP_OPT_EMAIL\": \"{{Contact.Field(C_Eylea_HCP_Email_Opt_Status1)}}\",\r\n        \"EYLEA_HCP_OPT_DIRECT_MAIL\": \"{{Contact.Field(C_Eylea_HCP_Direct_Mail_Opt_Status1)}}\",\r\n        \"EYLEA_HCP_OPT_PHONE\": \"{{Contact.Field(C_Eylea_HCP_Phone_Opt_Status1)}}\",\r\n        \"INDICATION\": \"{{Contact.Field(C_Indication1)}}\",\r\n        \"DIAGNOSED\": \"{{Contact.Field(C_Diagnosed1)}}\",\r\n        \"ENROLLMENT_DATE\": \"{{Contact.Field(C_Enrollment_Date1)}}\",\r\n        \"PRACTICE_TYPE\": \"{{Contact.Field(C_Practice_Type1)}}\",\r\n        \"HCP_SPECIALITY\": \"{{Contact.Field(C_HCP_Speciality1)}}\",\r\n        \"SEED_FLAG\": \"{{Contact.Field(C_Seed_Flag1)}}\",\r\n        \"MARKETABLE_FLAG\": \"{{Contact.Field(C_Marketable_Flag1)}}\",\r\n        \"MARKETABLE_UPDATE_DATE\": \"{{Contact.Field(C_Marketable_Update_Date1)}}\",\r\n        \"EVKEEZA_SPECIALTY_OTHER\": \"{{Contact.Field(C_Evkeeza_Specialty_Other1)}}\",\r\n        \"EVKEEZA_SPECIALTY\": \"{{Contact.Field(C_Evkeeza_Specialty1)}}\",\r\n        \"EVKEEZA_PATIENT_TYPE\": \"{{Contact.Field(C_Evkeeza_Patient_Type1)}}\",\r\n        \"EVKEEZA_HCP_OPTIN\": \"{{Contact.Field(C_Evkeeza_HCP_Opt_Status1)}}\",\r\n        \"EVKEEZA_PATIENT_OPTIN\": \"{{Contact.Field(C_Evkeeza_Patient_Opt_Status1)}}\",\r\n        \"NOWEYESEE_SYMPTOM\": \"{{Contact.Field(C_NowEyeSee_Symptoms1)}}\",\r\n        \"NOWEYESEE_EMAIL_OPTIN\":\"{{Contact.Field(C_NowEyeSee_Email_Opt_Status1)}}\",\r\n        \"NOWEYESEE_MAIL_OPTIN\": \"{{Contact.Field(C_NowEyeSee_Direct_Mail_Opt_Status1)}}\"\r\n   },\r\n  \"identifierFieldName\": \"EMAIL_ADDRESS\",\r\n  \"isSyncTriggeredOnImport\": false,\r\n  \"isUpdatingMultipleMatchedRecords\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_contacts_url}}imports/70",
+							"host": [
+								"{{bulk_contacts_url}}imports"
+							],
+							"path": [
+								"70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Primary Contact Import",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"Primary Contact Import\",\r\n   \"fields\":{\r\n        \"DD_CLIENT\": \"{{Contact.Field(C_DD_Client1)}}\",\r\n        \"CONT_ID\": \"{{Contact.Field(C_DD_Contact_ID1)}}\",\r\n        \"CONTACT_TYPE\": \"{{Contact.Field(C_Contact_Type1)}}\",\r\n        \"CONT_ACTIVE_FLAG\": \"{{Contact.Field(C_Contact_Active_Flag1)}}\",\r\n        \"PRIORITY_INDICATOR\": \"{{Contact.Field(C_Priority_Indicator1)}}\",\r\n        \"PREFIX\": \"{{Contact.Field(C_Title)}}\",\r\n        \"FIRST_NAME\": \"{{Contact.Field(C_FirstName)}}\",\r\n        \"LAST_NAME\": \"{{Contact.Field(C_LastName)}}\",\r\n        \"SUFFIX\": \"{{Contact.Field(C_Suffix1)}}\",\r\n        \"DATE_OF_BIRTH\": \"{{Contact.Field(C_Date_of_Birth1)}}\",\r\n        \"GENDER\": \"{{Contact.Field(C_Gender1)}}\",\r\n        \"EMAIL_ADDRESS\": \"{{Contact.Field(C_EmailAddress)}}\",\r\n        \"CONTACT_CREATE_DATE\": \"{{Contact.Field(C_DD_Contact_Create_Date1)}}\",\r\n        \"ADDRESS_1\": \"{{Contact.Field(C_Address1)}}\",\r\n        \"ADDRESS_2\": \"{{Contact.Field(C_Address2)}}\",\r\n        \"CITY\": \"{{Contact.Field(C_City)}}\",\r\n        \"STATE\": \"{{Contact.Field(C_State_Prov)}}\",\r\n        \"ZIP\": \"{{Contact.Field(C_Zip_Postal)}}\",\r\n        \"ADDRESS_VALID_FLAG\": \"{{Contact.Field(C_Valid_Address_Flag1)}}\",\r\n        \"HOME_PHONE\": \"{{Contact.Field(C_Home_Phone1)}}\",\r\n        \"HOME_PHONE_VALID_FLAG\": \"{{Contact.Field(C_Valid_Home_Phone_Flag1)}}\",\r\n        \"MOBILE_PHONE\": \"{{Contact.Field(C_MobilePhone)}}\",\r\n        \"MOBILE_PHONE_VALID_FLAG\": \"{{Contact.Field(C_Valid_Mobile_Phone_Flag1)}}\",\r\n        \"WORK_PHONE\": \"{{Contact.Field(C_BusPhone)}}\",\r\n        \"WORK_PHONE_VALID_FLAG\": \"{{Contact.Field(C_Valid_Business_Phone_Flag1)}}\",\r\n        \"EYLEA_OPT_EMAIL\": \"{{Contact.Field(C_Eylea_Email_Opt_Status1)}}\",\r\n        \"EYLEA_OPT_SMS\": \"{{Contact.Field(C_Eylea_SMS_Opt_Status1)}}\",\r\n        \"EYLEA_OPT_DIRECT_MAIL\": \"{{Contact.Field(C_Eylea_Direct_Mail_Opt_Status1)}}\",\r\n        \"EYLEA_OPT_PHONE\": \"{{Contact.Field(C_Eylea_Phone_Opt_Status1)}}\",\r\n        \"EYLEA_HCP_OPT_EMAIL\": \"{{Contact.Field(C_Eylea_HCP_Email_Opt_Status1)}}\",\r\n        \"EYLEA_HCP_OPT_DIRECT_MAIL\": \"{{Contact.Field(C_Eylea_HCP_Direct_Mail_Opt_Status1)}}\",\r\n        \"EYLEA_HCP_OPT_PHONE\": \"{{Contact.Field(C_Eylea_HCP_Phone_Opt_Status1)}}\",\r\n        \"EMPLOYEE_OPT_EMAIL\": \"{{Contact.Field(C_Employee_Email_Opt_Status1)}}\",\r\n        \"EMPLOYEE_OPT_SMS\": \"{{Contact.Field(C_Employee_SMS_Opt_Status1)}}\",\r\n        \"EMPLOYEE_OPT_PHONE\": \"{{Contact.Field(C_Employee_Phone_Opt_Status1)}}\",\r\n        \"EYLEA_ACCESS_BULLETIN_OPT\": \"{{Contact.Field(C_Eylea_Access_Bulletin_Opt_Status1)}}\",\r\n        \"INDICATION\": \"{{Contact.Field(C_Indication1)}}\",\r\n        \"DIAGNOSED\": \"{{Contact.Field(C_Diagnosed1)}}\",\r\n        \"ENROLLMENT_DATE\": \"{{Contact.Field(C_Enrollment_Date1)}}\",\r\n        \"PRACTICE_TYPE\": \"{{Contact.Field(C_Practice_Type1)}}\",\r\n        \"HCP_SPECIALITY\": \"{{Contact.Field(C_HCP_Speciality1)}}\",\r\n        \"EMPLOYEE_HIRE_DATE\": \"{{Contact.Field(C_Employee_Hire_Date1)}}\",\r\n        \"EMPLOYEE_REPORTS_TO\": \"{{Contact.Field(C_Employee_Reports_To1)}}\",\r\n        \"EMPLOYEE_NICKNAME\": \"{{Contact.Field(C_Employee_Nickname1)}}\",\r\n        \"SEED_FLAG\": \"{{Contact.Field(C_Seed_Flag1)}}\",\r\n        \"MARKETABLE_FLAG\": \"{{Contact.Field(C_Marketable_Flag1)}}\",\r\n        \"MARKETABLE_UPDATE_DATE\": \"{{Contact.Field(C_Marketable_Update_Date1)}}\",\r\n        \"HCP_LUCENTIS_AVASTIN_USER\": \"{{Contact.Field(C_Lucentis_Avastin_User1)}}\",\r\n        \"HCP_EYLEA_BRAND_LOYALIST\": \"{{Contact.Field(C_EYLEA_Brand_Loyalist1)}}\",\r\n        \"HCP_INJECTING_NON_INJECTING\": \"{{Contact.Field(C_HCP_INJECTING_NON_INJECTING1)}}\",\r\n        \"HCP_CPT_92134\": \"{{Contact.Field(C_HCP_CPT_921341)}}\",\r\n        \"HCP_CPT_92235\": \"{{Contact.Field(C_HCP_CPT_922351)}}\",\r\n        \"HCP_CPT_92250\": \"{{Contact.Field(C_HCP_CPT_922501)}}\",\r\n        \"LAST_ENROLLMENT_DATE\": \"{{Contact.Field(C_Last_Enrollment_Date1)}}\",\r\n        \"DIAGNOSIS_CODE\": \"{{Contact.Field(C_Diagnosis_Code1)}}\",\r\n        \"DIAGNOSIS_CODE_DESC\": \"{{Contact.Field(C_Diagnosis_Code_Description1)}}\",\r\n        \"HCP_SUP_FLAG\": \"{{Contact.Field(C_Patient_HCP_Suppression_Flag1)}}\",\r\n        \"RESIDE_CITY\": \"{{Contact.Field(C_Payer_Residence_City1)}}\",\r\n        \"RESIDE_STATE\": \"{{Contact.Field(C_Payer_Residence_State1)}}\",\r\n        \"PRALUENT_SPECIALTY\": \"{{Contact.Field(C_Praluent_HCP_Specialty1)}}\",\r\n        \"REP_ASSIGNED\": \"{{Contact.Field(C_Praluent_Assigned_Rep1)}}\",\r\n        \"PRALUENT_HCP_OPTIN\": \"{{Contact.Field(C_Praluent_HCP_Global_Opt1)}}\",\r\n        \"PRALUENT_HCP_EMAIL_OPTIN\": \"{{Contact.Field(C_Praluent_HCP_Email_Opt_Status1)}}\",\r\n        \"EVKEEZA_SPECIALTY_OTHER\":\"{{Contact.Field(C_Evkeeza_Specialty_Other1)}}\",\r\n        \"EVKEEZA_SPECIALTY\":\"{{Contact.Field(C_Evkeeza_Specialty1)}}\",\r\n        \"EVKEEZA_PATIENT_TYPE\":\"{{Contact.Field(C_Evkeeza_Patient_Type1)}}\",\r\n        \"EVKEEZA_HCP_OPTIN\":\"{{Contact.Field(C_Evkeeza_HCP_Opt_Status1)}}\",\r\n        \"EVKEEZA_PATIENT_OPTIN\":\"{{Contact.Field(C_Evkeeza_Patient_Opt_Status1)}}\",\r\n        \"NOWEYESEE_SYMPTOM\": \"{{Contact.Field(C_NowEyeSee_Symptoms1)}}\",\r\n        \"NOWEYESEE_EMAIL_OPTIN\":\"{{Contact.Field(C_NowEyeSee_Email_Opt_Status1)}}\",\r\n        \"NOWEYESEE_MAIL_OPTIN\": \"{{Contact.Field(C_NowEyeSee_Direct_Mail_Opt_Status1)}}\"\r\n   },\r\n  \"identifierFieldName\": \"CONT_ID\",\r\n  \"isSyncTriggeredOnImport\": false,\r\n  \"isUpdatingMultipleMatchedRecords\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_contacts_url}}imports/16",
+							"host": [
+								"{{bulk_contacts_url}}imports"
+							],
+							"path": [
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact Delete Marketable Import",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Contact Delete Marketable Import\",\r\n    \"fields\": {\r\n        \"DD_CLIENT\": \"{{Contact.Field(C_DD_Client1)}}\",\r\n        \"CONT_ID\": \"{{Contact.Field(C_DD_Contact_ID1)}}\",\r\n        \"MARKETABLE_FLAG\": \"{{Contact.Field(C_Marketable_Flag1)}}\",\r\n        \"MARKETABLE_UPDATE_DATE\": \"{{Contact.Field(C_Marketable_Update_Date1)}}\",\r\n        \"EMAIL_ADDRESS\": \"{{Contact.Field(C_EmailAddress)}}\"\r\n   },\r\n  \"identifierFieldName\": \"CONT_ID\",\r\n  \"isSyncTriggeredOnImport\": false,\r\n  \"isUpdatingMultipleMatchedRecords\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_contacts_url}}imports/34",
+							"host": [
+								"{{bulk_contacts_url}}imports"
+							],
+							"path": [
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Secondary Contact Import",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var bulk_cdo_url = pm.variables.get('bulk_cdo_url');",
+									"console.log(bulk_cdo_url);",
+									"var cdo_shared_email = pm.variables.get('cdo_shared');",
+									"console.log(cdo_shared_email);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_cdo_url}}{{cdo_shared}}/imports/17",
+							"host": [
+								"{{bulk_cdo_url}}{{cdo_shared}}"
+							],
+							"path": [
+								"imports",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Communication Import",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_cdo_url}}{{cdo_comm}}/imports/18",
+							"host": [
+								"{{bulk_cdo_url}}{{cdo_comm}}"
+							],
+							"path": [
+								"imports",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Contact Address Import",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_cdo_url}}{{cdo_address}}/imports/19",
+							"host": [
+								"{{bulk_cdo_url}}{{cdo_address}}"
+							],
+							"path": [
+								"imports",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Employee Import",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_cdo_url}}{{cdo_employee}}/imports/20",
+							"host": [
+								"{{bulk_cdo_url}}{{cdo_employee}}"
+							],
+							"path": [
+								"imports",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Payer Group Import",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_cdo_url}}{{cdo_payer}}/imports/50",
+							"host": [
+								"{{bulk_cdo_url}}{{cdo_payer}}"
+							],
+							"path": [
+								"imports",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Email Hygiene Import",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Email Hygiene Import (Match on Email)\",\r\n    \"fields\": {\r\n        \"DD_CLIENT\": \"{{Contact.Field(C_DD_Client1)}}\",\r\n        \"EMAIL_ADDRESS\": \"{{Contact.Field(C_EmailAddress)}}\",\r\n        \"RESULT_CODE\": \"{{Contact.Field(C_Email_Hygiene_Result_Code1)}}\",\r\n        \"HYGIENE_VALID_FLAG\": \"{{Contact.Field(C_Email_Hygiene_Valid_Flag1)}}\"\r\n    },\r\n  \"identifierFieldName\": \"EMAIL_ADDRESS\",\r\n  \"isSyncTriggeredOnImport\": false,\r\n  \"isUpdatingMultipleMatchedRecords\": true\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_contacts_url}}imports/219",
+							"host": [
+								"{{bulk_contacts_url}}imports"
+							],
+							"path": [
+								"219"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Export Definitions",
+			"item": [
+				{
+					"name": "Patient Eylea Active Mailer",
+					"item": [
+						{
+							"name": "Patient Eylea Active Mailer Export",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/exports/33",
+									"protocol": "https",
+									"host": [
+										"secure",
+										"p04",
+										"eloqua",
+										"com"
+									],
+									"path": [
+										"api",
+										"bulk",
+										"2.0",
+										"contacts",
+										"exports",
+										"33"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Eylea Active Mailer Reset Import",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}imports/40",
+									"host": [
+										"{{bulk_contacts_url}}imports"
+									],
+									"path": [
+										"40"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JB-Patient Eylea Active Mailer Export",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "LINK",
+								"header": [],
+								"url": {
+									"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_DM_LOAD?ELOQUA_EXPORT_CONFIG_ID=2",
+									"protocol": "https",
+									"host": [
+										"lap1",
+										"dialogintegration",
+										"com"
+									],
+									"port": "46909",
+									"path": [
+										"Launcher_REGMDR_Eloqua_API_DM_LOAD"
+									],
+									"query": [
+										{
+											"key": "ELOQUA_EXPORT_CONFIG_ID",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JBPROD-REGMDR_ELYEA_ACTIVE_MAILER Std Export",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "LINK",
+								"header": [],
+								"url": {
+									"raw": "https://lap1.dialogintegration.com:46909/REGMDR_ELYEA_ACTIVE_MAILER",
+									"protocol": "https",
+									"host": [
+										"lap1",
+										"dialogintegration",
+										"com"
+									],
+									"port": "46909",
+									"path": [
+										"REGMDR_ELYEA_ACTIVE_MAILER"
+									]
+								},
+								"description": "DEV: la1. \nQA:  la2.\nProd lap1."
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patient Eylea Active Email ",
+					"item": [
+						{
+							"name": "Patient Eylea Active Email Export",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Patient Eylea Active Email Export\",\r\n    \"fields\": {\r\n        \"CONT_ID\": \"{{Contact.Field(C_DD_Contact_ID1)}}\",\r\n        \"COMM_CODE\": \"{{Contact.Field(C_Export_Flag_Patient_Active_Email1)}}\"\r\n    },\r\n    \"filter\": \"'{{Contact.Field(C_Export_Flag_Patient_Active_Email1)}}' != '' '\",\r\n}"
+								},
+								"url": {
+									"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/exports/34",
+									"protocol": "https",
+									"host": [
+										"secure",
+										"p04",
+										"eloqua",
+										"com"
+									],
+									"path": [
+										"api",
+										"bulk",
+										"2.0",
+										"contacts",
+										"exports",
+										"34"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Eylea Active Email Reset Import",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}imports/41",
+									"host": [
+										"{{bulk_contacts_url}}imports"
+									],
+									"path": [
+										"41"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JB-Patient Eylea Active EMAIL Export",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "LINK",
+								"header": [],
+								"url": {
+									"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_Email_LOAD?ELOQUA_EXPORT_CONFIG_ID=3",
+									"protocol": "https",
+									"host": [
+										"lap1",
+										"dialogintegration",
+										"com"
+									],
+									"port": "46909",
+									"path": [
+										"Launcher_REGMDR_Eloqua_API_Email_LOAD"
+									],
+									"query": [
+										{
+											"key": "ELOQUA_EXPORT_CONFIG_ID",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "HCP Eylea Active Email",
+					"item": [
+						{
+							"name": "HCP Eylea Active Email Export",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/exports/35",
+									"protocol": "https",
+									"host": [
+										"secure",
+										"p04",
+										"eloqua",
+										"com"
+									],
+									"path": [
+										"api",
+										"bulk",
+										"2.0",
+										"contacts",
+										"exports",
+										"35"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "HCP Eylea Active Email Reset Import",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}imports/42",
+									"host": [
+										"{{bulk_contacts_url}}imports"
+									],
+									"path": [
+										"42"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JB-HCP Eylea Active EMAIL Export",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "LINK",
+								"header": [],
+								"url": {
+									"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_Email_LOAD?ELOQUA_EXPORT_CONFIG_ID=4",
+									"protocol": "https",
+									"host": [
+										"lap1",
+										"dialogintegration",
+										"com"
+									],
+									"port": "46909",
+									"path": [
+										"Launcher_REGMDR_Eloqua_API_Email_LOAD"
+									],
+									"query": [
+										{
+											"key": "ELOQUA_EXPORT_CONFIG_ID",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee Opt Out",
+					"item": [
+						{
+							"name": "Employee Opt Out Export",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/exports/30",
+									"protocol": "https",
+									"host": [
+										"secure",
+										"p04",
+										"eloqua",
+										"com"
+									],
+									"path": [
+										"api",
+										"bulk",
+										"2.0",
+										"contacts",
+										"exports",
+										"30"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Employee Opt Out Reset",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}imports/35",
+									"host": [
+										"{{bulk_contacts_url}}imports"
+									],
+									"path": [
+										"35"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Eylea Access Opt Out",
+					"item": [
+						{
+							"name": "EYLEA Access Bulletin Opt Out Export",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/exports/31",
+									"protocol": "https",
+									"host": [
+										"secure",
+										"p04",
+										"eloqua",
+										"com"
+									],
+									"path": [
+										"api",
+										"bulk",
+										"2.0",
+										"contacts",
+										"exports",
+										"31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EYLEA Access Opt Out Reset",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}imports/36",
+									"host": [
+										"{{bulk_contacts_url}}imports"
+									],
+									"path": [
+										"36"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payer Opt Out",
+					"item": [
+						{
+							"name": "Regeneron Payer Opt-Out Export",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}exports/45",
+									"host": [
+										"{{bulk_contacts_url}}exports"
+									],
+									"path": [
+										"45"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Regeneron Payer Opt-Out Reset",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{bulk_contacts_url}}imports/51",
+									"host": [
+										"{{bulk_contacts_url}}imports"
+									],
+									"path": [
+										"51"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JBPROD-Payer Eloqua->MDR Opt Out Export",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "LINK",
+								"header": [],
+								"url": {
+									"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_OPTOUT_LOAD?ELOQUA_EXPORT_CONFIG_ID=10",
+									"protocol": "https",
+									"host": [
+										"lap1",
+										"dialogintegration",
+										"com"
+									],
+									"port": "46909",
+									"path": [
+										"Launcher_REGMDR_Eloqua_API_OPTOUT_LOAD"
+									],
+									"query": [
+										{
+											"key": "ELOQUA_EXPORT_CONFIG_ID",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Syncs",
+			"item": [
+				{
+					"name": "Regeneron Get Syncs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_syncs_url}}?orderBy=syncStartedAt DESC",
+							"host": [
+								"{{bulk_syncs_url}}"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "syncStartedAt DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Get Sync Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_syncs_url}}1/logs",
+							"host": [
+								"{{bulk_syncs_url}}1"
+							],
+							"path": [
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Get Sync Rejects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_syncs_url}}1/rejects",
+							"host": [
+								"{{bulk_syncs_url}}1"
+							],
+							"path": [
+								"rejects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Get Sync Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_syncs_url}}1/data",
+							"host": [
+								"{{bulk_syncs_url}}1"
+							],
+							"path": [
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Start Sync",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{bulk_syncs_url}}",
+							"host": [
+								"{{bulk_syncs_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activities",
+			"item": [
+				{
+					"name": "Regeneron Get Activity Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_activities_url}}types",
+							"host": [
+								"{{bulk_activities_url}}types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Get Activity Exports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bulk_activities_url}}exports",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Activity Exports-EmailSends",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Email Send Activity Export\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"SubjectLine\": \"{{Activity.Field(SubjectLine)}}\",\r\n        \"EmailWebLink\": \"{{Activity.Field(EmailWebLink)}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"EmailSendType\": \"{{Activity.Field(EmailSendType)}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"ContactIdExt\": \"{{Activity.Contact.Field(C_DD_Contact_ID1)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='EmailSend' AND '{{Activity.CreatedAt}}' >= '2020-12-15' \" \r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_activities_url}}exports/43",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							],
+							"path": [
+								"43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Activity Exports-EmailClickthrough",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Email Clickthrough Activity Export\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"SubjectLine\": \"{{Activity.Field(SubjectLine)}}\",\r\n        \"EmailWebLink\": \"{{Activity.Field(EmailWebLink)}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"EmailSendType\": \"{{Activity.Field(EmailSendType)}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"ContactIdExt\": \"{{Activity.Contact.Field(C_DD_Contact_ID1)}}\",\r\n        \"EmailClickedThruLink\": \"{{Activity.Field(EmailClickedThruLink)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='EmailClickthrough' AND '{{Activity.CreatedAt}}' >= '2020-12-15' \" \r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_activities_url}}exports/44",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							],
+							"path": [
+								"44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Activity Exports-EmailOpen",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - Email Open\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"IpAddress\": \"{{Activity.Field(IpAddress)}}\",\r\n        \"VisitorId\": \"{{Activity.Visitor.Id}}\",\r\n        \"VisitorExternalId\": \"{{Activity.Visitor.ExternalId}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"SubjectLine\": \"{{Activity.Field(SubjectLine)}}\",\r\n        \"EmailWebLink\": \"{{Activity.Field(EmailWebLink)}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"EmailSendType\": \"{{Activity.Field(EmailSendType)}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"ContactIdExt\": \"{{Activity.Contact.Field(C_DD_Contact_ID1)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='EmailOpen' AND '{{Activity.CreatedAt}}' >= '2020-12-15' \" \r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_activities_url}}exports/49",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							],
+							"path": [
+								"49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Activity Exports-Unsubscribe",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - Unsubscribe\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"ContactIdExt\": \"{{Activity.Contact.Field(C_DD_Contact_ID1)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='Unsubscribe' AND '{{Activity.CreatedAt}}' >= '2020-12-15' \" \r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_activities_url}}exports/50",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							],
+							"path": [
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regeneron Activity Exports-Bounceback",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - Bounceback\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"SmtpErrorCode\": \"{{Activity.Field(SmtpErrorCode)}}\",\r\n        \"SmtpStatusCode\": \"{{Activity.Field(SmtpStatusCode)}}\",\r\n        \"SmtpMessage\": \"{{Activity.Field(SmtpMessage)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"ContactIdExt\": \"{{Activity.Contact.Field(C_DD_Contact_ID1)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='Bounceback' AND '{{Activity.CreatedAt}}' >= '2020-12-15' \" \r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_activities_url}}exports/51",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							],
+							"path": [
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TEST Regeneron Activity Exports-Bounceback",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bulk Activity Export - TESTING Bounceback\",\r\n    \"fields\": {\r\n        \"ActivityId\": \"{{Activity.Id}}\",\r\n        \"ActivityType\": \"{{Activity.Type}}\",\r\n        \"ActivityDate\": \"{{Activity.CreatedAt}}\",\r\n        \"EmailAddress\": \"{{Activity.Field(EmailAddress)}}\",\r\n        \"AssetType\": \"{{Activity.Asset.Type}}\",\r\n        \"AssetName\": \"{{Activity.Asset.Name}}\",\r\n        \"AssetId\": \"{{Activity.Asset.Id}}\",\r\n        \"CampaignId\": \"{{Activity.Campaign.Id}}\",\r\n        \"ExternalId\": \"{{Activity.ExternalId}}\",\r\n        \"EmailRecipientId\": \"{{Activity.Field(EmailRecipientId)}}\",\r\n        \"DeploymentId\": \"{{Activity.Field(EmailDeploymentId)}}\",\r\n        \"SmtpErrorCode\": \"{{Activity.Field(SmtpErrorCode)}}\",\r\n        \"SmtpStatusCode\": \"{{Activity.Field(SmtpStatusCode)}}\",\r\n        \"SmtpMessage\": \"{{Activity.Field(SmtpMessage)}}\",\r\n        \"ContactId\": \"{{Activity.Contact.Id}}\",\r\n        \"ContactIdExt\": \"{{Activity.Contact.Field(C_DD_Contact_ID1)}}\"\r\n    },\r\n    \"filter\": \"'{{Activity.Type}}'='Bounceback' AND '{{Activity.CreatedAt}}' >= '2020-01-01'\"\r\n}"
+						},
+						"url": {
+							"raw": "{{bulk_activities_url}}exports/200",
+							"host": [
+								"{{bulk_activities_url}}exports"
+							],
+							"path": [
+								"200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JB Endpoint - REG EmailSends Activity Export",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD?ELOQUA_EXPORT_CONFIG_ID=5",
+							"protocol": "https",
+							"host": [
+								"lap1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JB Endpoint - REG EmailOpen Activity Export",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD?ELOQUA_EXPORT_CONFIG_ID=7",
+							"protocol": "https",
+							"host": [
+								"lap1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JB Endpoint - REG EmailClickthrough Activity Export",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD?ELOQUA_EXPORT_CONFIG_ID=6",
+							"protocol": "https",
+							"host": [
+								"lap1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JB Endpoint - REG Bounceback Activity Export",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD?ELOQUA_EXPORT_CONFIG_ID=9",
+							"protocol": "https",
+							"host": [
+								"lap1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JB Endpoint - REG Unsubscribe Activity Export",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://lap1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD?ELOQUA_EXPORT_CONFIG_ID=8",
+							"protocol": "https",
+							"host": [
+								"lap1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_EMAIL_ACTIVITY_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JB Endpoints",
+			"item": [
+				{
+					"name": "DEV-PRIMARY_CONTACT_EXPORT",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_PRIMARY_CONTACT_EXPORT",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_PRIMARY_CONTACT_EXPORT"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-SECONDARY_CONT_EXPORT",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_SECONDARY_CONT_EXPORT",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_SECONDARY_CONT_EXPORT"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-DELETE_CONTACT_EXPORT",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_DELETE_CONTACT_EXPORT",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_DELETE_CONTACT_EXPORT"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-CONTACT_ADDRESS_EXPORT",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_CONTACT_ADDRESS_EXPORT",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_CONTACT_ADDRESS_EXPORT"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-COMMUNICATION_EXPORT",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_COMMUNICATION_EXPORT",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_COMMUNICATION_EXPORT"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-EMPLOYEE_EXPORT",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_EMPLOYEE_EXPORT",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_EMPLOYEE_EXPORT"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-ELOQUA_API_SCHEDULE_OPERATION",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/REGMDR_ELOQUA_API_Schedule_Operation",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"REGMDR_ELOQUA_API_Schedule_Operation"
+							]
+						},
+						"description": "DEV: la1\nQA: la2\nProd: lap1"
+					},
+					"response": []
+				},
+				{
+					"name": "DEV-Patient_Active_Mailer_DM_Export_to_MDR",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_DM_LOAD?ELOQUA_EXPORT_CONFIG_ID=9",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_DM_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PROD-Patient_Active_Mailer_DM_Export_to_MDR",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "LINK",
+						"header": [],
+						"url": {
+							"raw": "https://la1.dialogintegration.com:46909/Launcher_REGMDR_Eloqua_API_DM_LOAD?ELOQUA_EXPORT_CONFIG_ID=9",
+							"protocol": "https",
+							"host": [
+								"la1",
+								"dialogintegration",
+								"com"
+							],
+							"port": "46909",
+							"path": [
+								"Launcher_REGMDR_Eloqua_API_DM_LOAD"
+							],
+							"query": [
+								{
+									"key": "ELOQUA_EXPORT_CONFIG_ID",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Real Time Emails",
+			"item": [
+				{
+					"name": "Find Contact by Email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contacts?search=\"emailAddress=angela.plafcan@dialog-direct.com\"",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "\"emailAddress=angela.plafcan@dialog-direct.com\""
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Contact by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/934214",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"934214"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\":\"benjamin.chiappetta@dialog-direct.com\",\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Chiappetta\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"620158\",\r\n    \"emailAddress\":\"benjamin.chiappetta@dialog-direct.com\",\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Chiappetta\",\r\n    \"address1\":\"4 Applegate Dr\",\r\n    \"address2\":\"Suite A\",\r\n    \"city\":\"Robbinsville\",\r\n    \"state\":\"NJ\",\r\n    \"postalCode\":\"08691\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/620158",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"620158"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/users",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"system",
+								"users"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/user/33",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"system",
+								"user",
+								"33"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "LTYF Email Send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API LTYF Welcome Email\",\r\n    \"contactIds\": [\"1\"],\r\n    \"email\": {\r\n       \"id\": \"431\",\r\n       \"name\": \"LTYF Welcome Email [OPH.21.02.0006]\"\r\n    },\r\n    \"sendFromUserId\":\"33\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Regeneron Get Contact Imports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_contacts_url}}imports/?orderBy=name ASC",
+					"host": [
+						"{{bulk_contacts_url}}imports"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Regeneron Get Custom Objects Imports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_cdo_url}}{{cdo_shared}}/imports/",
+					"host": [
+						"{{bulk_cdo_url}}{{cdo_shared}}"
+					],
+					"path": [
+						"imports",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Regeneron Get Contact Fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_contacts_url}}fields",
+					"host": [
+						"{{bulk_contacts_url}}fields"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Regeneron Get Custom Objects Fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bulk_cdo_url}}{{cdo_shared}}/fields",
+					"host": [
+						"{{bulk_cdo_url}}{{cdo_shared}}"
+					],
+					"path": [
+						"fields"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Regeneron Get Contact Exports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/exports",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"bulk",
+						"2.0",
+						"contacts",
+						"exports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eylea.us API Registration DEV",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"MDRContactId\": 999,\r\n  \"ExternalContactId\": \"20210127-1527\",\r\n  \"ContactType\": \"PATIENT\",\r\n  \"Prefix\": \"\",\r\n  \"FirstName\": \"Angela\",\r\n  \"MiddleName\": \"\",\r\n  \"LastName\": \"Plafcan\",\r\n  \"Suffix\": \"\",\r\n  \"Salutation\": \"\",\r\n  \"CompanyName\": \"\",\r\n  \"HomePhone\": \"\",\r\n  \"MobilePhone\": \"2679817214\",\r\n  \"WorkPhone\": \"\",\r\n  \"EmailAddress\": \"angela.plafcan@qualfon.com\",\r\n  \"Address1\": \"4 Applegate Dr\",\r\n  \"Address2\": \"Ste A\",\r\n  \"City\": \"Robbinsville\",\r\n  \"State\": \"NJ\",\r\n  \"Zip\": \"08691\",\r\n  \"Zip4\": \"\",\r\n  \"Country\": \"USA\",\r\n  \"Gender\": \"\",\r\n  \"BirthDate\": \"\",\r\n  \"Timezone\": \"\",\r\n  \"Attributes\": [\r\n    {\r\n      \"FieldName\": \"PatientStatus\",\r\n      \"FieldValue\": \"ACTIVE\"\r\n    },\r\n    {\r\n      \"FieldName\": \"Indication\",\r\n      \"FieldValue\": \"UNDIAGNOSED\"\r\n    },\r\n    {\r\n      \"FieldName\": \"On Treatment\",\r\n      \"FieldValue\": \"Y\"\r\n    },\r\n    {\r\n      \"FieldName\": \"Medication\",\r\n      \"FieldValue\": \"EYLEA (aflibercept) Injection\"\r\n    },\r\n    {\r\n      \"FieldName\": \"Source\",\r\n      \"FieldValue\": \"www.eylea.us\"\r\n    }\r\n  ],\r\n  \"Preferences\": [\r\n    {\r\n      \"Type\": \"All Communications\",\r\n      \"Name\": \" EYLEA_OPTIN \",\r\n      \"Channel\": \"MAIL\",\r\n      \"OptIn\": \"Y\"\r\n    },\r\n    {\r\n      \"Type\": \"All Communications\",\r\n      \"Name\": \"EYLEA_OPTIN\",\r\n      \"Channel\": \"EMAIL\",\r\n      \"OptIn\": \"Y\"\r\n    },\r\n    {\r\n      \"Type\": \"All Communications\",\r\n      \"Name\": \"EYLEA_OPTIN\",\r\n      \"Channel\": \"PHONE\",\r\n      \"OptIn\": \"Y\"\r\n    },\r\n    {\r\n      \"Type\": \"All Communications\",\r\n      \"Name\": \"EYLEA_OPTIN\",\r\n      \"Channel\": \"SMS\",\r\n      \"OptIn\": \"Y\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dialog-direct.jitterbit.net/QA-Grp/v1/REGMDR_WebService",
+					"protocol": "https",
+					"host": [
+						"dialog-direct",
+						"jitterbit",
+						"net"
+					],
+					"path": [
+						"QA-Grp",
+						"v1",
+						"REGMDR_WebService"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HCP OD Fulfillment API (QA)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "VhwSVrOpdX?Sj@",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "revhealth",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ExternalContactId\": \"73680ab1-9e5c-4bf7-9705-a0d0e7363f13\",\r\n    \"ContactType\": \"HCP\",\r\n    \"FirstName\": \"Angela\",\r\n    \"LastName\": \"Plafcan\",\r\n    \"CompanyName\": \"Qualfon\",\r\n    \"WorkPhone\": \"2155551212\",\r\n    \"EmailAddress\": \"angela.plafcan@qualfon.com\",\r\n    \"Address1\": null,\r\n    \"Address2\": null,\r\n    \"City\": null,\r\n    \"State\": null,\r\n    \"Zip\": null,\r\n    \"Country\":null,\r\n    \"Attributes\": [\r\n        {\r\n            \"FieldName\": \"Source\",\r\n            \"FieldValue\": \"diabeticretinaldisease.com\"\r\n        }\r\n    ],\r\n    \"Preferences\": [\r\n        {\r\n            \"Channel\": \"EMAIL\",\r\n            \"OptIn\": \"Y\"\r\n        }\r\n    ],\r\n    \"Products\": [\r\n        {\r\n            \"ProdCode\": \"Diabetic Retinopathy (DR) Quick Reference Guide\",\r\n            \"Quantity\": 1\r\n        },\r\n        {\r\n            \"ProdCode\": \"Diabetic Retinopathy (DR) Patient Identification and Referral Guide\",\r\n            \"Quantity\": 1\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dialog-direct.jitterbit.net/QA-Grp/regmdr/hcpODFulfill",
+					"protocol": "https",
+					"host": [
+						"dialog-direct",
+						"jitterbit",
+						"net"
+					],
+					"path": [
+						"QA-Grp",
+						"regmdr",
+						"hcpODFulfill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NowEyeSee Registration (APPD)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "VhwSVrOpdX?Sj@",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "revhealth",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ExternalContactId\": \"20a0805c-f669-4086-930f-c966791df3d1\",\r\n    \"ContactType\": \"Patient\",\r\n    \"FirstName\": \"Angela\",\r\n    \"LastName\": \"Plafcan\",\r\n    \"HomePhone\": \"2155551212\",\r\n    \"MobilePhone\": \"2679817214\",\r\n    \"EmailAddress\": \"angela.plafcan@qualfon.com\",\r\n    \"Attributes\": [\r\n        {\r\n            \"FieldName\": \"Source\",\r\n            \"FieldValue\": \"noweyesee.com\"\r\n        },\r\n        {\r\n            \"FieldName\": \"Indication\",\r\n            \"FieldValue\": \"DME\"\r\n        },\r\n        {\r\n            \"FieldName\": \"Symptoms\",\r\n            \"FieldValue\": \"Y\"\r\n        }\r\n    ],\r\n    \"Preferences\": [\r\n        {\r\n            \"Channel\": \"EMAIL\",\r\n            \"OptIn\": \"Y\"\r\n        },\r\n        {\r\n            \"Channel\": \"MAIL\",\r\n            \"OptIn\": \"Y\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dialog-direct.jitterbit.net/Dev-Grp/regmdr/noweyesee",
+					"protocol": "https",
+					"host": [
+						"dialog-direct",
+						"jitterbit",
+						"net"
+					],
+					"path": [
+						"Dev-Grp",
+						"regmdr",
+						"noweyesee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NowEyeSee Registration (APPQ)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "VhwSVrOpdX?Sj@",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "revhealth",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ExternalContactId\": \"20a0805c-f669-4086-930f-c966791df3d1\",\r\n    \"ContactType\": \"Patient\",\r\n    \"FirstName\": \"Angela\",\r\n    \"LastName\": \"Plafcan\",\r\n    \"HomePhone\": \"2155551212\",\r\n    \"MobilePhone\": \"2679817214\",\r\n    \"EmailAddress\": \"angela.plafcan@qualfon.com\",\r\n    \"Attributes\": [\r\n        {\r\n            \"FieldName\": \"Source\",\r\n            \"FieldValue\": \"noweyesee.com\"\r\n        },\r\n        {\r\n            \"FieldName\": \"Indication\",\r\n            \"FieldValue\": \"DME\"\r\n        },\r\n        {\r\n            \"FieldName\": \"Symptoms\",\r\n            \"FieldValue\": \"Y\"\r\n        }\r\n    ],\r\n    \"Preferences\": [\r\n        {\r\n            \"Channel\": \"EMAIL\",\r\n            \"OptIn\": \"Y\"\r\n        },\r\n        {\r\n            \"Channel\": \"MAIL\",\r\n            \"OptIn\": \"Y\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dialog-direct.jitterbit.net/QA-Grp/regmdr/noweyesee",
+					"protocol": "https",
+					"host": [
+						"dialog-direct",
+						"jitterbit",
+						"net"
+					],
+					"path": [
+						"QA-Grp",
+						"regmdr",
+						"noweyesee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NowEyeSee Registration (APPX)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "VhwSVrOpdX?Sj@",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "revhealth",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ExternalContactId\": \"20a0805c-f669-4086-930f-c966791df3d1\",\r\n    \"ContactType\": \"Patient\",\r\n    \"FirstName\": \"Angela\",\r\n    \"LastName\": \"Plafcan\",\r\n    \"HomePhone\": \"2155551212\",\r\n    \"MobilePhone\": \"2679817214\",\r\n    \"EmailAddress\": \"angela.plafcan@qualfon.com\",\r\n    \"Attributes\": [\r\n        {\r\n            \"FieldName\": \"Source\",\r\n            \"FieldValue\": \"noweyesee.com\"\r\n        },\r\n        {\r\n            \"FieldName\": \"Indication\",\r\n            \"FieldValue\": \"DME\"\r\n        },\r\n        {\r\n            \"FieldName\": \"Symptoms\",\r\n            \"FieldValue\": \"Y\"\r\n        }\r\n    ],\r\n    \"Preferences\": [\r\n        {\r\n            \"Channel\": \"EMAIL\",\r\n            \"OptIn\": \"Y\"\r\n        },\r\n        {\r\n            \"Channel\": \"MAIL\",\r\n            \"OptIn\": \"Y\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dialog-direct.jitterbit.net/Prod-Grp/regmdr/noweyesee",
+					"protocol": "https",
+					"host": [
+						"dialog-direct",
+						"jitterbit",
+						"net"
+					],
+					"path": [
+						"Prod-Grp",
+						"regmdr",
+						"noweyesee"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "REGENERON\\UserName",
+				"type": "string"
+			},
+			{
+				"key": "saveHelperData",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "showPassword",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bulk_contacts_url",
+			"value": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/"
+		},
+		{
+			"key": "bulk_cdo_url",
+			"value": "https://secure.p04.eloqua.com/api/bulk/2.0/customobjects/"
+		},
+		{
+			"key": "bulk_activities_url",
+			"value": "https://secure.p04.eloqua.com/api/bulk/2.0/activities/"
+		},
+		{
+			"key": "bulk_syncs_url",
+			"value": "https://secure.p04.eloqua.com/api/bulk/2.0/syncs/"
+		},
+		{
+			"key": "cdo_shared",
+			"value": "7"
+		},
+		{
+			"key": "cdo_comm",
+			"value": "13"
+		},
+		{
+			"key": "cdo_address",
+			"value": "10"
+		},
+		{
+			"key": "cdo_employee",
+			"value": "11"
+		},
+		{
+			"key": "cdo_payer",
+			"value": "18"
+		}
+	]
+}

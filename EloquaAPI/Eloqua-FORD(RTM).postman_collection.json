@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "2ea57dcd-0b6d-47fb-a818-2f0d863b3de1",
+		"name": "Eloqua - FORD (RTM)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SMS Form APIs",
+			"item": [
+				{
+					"name": "Get List of Forms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/forms?orderBy=createdAt DESC",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"forms"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "createdAt DESC"
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Form",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/form/42",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"form",
+								"42"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Form Data - SMS Double Opt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"FormData\",\r\n  \"fieldValues\": [\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"279\",\r\n      \"name\": \"emailAddress\",\r\n      \"value\": \"angela.plafcan@qualfon.com\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"292\",\r\n      \"name\": \"mobilePhone\",\r\n      \"value\": \"2679817214\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"294\",\r\n      \"name\": \"firstName\",\r\n      \"value\": \"Angie\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"282\",\r\n      \"name\": \"lastName\",\r\n      \"value\": \"Plafcan\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"299\",\r\n      \"name\": \"vehMake\",\r\n      \"value\": \"FORD\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"300\",\r\n      \"name\": \"agentName\",\r\n      \"value\": \"Test Agent\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"301\",\r\n      \"name\": \"agentPhoneNumber\",\r\n      \"value\": \"800-555-1212\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"338\",\r\n      \"name\": \"VIN\",\r\n      \"value\": \"ABC123456789\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"339\",\r\n      \"name\": \"cKSCustomerId\",\r\n      \"value\": \"123456789\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/data/form/39",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"data",
+								"form",
+								"39"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Form Data - SMS eSignature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"FormData\",\r\n  \"fieldValues\": [\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"302\",\r\n      \"name\": \"emailAddress\",\r\n      \"value\": \"angela.plafcan@qualfon.com\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"305\",\r\n      \"name\": \"mobilePhone\",\r\n      \"value\": \"2679817214\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"307\",\r\n      \"name\": \"vehMake\",\r\n      \"value\": \"FORD\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"306\",\r\n      \"name\": \"firstName\",\r\n      \"value\": \"Angie\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"303\",\r\n      \"name\": \"lastName\",\r\n      \"value\": \"Plafcan\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"308\",\r\n      \"name\": \"agentName\",\r\n      \"value\": \"Test Agent\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"309\",\r\n      \"name\": \"agentPhoneNumber\",\r\n      \"value\": \"800-555-1212\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"310\",\r\n      \"name\": \"purchActCode\",\r\n      \"value\": \"TEST\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"311\",\r\n      \"name\": \"VIN\",\r\n      \"value\": \"ABC123456789\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"340\",\r\n      \"name\": \"cKSCustomerId\",\r\n      \"value\": \"123456789\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/data/form/40",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"data",
+								"form",
+								"40"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Form Data - SMS Agent Phone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"FormData\",\r\n  \"fieldValues\": [\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"312\",\r\n      \"name\": \"emailAddress\",\r\n      \"value\": \"angela.plafcan@qualfon.com\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"315\",\r\n      \"name\": \"mobilePhone\",\r\n      \"value\": \"2679817214\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"317\",\r\n      \"name\": \"vehMake\",\r\n      \"value\": \"FORD\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"316\",\r\n      \"name\": \"firstName\",\r\n      \"value\": \"Angie\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"313\",\r\n      \"name\": \"lastName\",\r\n      \"value\": \"Plafcan\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"318\",\r\n      \"name\": \"agentName\",\r\n      \"value\": \"Test Agent\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"319\",\r\n      \"name\": \"agentPhoneNumber\",\r\n      \"value\": \"800-555-1212\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"341\",\r\n      \"name\": \"VIN\",\r\n      \"value\": \"ABC123456789\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"342\",\r\n      \"name\": \"cKSCustomerId\",\r\n      \"value\": \"123456789\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/data/form/41",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"data",
+								"form",
+								"41"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Form Data - SMS Opt Out",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"FormData\",\r\n  \"fieldValues\": [\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"322\",\r\n      \"name\": \"emailAddress\",\r\n      \"value\": \"angela.plafcan@qualfon.com\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"325\",\r\n      \"name\": \"mobilePhone\",\r\n      \"value\": \"2679817214\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"327\",\r\n      \"name\": \"vehMake\",\r\n      \"value\": \"FORD\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"326\",\r\n      \"name\": \"firstName\",\r\n      \"value\": \"Angie\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"323\",\r\n      \"name\": \"lastName\",\r\n      \"value\": \"Plafcan\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"328\",\r\n      \"name\": \"agentName\",\r\n      \"value\": \"Test Agent\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"329\",\r\n      \"name\": \"agentPhoneNumber\",\r\n      \"value\": \"800-555-1212\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"343\",\r\n      \"name\": \"VIN\",\r\n      \"value\": \"ABC123456789\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"344\",\r\n      \"name\": \"cKSCustomerId\",\r\n      \"value\": \"123456789\"\r\n    }\r\n  ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/data/form/42",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"data",
+								"form",
+								"42"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Form Data - SMS Follow-Up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"FormData\",\r\n  \"fieldValues\": [\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"330\",\r\n      \"name\": \"emailAddress\",\r\n      \"value\": \"angela.plafcan@qualfon.com\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"333\",\r\n      \"name\": \"mobilePhone\",\r\n      \"value\": \"2679817214\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"335\",\r\n      \"name\": \"vehMake\",\r\n      \"value\": \"FORD\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"334\",\r\n      \"name\": \"firstName\",\r\n      \"value\": \"Angie\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"331\",\r\n      \"name\": \"lastName\",\r\n      \"value\": \"Plafcan\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"336\",\r\n      \"name\": \"agentName\",\r\n      \"value\": \"Test Agent\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"337\",\r\n      \"name\": \"agentPhoneNumber\",\r\n      \"value\": \"800-555-1212\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"345\",\r\n      \"name\": \"VIN\",\r\n      \"value\": \"ABC123456789\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"346\",\r\n      \"name\": \"cKSCustomerId\",\r\n      \"value\": \"123456789\"\r\n    },\r\n    {\r\n      \"type\": \"FieldValue\",\r\n      \"id\": \"350\",\r\n      \"name\": \"scheduledCallTime\",\r\n      \"value\": \"12:00 PM\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/data/form/43",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"data",
+								"form",
+								"43"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Real Time Emails",
+			"item": [
+				{
+					"name": "Find Contact (Email)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contacts?search=\"emailAddress=angela.plafcan@qualfon.com\"",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "\"emailAddress=angela.plafcan@qualfon.com\""
+								}
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Find Contact (ID)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+							}
+						],
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/63",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"63"
+							]
+						},
+						"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\":\"jkplaf@gmail.com\",\r\n    \"firstName\":\"Catherine\",\r\n    \"lastName\":\"Plafcan\",\r\n    \"fieldValues\":[\r\n    \t{\r\n    \t\t\"type\":\"FieldValue\",\r\n    \t\t\"id\":\"100261\",\r\n    \t\t\"value\":\"TEST123456789\"\r\n    \t}\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"620158\",\r\n    \"emailAddress\":\"benjamin.chiappetta@dialog-direct.com\",\r\n    \"firstName\":\"Ben\",\r\n    \"lastName\":\"Chiappetta\",\r\n    \"address1\":\"4 Applegate Dr\",\r\n    \"address2\":\"Suite A\",\r\n    \"city\":\"Robbinsville\",\r\n    \"state\":\"NJ\",\r\n    \"postalCode\":\"08691\"\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/REST/1.0/data/contact/620158",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"REST",
+								"1.0",
+								"data",
+								"contact",
+								"620158"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test Email\",\r\n    \"contactIds\": [\"615449\"],\r\n    \"email\": {\r\n        \"id\": \"129\", \r\n        \"name\": \"Ford Dealer Brouchers - ExtraCARE\"\r\n    },\r\n   \"sendFromUserId\":\"26\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Lincoln PremiumCARE Brochure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Lincoln PremiumCARE Brochure\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"285\", \r\n        \"name\": \"Lincoln PremiumCARE Brochure\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Ford Comparison Instant Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Ford Comparison Instant Email\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"174\", \r\n        \"name\": \"Ford Comparison Instant Email\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Ford eSign/Registration Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Ford eSign/Registration Email\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"153\", \r\n        \"name\": \"Ford eSign/Registration Email\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Ford ePub instant Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Ford ePub instant Email\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"152\", \r\n        \"name\": \"Ford ePub instant Email\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Ford Dealer Brouchers - PremiumCARE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Ford Dealer Brouchers - PremiumCARE\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"127\", \r\n        \"name\": \"Ford Dealer Brouchers - PremiumCARE\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Ford Dealer Brouchers - PMP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Ford Dealer Brouchers - PMP\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"128\", \r\n        \"name\": \"Ford Dealer Brouchers - PMP\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Send -Ford Dealer Brouchers - ExtraCARE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"EmailLowVolumeDeployment\",\r\n    \"name\": \"Postman API Test - Ford Dealer Brouchers - ExtraCARE\",\r\n    \"contactIds\": [\"1457265\"],\r\n    \"email\": {\r\n        \"id\": \"129\", \r\n        \"name\": \"Ford Dealer Brouchers - ExtraCARE\"\r\n    },\r\n   \"sendFromUserId\":\"44\",\r\n    \"sendOptions\": {\r\n        \"allowResend\": \"true\",\r\n        \"allowSendToUnsubscribe\": \"true\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://secure.p04.eloqua.com/api/rest/2.0/assets/email/deployment",
+							"protocol": "https",
+							"host": [
+								"secure",
+								"p04",
+								"eloqua",
+								"com"
+							],
+							"path": [
+								"api",
+								"rest",
+								"2.0",
+								"assets",
+								"email",
+								"deployment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get Contact Fields",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/fields/?orderBy=name ASC",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"bulk",
+						"2.0",
+						"contacts",
+						"fields",
+						""
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact Field",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEVsb3F1YS5BUEk6clQ1eCNuNldNTw=="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/bulk/2.0/contacts/fields/?orderBy=name ASC",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"bulk",
+						"2.0",
+						"contacts",
+						"fields",
+						""
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/users",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"REST",
+						"1.0",
+						"system",
+						"users"
+					]
+				},
+				"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic UkVHRU5FUk9OXEFuZ2VsYS5QbGFmY2FuOlNoYWtpcmEhMjc="
+					}
+				],
+				"url": {
+					"raw": "https://secure.p04.eloqua.com/api/REST/1.0/system/user/42",
+					"protocol": "https",
+					"host": [
+						"secure",
+						"p04",
+						"eloqua",
+						"com"
+					],
+					"path": [
+						"api",
+						"REST",
+						"1.0",
+						"system",
+						"user",
+						"42"
+					]
+				},
+				"description": "Look up contact using email address\nto search on email: data/contacts?search=\"emailAddress=dialogdirectcampaign@gmail.com\"\nto search by ID data/contact/934213"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "FORD\\",
+				"type": "string"
+			},
+			{
+				"key": "saveHelperData",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "showPassword",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "737a6e47-a1bf-4f01-a40a-d338b5e6f44b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5dcfbd39-c71b-45f8-bc92-b8a66a7b7900",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

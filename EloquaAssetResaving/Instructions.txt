@@ -1,0 +1,10 @@
+Follow these instructions to start the Eloqua Asset Resaving tool:
+
+1. Download and install node.js from https://nodejs.org/en/ 
+	(LTS Recommended)
+2. Open PowerShell and navigate to this directory
+	Command Example: Set-Location -Path "C:\EloquaResavingAssets"
+3. Run npm install. This will install all dependencies in a node_modules subdirectory. This only needs to be run once.
+4. Run npm start. Open Chrome/Firefox/Edge and navigate to http://127.0.0.1:3000/
+
+Closing PowerShell will stop the tool. Repeat steps 2 and 4 to reopen the tool.
