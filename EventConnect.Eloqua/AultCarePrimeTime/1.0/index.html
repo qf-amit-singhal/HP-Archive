@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Event Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12ebb599fc.js"></script>
+
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: rgb(36,50,103);
+            background: linear-gradient(169deg, rgba(36,50,103,1) 0%, rgba(20,131,142,1) 100%);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        #app {
+            height: 115%;
+        }
+
+        #app-container {
+            padding-top: 1px;
+            height: 100%;
+        }
+
+        .footer-fix {
+            margin-bottom: 200px;
+        }
+
+        .has-photos {
+            background-image: url(https://img04.en25.com/EloquaImages/clients/SOUTHSHORE/{3c585a1c-5d34-4151-993c-a5605bd32626}_lp-bg.jpg);
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+
+        .page-row {
+            margin-top: 10%;
+        }
+
+        .home-page-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+        }
+
+        .step-list-container {
+            background-color: #dddddd;
+            padding: 40px 20px 40px 20px;
+        }
+
+        .step-page-container {
+            background-color: white;
+            padding: 40px;
+        }
+
+        .page-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #242729 !important;
+            color: white;
+            height: 200px;
+            padding-top: 40px;
+        }
+
+            .page-footer .main-text {
+                font-weight: normal;
+            }
+
+            .page-footer .links {
+                font-size: 12px;
+                margin-top: 30px;
+            }
+
+                .page-footer .links a, .page-footer .links a:visited, .page-footer .links a:active {
+                    color: white;
+                }
+
+        [v-cloak] {
+            display: none
+        }
+
+        .text-dark {
+            color: rgb(36,50,103) !important;
+        }
+
+        a, a:visited {
+            color: rgb(36,50,103);
+        }
+
+        .btn-primary.btn-dd {
+            background-color: rgb(36,50,103);
+            border-color: rgb(36,50,103);
+            font-size: 14px;
+        }
+
+        .btn-outline-primary.btn-dd {
+            border-color: rgb(36,50,103);
+            font-size: 14px;
+            color: rgb(36,50,103);
+        }
+
+            .btn-outline-primary.btn-dd:hover {
+                background-color: rgb(36,50,103);
+                color: white;
+            }
+
+        .title {
+            margin-top: 20px;
+            font-size: 32px;
+            font-family: 'Slabo 27px', serif;
+            line-height: 34px;
+        }
+
+        .rsvp-code-panel {
+            margin-top: 20px;
+        }
+
+        .yes-no {
+            font-weight: bold;
+            color: rgb(20,131,142);
+        }
+
+        .question-header {
+            margin-bottom: 10px;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .component-fade-enter-active, .component-fade-leave-active {
+            transition: opacity .3s ease;
+        }
+
+        .component-fade-enter, .component-fade-leave-to {
+            opacity: 0;
+        }
+
+        .step-panel .step-name {
+            font-family: 'Slabo 27px', serif;
+            font-size: 27px;
+            line-height: 27px;
+            color: #888888;
+        }
+
+        .step-panel .step-label {
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .step-list-container .company-header {
+            margin-bottom: 30px;
+        }
+
+        .step-panel {
+            margin-top: 15px;
+        }
+
+            .step-panel.active .step-name {
+                color: rgb(20,131,142);
+            }
+
+            .step-panel.active .step-label {
+                color: #333333;
+            }
+
+        .event {
+            text-align: center;
+        }
+
+            .event .title {
+                color: rgb(20,131,142);
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+        .event-info {
+            font-size: 10px;
+        }
+
+        .review-info {
+            font-size: 12px;
+            word-break: break-word;
+        }
+
+        .map {
+            margin-top: 5px;
+        }
+
+            .map img {
+                cursor: pointer;
+            }
+
+        .event-list {
+            height: 250px;
+            margin-top: 10px;
+        }
+
+            .event-list.large {
+                height: 500px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+        .review .title {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            color: rgb(20,131,142);
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .review-edit-link {
+            margin-top: 15px;
+        }
+
+        .page-row h1 {
+            font-family: 'Slabo 27px', serif;
+            font-size: 27px;
+            color: rgb(20,131,142);
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            color: rgb(20,131,142);
+            margin-bottom: 10px;
+        }
+
+        .help-text {
+            font-size: 11px;
+        }
+
+        input.underline {
+            border: 0px;
+            border-bottom: 1px solid #888;
+            padding: 0px;
+        }
+
+            input.underline::placeholder {
+                color: gray;
+                font-size: 12px;
+            }
+
+            input.underline::-ms-input-placeholder {
+                color: #cccccc;
+            }
+
+            input.underline:-ms-input-placeholder {
+                color: #cccccc;
+            }
+
+            input.underline.invalid {
+                border-bottom: 1px solid red;
+            }
+
+        .alert-sm {
+            font-size: 12px;
+            padding: 8px;
+        }
+
+        .text-xs {
+            font-size: 12px;
+        }
+
+        .shaded {
+            background-color: #eee;
+            border-radius: 2px;
+        }
+
+        .confirmation-company-name {
+            color: #656565;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .mb20 {
+            margin-bottom: 20px;
+        }
+
+        .mt10 {
+            margin-top: 10px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+        .p20 {
+            padding: 20px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .col-border-r {
+                border-right: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+
+    <div id="app">
+        <div id="app-container" class="container">
+            <div class="footer-fix">
+                <keep-alive>
+                    <transition name="component-fade" mode="out-in">
+                        <router-view v-on:go-to-register="onGoToRegister" v-on:go-to-events="onGoToEvents" v-on:go-to-review="onGoToReview" v-on:go-to-thank-you="onGoToThankYou"></router-view>
+                    </transition>
+                </keep-alive>
+            </div>
+        </div>
+
+        <nav class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 main-text">
+                        For event registration assistance,<br>please contact us at <span v-cloak="">{{ store.company.supportPhone }}</span>.
+                    </div>
+                </div>
+                <div class="row links">
+                    <div class="col-sm-6 col-xs-12">
+                        <a href="/">Home</a> | <a href="/privacy">Privacy Policy</a> | <a href="terms">Terms of Use</a>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 text-right">
+                        <img src="https://img04.en25.com/EloquaImages/clients/SOUTHSHORE/{640cf93b-4bfa-433b-85a9-d4b0f2d10ef4}_dd-logo.png">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- Steps List -->
+    <script type="text/x-template" id="steps-template">
+        <div class="row">
+            <div v-for="step in steps" class="step-panel col col-xs col-md-12" v-bind:class="{ active: current == step.name }">
+                <div v-if="current === step.name || !step.navUnlocked">
+                    <div class="step-name">{{ step.name }}</div>
+                    <div class="step-label">{{ step.label }}</div>
+                </div>
+                <div class="clickable" v-if="current !== step.name && step.navUnlocked" v-on:click="navigateToStep(step.emitEvent)">
+                    <div class="step-name">{{ step.name }}</div>
+                    <div class="step-label">{{ step.label }}</div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript">
+        var RegisterPage = Vue.component('steps-list', {
+            template: '#steps-template',
+            props: ['steps', 'current'],
+            methods: {
+                navigateToStep: function (step) {
+                    //alert(JSON.stringify(step));
+                    messageBus.$emit(step);
+                }
+            }
+        });
+    </script>
+    <!-- END Steps List -->
+    <!-- Home/RSVP Code Page -->
+    <script type="text/x-template" id="home-template">
+        <div class="row page-row text-center">
+            <div class="home-page-container col-md-10 offset-md-1">
+
+                <div class="company-header">
+                    <img v-bind:src="store.company.logoUrl" />
+                    <div class="company-name">{{ store.company.name }}</div>
+                </div>
+                <div class="row title">
+                    <div class="col-md-6 offset-md-3" v-html="store.homeTitle"></div>
+                </div>
+                <div class="rsvp-code-panel">
+                    <p><b>Do you have an RSVP code?</b></p>
+                    <div>
+                        <div class="question-header">
+                            <span class="yes-no">Yes!</span> I have an RSVP code.
+                        </div>
+                        <div v-if="!isValid" class="row">
+                            <div class="col-md-4 offset-md-4">
+                                <div class="alert alert-sm alert-warning text-left"><i class="fas fa-exclamation-circle"></i> <span v-html="errorMessage"></span></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-2 offset-md-4">
+                                <input type="text" class="form-control rounded-0 white-bg rsvp-code required" placeholder="Enter code here" v-model="code">
+                            </div>
+                            <div class="col-md-3 text-left" style="padding-top: 2px;">
+                                <button class="btn btn-primary btn-dd rounded-0" @click="onSearchForEvent">Search for an event</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="question-header">
+                            <span class="yes-no">No,</span> I don't have an RSVP code.
+                        </div>
+                        <button class="btn btn-primary btn-dd rounded-0" @click="onSearchForEventNoCode">Search for an event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Home/RSVP Code Page -->
+    <!-- Register Page -->
+    <script type="text/x-template" id="register-template">
+        <div class="row page-row text-center">
+            <div class="step-list-container col-md-2 offset-md-1">
+                <div class="company-header">
+                    <img v-bind:src="store.company.logoUrl" />
+                    <div class="company-name">{{ store.company.name }}</div>
+                </div>
+                <steps-list v-bind:steps="store.steps" current="Step 1"></steps-list>
+            </div>
+            <div class="step-page-container col-md-8 text-left">
+                <h1>Register</h1>
+                <div v-if="!isValid" class="alert alert-sm alert-warning"><i class="fas fa-exclamation-circle"></i> One or more required values are missing or invalid. Please see below.</div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <input type="text" v-model="attendee.first" class="required form-control underline mb20 rounded-0" placeholder="First name">
+                        <input type="text" v-model="attendee.last" class="required form-control underline mb20 rounded-0" placeholder="Last name">
+                        <input type="text" v-model="attendee.zip" class="required form-control underline zip mb20 rounded-0" placeholder="Zip code">
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <input type="text" v-model="attendee.email" class="form-control underline mb20 rounded-0" placeholder="Email address (optional)">
+                        <input type="text" v-model="attendee.phone" class="form-control underline mb20 rounded-0" placeholder="Phone number (optional)">
+                        <div class="help-text mt-2">
+                            We encourage you to provide your email address and or phone
+                            number to receive communications about updates and reminders
+                            about the event. You will not receive marketing communications.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    Bringing a guest? Please enter their name below.
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <input type="text" v-model="guest.first" class="form-control underline mb20 rounded-0" placeholder="First name">
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <input type="text" v-model="guest.last" class="form-control underline mb20 rounded-0" placeholder="Last name">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-dd rounded-0 mt-3" @click="onContinue">Continue</button>
+            </div>
+        </div>
+    </script>
+    <!-- END Register Page -->
+    <!-- Search Events Page -->
+    <script type="text/x-template" id="search-template">
+        <div class="row page-row text-center">
+            <div class="step-list-container col-md-2 offset-md-1">
+                <div class="company-header">
+                    <img v-bind:src="store.company.logoUrl" />
+                    <div class="company-name">{{ store.company.name }}</div>
+                </div>
+                <steps-list v-bind:steps="store.steps" current="Step 2"></steps-list>
+            </div>
+            <div class="step-page-container col-md-8 text-left">
+                <h1>Search for events near you</h1>
+                <div class="help-text">Enter the mile radius from your zip code that you would like to search within.</div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <input type="text" class="form-control underline rounded-0 mt-3" placeholder="Enter miles here" v-model="miles">
+                    </div>
+                    <div class="col-md-2 col-xs-4">
+                        <button class="btn btn-primary btn-dd rounded-0 mt-3" @click="onSearch">Search</button>
+                    </div>
+                </div>
+                <div class="row" v-if="results.length == 0">
+                    <div class="col-12 mt-3">
+                        We're sorry, no events were found within <b>{{ lastMiles }} miles</b> of <b>{{ store.attendee.zip }}</b>. Please try a larger radius.
+                    </div>
+                </div>
+                <div v-if="results.length > 0">
+                    <div class="help-text mt-4" v-if="showItemCount < 100">Listed below are the three closest event locations based on your search criteria. Select the event location that you would like to attend. Click here to <a href="#" @click.prevent="onAllResults">view all results</a>.</div>
+                    <div class="event-list">
+                        <div class="row">
+                            <div class="event col-md-4 col-xs-6" v-for="(result, index) in results" v-if="index < showItemCount">
+                                <div class="title">{{ result.city }}</div>
+                                <div class="event-info">
+                                    <div class="miles">({{ result.miles | miles }} miles)</div>
+                                    <div class="date">{{ result.date | date }}</div>
+                                    <div class="time">{{ result.date | time }}</div>
+                                    <div class="address">{{ result.address1 }}</div>
+                                    <div class="address">{{ result.address2 }}</div>
+                                    <div class="county">{{ result.county }}</div>
+                                </div>
+                                <button class="btn btn-outline-primary btn-dd btn-sm rounded-0 mt-3" @click="onAttendEvent(result)">Attend this event</button>
+                                <div class="map">
+                                    <img :src="result.mapUrl" @click="onMapClicked(result)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2" v-if="results.length > 0">
+                        <div class="col text-center">
+                            <a href="#" @click.prevent="onAllResults" v-if="showItemCount < 100">View all results</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Search Events Page -->
+    <!-- Review Page -->
+    <script type="text/x-template" id="review-template">
+        <div class="row page-row text-center">
+            <div class="step-list-container col-md-2 offset-md-1">
+                <div class="company-header">
+                    <img v-bind:src="store.company.logoUrl" />
+                    <div class="company-name">{{ store.company.name }}</div>
+                </div>
+                <steps-list v-bind:steps="store.steps" current="Step 3"></steps-list>
+            </div>
+            <div class="step-page-container col-md-8 text-left">
+                <h1>Review your reservation</h1>
+                <div class="row review">
+                    <div class="col-md-4 col-border-r">
+                        <div class="title">Event</div>
+                        <div class="review-info">
+                            <div><b>{{ store.event.city }} ({{ store.event.miles | miles }} miles)</b></div>
+                            <div class="date">{{ store.event.date | date }}</div>
+                            <div class="time">{{ store.event.date | time }}</div>
+                            <div class="address">{{ store.event.address1 }}</div>
+                            <div class="address">{{ store.event.address2 }}</div>
+                            <div class="address">{{ store.event.city }}, {{ store.event.state}} {{ store.event.zip }}</div>
+                            <div class="county">{{ store.event.county }}</div>
+                            <div class="review-edit-link"><router-link to="/events">Find a new event</router-link></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-border-r">
+                        <div class="title">Attendee</div>
+                        <div class="review-info">
+                            <div><b>{{ store.attendee.first }} {{ store.attendee.last }}</b></div>
+                            <div>{{ store.attendee.email }}</div>
+                            <div>Zip code: {{ store.attendee.zip }}</div>
+                            <div class="review-edit-link"><router-link to="/register">Edit</router-link></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="title">Guest</div>
+                        <div class="review-info">
+                            <div v-if="store.guest.first.length > 0"><b>{{ store.guest.first }} {{ store.guest.last }}</b></div>
+                            <div v-else>(None)</div>
+                            <div class="review-edit-link"><router-link to="/register">Edit</router-link></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt20">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary btn-dd rounded-0" @click="completeRegistration()">Attend this event</button>
+                    </div>
+                    <div v-if="errorMessage !== ''" class="col-md-8">
+                        <div class="alert alert-sm alert-danger text-left"><i class="fas fa-exclamation-circle"></i> <span v-html="errorMessage"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Review Page -->
+    <!-- Thank You Page -->
+    <script type="text/x-template" id="thank-you-template">
+        <div class="row page-row">
+            <div class="step-page-container col-md-12">
+                <div class="row mb20">
+                    <div class="col-md-12 text-center">
+                        <div>
+                            <img v-bind:src="store.company.logoUrl" />
+                        </div>
+                        <span class="confirmation-company-name text-uppercase">{{ store.company.name }}</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h1>Thank you for registering</h1>
+                    <p class="text-xs">You will receive an event registration confirmation email.</p>
+                    <h4 class="text-dark"><strong>Your RSVP code is {{ store.rsvpCode }}</strong></h4>
+                    <p class="small mt20">For additional questions, please contact us at {{ store.company.supportPhone }}.</p>
+                </div>
+
+                <div class="row review">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="row shaded p20">
+                            <div class="col-md-4 col-border-r">
+                                <div class="title">Event</div>
+                                <div class="review-info">
+                                    <div><b>{{ store.event.city }} ({{ store.event.miles | miles }} miles)</b></div>
+                                    <div class="date">{{ store.event.date | date }}</div>
+                                    <div class="time">{{ store.event.date | time }}</div>
+                                    <div class="address">{{ store.event.address1 }}</div>
+                                    <div class="address">{{ store.event.address2 }}</div>
+                                    <div class="address">{{ store.event.city }}, {{ store.event.state}} {{ store.event.zip }}</div>
+                                    <div class="county">{{ store.event.county }}</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-border-r">
+                                <div class="title">Attendee</div>
+                                <div class="review-info">
+                                    <div><b>{{ store.attendee.first }} {{ store.attendee.last }}</b></div>
+                                    <div>{{ store.attendee.email }}</div>
+                                    <div>Zip code: {{ store.attendee.zip }}</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="title">Guest</div>
+                                <div class="review-info">
+                                    <div v-if="store.guest.first.length > 0"><b>{{ store.guest.first }} {{ store.guest.last }}</b></div>
+                                    <div v-else>(None)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- END Thank You Page -->
+    <!-- Startup Code -->
+    <script type="text/javascript">
+
+        var messageBus = new Vue({});
+
+        // var FIND_ATTENDEE_URL = "../api/rsvp.asmx/FindAttendee";
+        // var FIND_EVENTS_URL = "../api/rsvp.asmx/FindEvents";
+        // var REGISTER_URL = "../api/rsvp.asmx/Register";
+
+        var FIND_ATTENDEE_URL = "https://www.eventconnectnow.com/api/rsvp.asmx/FindAttendee";
+        var FIND_EVENTS_URL = "https://www.eventconnectnow.com/api/rsvp.asmx/FindEvents";
+        var REGISTER_URL = "https://www.eventconnectnow.com/api/rsvp.asmx/Register";
+
+        var DEFAULT_SHOW_ITEM_COUNT = 3;
+
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        function isValidZip(val) {
+            return /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(val);
+        }
+
+        function getMapUrl(add1, add2, city, state, zip, w, h) {
+            return '//dev.virtualearth.net/REST/v1/Imagery/Map/Road/' + getUriAddress(add1, add2, city, state, zip) + '?mapSize=' + w + ',' + h + '&key=' + store.mapKey;
+        }
+
+        function getUriAddress(add1, add2, city, state, zip) {
+            var address = add1 + ' ';
+            if (add2 && add2.length > 0) address += add2 + ' ';
+            address += city + ', ' + state + ' ' + zip;
+
+            return encodeURIComponent(address);
+        }
+
+
+        // Global data store shared by all steps.
+        var store = {
+            // Static, customizable information for each company and steps shown in sidebar
+            homeTitle: 'Search for an event in your area to learn about 2019 Benefits',
+
+            company: {
+                logoUrl: 'https://img04.en25.com/EloquaImages/clients/SOUTHSHORE/%7Bedf70bbc-2097-47ff-9c80-4bf8b4f36406%7D_aultcare_transparent.png',
+                name: '',
+                supportPhone: '800-577-5084',
+                accountOid: 183156444
+            },
+
+            steps: [
+                { name: 'Step 1', label: 'Register', emitEvent: 'nav-to-register', navUnlocked: false },
+                { name: 'Step 2', label: 'Select Event', emitEvent: 'nav-to-events', navUnlocked: false },
+                { name: 'Step 3', label: 'Review Reservation', emitEvent: 'nav-to-review', navUnlocked: false }
+            ],
+
+            // Dynamic data
+            attendee: {
+                first: '',
+                last: '',
+                zip: '',
+                email: '',
+                phone: '',
+                leadLoadOid: 0
+            },
+
+            guest: {
+                first: '',
+                last: ''
+            },
+
+            eventSearch: {
+                selectedMiles: 0,
+                results: []
+            },
+
+            event: {},
+
+            rsvpCode: '',
+            mapKey: '',
+
+            // Actions to make changes to data. IMPORTANT: ONLY use these functions to make changes to data in this object
+            setRSVPCode: function (code) {
+                this.rsvpCode = code;
+            },
+
+            setAttendee: function (first, last, zip, email, phone, leadLoadOid) {
+                this.attendee.first = first;
+                this.attendee.last = last;
+                this.attendee.zip = zip;
+                this.attendee.email = email;
+                this.attendee.phone = phone;
+                this.attendee.leadLoadOid = leadLoadOid
+            },
+
+            setGuest: function (first, last) {
+                this.guest.first = first;
+                this.guest.last = last;
+            },
+
+            setMapKey: function (key) {
+                this.mapKey = key;
+            },
+
+            setEvent: function (ev) {
+                this.event = ev;
+            }
+        };
+
+        // Mixin for validation
+        var ValidationMixin = {
+            methods: {
+                validate: function ($items) {
+                    var isValid = true;
+
+                    console.log($items.length + ' items');
+
+                    $items.each(function (index, elem) {
+                        var isItemValid = true;
+                        var $elem = $(elem);
+                        var v = $elem.val();
+
+                        if ($elem.hasClass('required') && (v === undefined || v === '')) isItemValid = false;
+                        if ($elem.hasClass('zip') && !isValidZip(v)) isItemValid = false;
+
+                        if (!isItemValid) {
+                            $elem.addClass('invalid');
+                            isValid = false;
+                        }
+                    });
+
+                    return isValid;
+                }
+            }
+        };
+
+        // Mixin for AJAX
+        var AjaxMixin = {
+            methods: {
+                post: function (url, data, success) {
+                    $.ajax({
+                        type: 'POST',
+                        contentType: 'application/json',
+                        url: url,
+                        data: JSON.stringify(data),
+                        success: function (data) {
+                            success(data.d);    // NOTE: For ASMX endpoints actual response is in "d"
+                        }
+                    });
+                }
+            }
+        };
+
+        // Mixin for state retention
+        var StateMixin = {
+            methods: {
+                loadState: function (id) {
+                    return JSON.parse(this.$cookies.get('state-' + id));
+                },
+                saveState: function (id, state) {
+                    this.$cookies.set('state-' + id, JSON.stringify(state));
+                },
+                hasState: function (id) {
+                    // TODO: Implement
+                    return false;
+                }
+            }
+        };
+
+        // Home page
+        var HomePage = Vue.component('home-page', {
+            template: '#home-template',
+            data: function () {
+                return {
+                    store: store,
+                    code: store.rsvpCode,
+                    isValid: true,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+                onSearchForEvent: function () {
+                    var _this = this;
+
+                    // Validate
+                    $('input.rsvp-code').removeClass('invalid');
+                    this.isValid = this.validate($('input.rsvp-code'));
+
+                    if (this.isValid) {
+                        // Make call to find attendee
+                        this.post(FIND_ATTENDEE_URL, { RSVPCode: this.code },
+                            function success(response) {
+                                // Only considered a match if it also matches the company account ID
+                                if (response.AccountOId !== store.company.accountOid)
+                                    response.IsValid = false;
+
+                                if (response.IsValid) {
+
+                                    store.setRSVPCode(_this.code);
+                                    store.setAttendee(response.FirstName, response.LastName, response.Zip, response.Email, response.Phone, response.LeadLoadOid);
+
+                                    _this.saveState(store.company.accountOid, store);
+
+                                    _this.$emit('go-to-register', _this.code);
+                                }
+                                else {
+                                    _this.errorMessage = "Sorry, we could not find that code.";
+                                    _this.isValid = false;
+                                }
+                            });
+                    }
+                    else
+                        this.errorMessage = "Please enter an RSVP code.";
+                },
+                onSearchForEventNoCode: function () {
+                    store.setRSVPCode('');
+                    this.$emit('go-to-register', '');
+                }
+            },
+            mounted: function () {
+                $('#app-container').addClass('has-photos');
+
+                // If state exists, load it
+                if (this.hasState(store.company.accountOid))
+                    store = this.loadState(store.company.accountOid);
+            },
+            destroyed: function () {
+                $('#app-container').removeClass('has-photos');
+            },
+            mixins: [ValidationMixin, AjaxMixin, StateMixin]
+        });
+
+        // Register page
+        var RegisterPage = Vue.component('register-page', {
+            template: '#register-template',
+            data: function () {
+                return {
+                    store: store,
+
+                    isValid: true,
+
+                    attendee: {
+                        first: store.attendee.first,
+                        last: store.attendee.last,
+                        zip: store.attendee.zip,
+                        email: store.attendee.email,
+                        phone: store.attendee.phone,
+                        leadLoadOid: store.attendee.leadLoadOid
+                    },
+
+                    guest: {
+                        first: store.guest.first,
+                        last: store.guest.last
+                    }
+                }
+            },
+            methods: {
+                onContinue: function () {
+                    var _this = this;
+
+                    // Validate form
+                    $('input.underline').removeClass('invalid');
+                    this.isValid = this.validate($('input.underline'));
+
+                    if (this.isValid) {
+                        store.setAttendee(this.attendee.first, this.attendee.last, this.attendee.zip, this.attendee.email, this.attendee.phone, this.attendee.leadLoadOid);
+                        store.setGuest(this.guest.first, this.guest.last);
+
+                        this.$emit('go-to-events');
+                    }
+                }
+            },
+            mixins: [ValidationMixin]
+        });
+
+        // Search page
+        var SearchPage = Vue.component('search-page', {
+            template: '#search-template',
+            data: function () {
+                return {
+                    store: store,
+                    miles: 10,
+                    results: [],
+                    showItemCount: 3,
+                    lastMiles: 0
+                };
+            },
+            mounted: function () {
+                if (this.store.eventSearch.results.length !== 0) {
+                    this.results = this.store.eventSearch.results;
+                    this.miles = this.store.eventSearch.miles;
+
+                    return;
+                }
+
+                if (this.results.length === 0) {
+                    this.search();
+                }
+            },
+            methods: {
+                search: function () {
+                    var _this = this;
+
+                    this.lastMiles = this.miles;
+
+                    // Run search for nearby events
+                    this.post(FIND_EVENTS_URL, { LeadLoadOid: store.attendee.leadLoadOid, AccountOId: store.company.accountOid, Zip: store.attendee.zip, Miles: this.miles },
+                        function success(response) {
+                            store.setMapKey(response.MapKey);
+
+                            _this.results = [];
+
+                            for (var i = 0; i < response.Events.length; i++) {
+                                var ev = response.Events[i];
+
+                                var date = new Date(parseInt(ev.EventDate.substr(6)));
+
+                                _this.results.push({
+                                    id: ev.EventBaseOid,
+                                    eventBaseOid: ev.EventBaseOid,
+                                    lat: ev.Latitude,
+                                    lng: ev.Longitude,
+                                    campaignOid: ev.CampaignOId,
+                                    eloquaEventID: ev.EloquaEventID,
+                                    date: date,
+                                    address1: ev.StreetAddress,
+                                    address2: ev.StreetAddress2,
+                                    city: ev.City,
+                                    state: ev.State,
+                                    zip: ev.ZipCode,
+                                    county: ev.County + ' County',
+                                    miles: ev.Distance,
+                                    mapUrl: getMapUrl(ev.StreetAddress, ev.StreetAddress2, ev.City, ev.State, ev.ZipCode, 125, 75)
+                                });
+                            }
+
+                            this.store.eventSearch.results = _this.results;
+                            this.store.eventSearch.miles = _this.miles;
+                        });
+                },
+                onSearch: function () {
+                    this.search();
+                },
+                onAttendEvent: function (event) {
+                    store.setEvent(event);
+                    this.$emit('go-to-review');
+                },
+                onAllResults: function () {
+                    if (this.showItemCount == DEFAULT_SHOW_ITEM_COUNT) {
+                        this.showItemCount = 100;
+                        $('.event-list').addClass('large');
+                    }
+                    else {
+                        this.showItemCount = DEFAULT_SHOW_ITEM_COUNT;
+                        $('.event-list').removeClass('large');
+                    }
+                },
+                onMapClicked: function (ev) {
+                    window.open('/MapView2.aspx?address=' + getUriAddress(ev.address1, ev.address2, ev.city, ev.state, ev.zip), 'Window', 'height=600, width=800');
+                }
+            },
+            mixins: [ValidationMixin, AjaxMixin]
+        });
+
+        // Review page
+        var ReviewPage = Vue.component('review-page', {
+            template: '#review-template',
+            data: function () {
+                return {
+                    store: store,
+                    errorMessage: ''
+                }
+            },
+            methods: {
+                completeRegistration() {
+                    var _this = this;
+
+                    this.post(REGISTER_URL, { Request: { accountOid: store.company.accountOid, attendee: store.attendee, guest: store.guest, event: store.event } },
+                        function success(response) {
+                            if (response.Status === 0) {
+                                this.store.setRSVPCode(response.RsvpCode);
+                                _this.$emit('go-to-thank-you');
+                            }
+                            else {
+                                this.errorMessage = response.data.ErrorMessage;
+                            }
+                        },
+                        function error(err) {
+                            this.errorMessage = err.data.ErrorMessage;
+                        });
+                }
+            },
+            mixins: [AjaxMixin]
+        });
+
+        // Thank You page
+        var ThankYouPage = Vue.component('thank-you-page', {
+            template: '#thank-you-template',
+            data: function () {
+                return {
+                    store: store
+                }
+            },
+            methods: {
+            },
+        });
+
+        // Filters for miles, dates and times
+        Vue.filter('miles', function (value) {
+            return value.toFixed(1) || 10;
+        });
+        Vue.filter('date', function (value) {
+            // October 5, 2019
+            return months[value.getMonth()] + ' ' + value.getDate() + ', ' + value.getFullYear();
+        });
+        Vue.filter('time', function (value) {
+            var hr = value.getHours();
+            var ampm;
+            if (hr > 11) {
+                hr -= 12;
+                ampm = 'pm';
+            }
+            else
+                ampm = 'am';
+
+            if (hr == 0) hr = 12;
+
+            var min = value.getMinutes();
+            if (min < 10) min = '0' + min;
+
+            return hr + ':' + min + ' ' + ampm;
+        });
+
+
+        // Map pages to routes
+        var routes = [
+            { path: '/', component: HomePage },
+            { path: '/register', component: RegisterPage },
+            { path: '/events', component: SearchPage },
+            { path: '/review', component: ReviewPage },
+            { path: '/thank-you', component: ThankYouPage }
+        ];
+
+        var router = new VueRouter({
+            routes: routes
+        });
+
+        var vm = new Vue({
+            data: {
+                store: store,
+                rsvpCode: ''
+            },
+            methods: {
+                onGoToRegister: function () {
+                    store.steps[0].navUnlocked = true;
+
+                    this.current = 'register-page';
+                    router.push({ path: 'register' });
+                },
+                onGoToEvents: function () {
+                    store.steps[1].navUnlocked = true;
+
+                    this.current = 'events-page';
+                    router.push({ path: 'events' });
+                },
+                onGoToReview: function () {
+                    store.steps[2].navUnlocked = true;
+
+                    router.push({ path: 'review' });
+                },
+                onGoToThankYou: function () {
+                    router.push({ path: 'thank-you' });
+                }
+            },
+            mounted() {
+                messageBus.$on('nav-to-register', this.onGoToRegister);
+
+                messageBus.$on('nav-to-events', this.onGoToEvents);
+
+                messageBus.$on('nav-to-review', this.onGoToReview);
+            },
+            mixins: [AjaxMixin],
+            router: router
+        }).$mount('#app');
+
+
+    </script>
+    <!-- END Startup Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127416311-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127416311-2');
+    </script>
+</body>
+</html>
